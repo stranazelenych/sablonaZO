@@ -1,0 +1,35 @@
+// styles for splash page
+.splash {
+
+	.visual {
+		background: green;
+		overflow: hidden;
+		text-align: center;
+		border-bottom: 2px solid @green;
+
+		@media screen and (min-width: 700px) {
+			min-height: 500px;
+			background: #fff url("../img/splash-background.jpg") 50% 0 no-repeat;
+		}
+	}
+
+	.org-name {
+		text-align: left;
+		background: @green;
+		display: inline-block;
+		padding: 0 @space;
+		position: relative;
+		.typeface2;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -110px;
+			display: block;
+			width: 130px;
+			height: 130px;
+			background: transparent url("../img/logo-v-kruhu.png") 0 0 no-repeat;
+		}
+	}
+
+}
