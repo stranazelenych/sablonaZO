@@ -6,13 +6,20 @@
 		.clear;
 		margin-bottom: @space;
 		.clearfix;
+		
+		h2 {
+			margin-bottom: @space/4;
+			.t4;
+		}
 	}
+
+	
+			
+	
 	.datum-publikovani {
 		color: @gray-light;
 
-		&:after {
-			content: " | ";
-		}
+		
 	}
 
 	img {
@@ -28,7 +35,10 @@
 		}
 		img {
 			max-width: 100%;
-			margin-bottom: @space/2;
+			margin-bottom: @space/1.5;
+		}
+		.datum-publikovani:after {
+			content: " | ";
 		}
 	}
 }
