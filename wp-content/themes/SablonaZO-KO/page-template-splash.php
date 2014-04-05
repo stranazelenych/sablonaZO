@@ -10,20 +10,22 @@ Template Name: Splash page
     <div class="visual">
         <hgroup class="org-name">
             <h1>Strana zelených</h1>
-            <h2>Základní organizace Zlín</h2>
+            <h2>Moravskoslezský kraj</h2>
         </hgroup>
 
         <div class="action-boxes">
-            <div class="box">
+            <div class="box box-info">
                 <h3>Získejte informace</h3>
             </div>
-            <div class="box">
+            <div class="box box-fundraising">
                 <h3>Podpořte nás</h3>
             </div>
         </div>
     </div>
-    <a href="#" class="splash-continue">Pokračovat na web</a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, perferendis reprehenderit rerum! Distinctio, sed, nobis, perferendis delectus ad ut voluptatum placeat vitae laborum magni amet odio facilis atque dignissimos assumenda.</p>
+    <a href="#" class="splash-continue">Pokračovat na web »</a>
+    <div class="splash-footer">
+        <p>Ing.Vilém Jurek, předseda KO  |  tel. 605 526 958  |  email: <a href="#">vilem.j@gmail.com</a></p>
+    </div>
 
       <div>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
