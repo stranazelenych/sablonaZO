@@ -1,0 +1,3 @@
+[submodule "wp-content/plugins/kandidatka"]
+	path = wp-content/plugins/kandidatka
+	url = https://github.com/stranazelenych/kandidatka.git
