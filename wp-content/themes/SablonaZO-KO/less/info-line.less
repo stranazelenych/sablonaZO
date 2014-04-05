@@ -1,4 +1,15 @@
 // Prouzek uplne nahore v hlavice s informacemi o strane
+.separated {
+	background: transparent url(../img/info-line-separator.png) no-repeat right center; 
+}
+.screen-reader-text {
+	font-size: 0; 
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
 #info-line-wrap { 
 	height: @space*2; 
 	background-color: @green-dark; 
@@ -6,51 +17,86 @@
 #info-line {
 	width: 980px; 
 	margin: 0 auto; 
-	div.info-line li {
-		&.hp a:before { 
-			content:"";
-			background-image: url(img/top-zeleni.png); 
-			padding-left: 25px; 
-		}
-		&.dary a:before { 
-			background-image: url(img/top-dary.png); 
-			padding-left: 26px; 
-		}
-		&.kontakt a:before { 
-			background-image: url(img/top-kontakty.png); 
-			padding-left: 19px; 
-		}
-		&.dalsi a:before { 
-			background-image: url(img/top-dalsi.png); 
-			padding-left:31px; 
+	> div {
+		float: left; 
+		ul {
+			margin: 0;
+			padding: 0;
 		}
 	}
-	ul { 
-		li { 
-			float: left; 
-			background: transparent url(img/top-separator.png) no-repeat right center; 
-			&.last { 
-				background: none; 
+	li { 
+		float: left; 
+		list-style-type:none; 
+		.separated;
+		a { 
+			.t7; 
+			.border-box;
+			padding:0 @space;
+			color: @white; 
+			background-color: transparent; 
+			background-repeat: no-repeat; 
+			background-position: left center; 
+			line-height: @space*2; 
+			height: @space*2; 
+			display: block; 
+			&:hover {
+				text-decoration: none;
 			}
-			a { 
-				color: @white; 
-				background-color: transparent; 
-				background-repeat: no-repeat; 
-				background-position: left center; 
-				line-height: @space*2; 
-				height: @space*2; 
-				display:block; 
-				.t7; 
+		}
+	}
+	div.menu li {
+		a:before {
+			content: "";
+			background: transparent url(../img/info-line-icons.png) no-repeat left top; 
+		}
+		&.hp a:before { 
+			padding-left: @space/2+15; 
+		}
+		&.dary a:before { 
+			padding-left: @space/2+16; 
+			background-position: left -20px; 
+		}
+		&.kontakt a:before { 
+			padding-left: @space/2+9; 
+			background-position: left -40px; 
+		}
+		&.dalsi a:before { 
+			padding-left: @space/2+21; 
+			background-position: left -60px; 
+		}
+	}
+
+	div.search {
+		padding: 10px 20px; 
+		.separated;
+		h2 {
+			display: none;
+		}
+		.searchform { 
+			background: transparent url(../img/info-line-search-bg.png) no-repeat left top; 
+			padding: 0 5px; 
+			width: 140px; 
+			.border-box;
+			input[type="text"] { 
+				border: none; 
+				width: 106px; 
+				height: @space; 
+				float: left;
+				padding: 0;
+			}
+			input[type="submit"] { 
+				border: none; 
+				background: none; 
+				padding: 0; 
+				height: 20px; 
+				width: 20px; 
+				color: transparent;
+				background: transparent url(../img/info-line-search-button.png) no-repeat right center; 
 			}
 		}
 	}
 }
 
-#searchform li     { padding:10px 20px; }
-#searchform .wrap  { background:transparent url(img/top-search-bg.png) no-repeat left top; padding:0 5px; width:140px; }
-#searchform input  { border:none; width:111px; height:20px; float:left; }
-#searchform button { border:none; background:none; padding:0; height:20px; cursor:pointer; }
-#searchform button img { display:block; }
 
 #top .social li     { padding:0 14px; }
 #top .social a      { float:left; padding:10px 2px; line-height:20px; height:20px; }

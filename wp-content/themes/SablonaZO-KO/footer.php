@@ -8,7 +8,7 @@
       </div><!-- /container -->
 	  <div id="info-line-wrap">
 		  <div id="info-line">
-			<?php wp_nav_menu( array( 'theme_location' => 'info-line', 'container_class' => 'info-line') ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'info-line', 'container_class' => 'menu') ); ?>
 			<?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
 		  </div>
 	  </div>

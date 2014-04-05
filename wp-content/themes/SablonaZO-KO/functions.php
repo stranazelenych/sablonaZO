@@ -26,10 +26,8 @@ function add_widget_areas(){
 	register_sidebar( array(
 		'name' => __('Proužek s dalšími informacemi'),
 		'id' => 'info-line',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="search">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="rounded">',
-		'after_title' => '</h2>',
 	));
 }
 
