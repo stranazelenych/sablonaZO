@@ -20,7 +20,6 @@
             functions: {},
             dumpLineNumbers: "comments",
             relativeUrls: false,
-            rootpath: ":/a.com/"
           };
         </script>
         <script src="<?php bloginfo('template_directory'); ?>/js/vendor/less-1.6.3.min.js" type="text/javascript"></script>
