@@ -10,9 +10,8 @@ Template Name: Splash page
     <div class="visual">
         <hgroup class="org-name">
             <h1>Strana zelených</h1>
-            <h2>Moravskoslezský kraj</h2>
+            <h2><?php get_bloginfo ( 'description' );  ?></h2>
         </hgroup>
-
         <div class="action-boxes">
             <div class="box box-info">
                 <h3>Získejte informace</h3>

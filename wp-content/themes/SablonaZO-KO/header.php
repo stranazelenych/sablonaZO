@@ -6,11 +6,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="web knedlík jedlík">
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
+	      <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">     
+   
         <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/less/screen.less">
+
         <script>
           less = {
             env: "development",
@@ -22,8 +25,12 @@
             relativeUrls: false,
           };
         </script>
+
         <script src="<?php bloginfo('template_directory'); ?>/js/vendor/less-1.6.3.min.js" type="text/javascript"></script>
         <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <!-- slouží k vypisování scriptů a dalších záležitostí wordpressu a jeho pluginů !-->
+        <?php wp_head(); ?>
     </head>
     <body>
 		<div id="color-lines">
