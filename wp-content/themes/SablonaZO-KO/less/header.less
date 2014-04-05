@@ -2,7 +2,6 @@
 #color-lines {
 	div {
 		float: left;
-		height: @space/4;
 		width: 20%;
 		height: 5px;
 		&.orange {
@@ -23,9 +22,9 @@
 #header-wrap {
 	@header-space-big: 27px;
 	@header-space-small: 17px;
-	@header-height: 180px; 
-	background: @green url(../img/header-bg.png) repeat-x left top; 
-	height: @header-height; 
+	@header-height: 180px;
+	background: @green url(../img/header-bg.png) repeat-x left bottom;
+	height: @header-height;
 	#header {
 		width: 98%;
 		margin: 0 auto;
@@ -40,18 +39,21 @@
 			height: 180px;
 			.border-box;
 			.ctyrlistek {
-				background: transparent url(../img/logo-bg.png) no-repeat left top; 
+				background: transparent url(../img/logo-bg.png) no-repeat left top;
 				.left;
 				width: 110px;
-				height: 105px; 
+				height: 105px;
 				padding-right: @header-space-big;
 			}
-			 
+			a {
+				border-bottom: 0;
+			}
+
 			.logoTypo {
 				color: @white;
 				.typeAbcGreen;
 				font-weight: normal;
-				
+
 			}
 			h1 {
 				padding-bottom: 10px;

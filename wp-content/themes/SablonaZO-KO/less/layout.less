@@ -1,5 +1,5 @@
 // rozlozeni stranky (pouze velikosti a umisteni, ne graficke stylovani prvku)
-#container {
+.container {
 	width: 98%;
 	margin: 0 auto;
 	@media screen and (min-width: 700px) {
@@ -18,7 +18,23 @@
 	}
 }
 
+#header-wrap {
+	@media screen and (min-width: 700px) {
+		padding-top: 45px;
+	}
+}
+
+#info-line-wrap {
+	@media screen and (min-width: 700px) {
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 100%;
+	}
+}
+
 .content-wrapper {
+	.clearfix;
 	@media screen and (min-width: 980px) {
 		padding: 0 20px;
 	}

@@ -1,0 +1,17 @@
+.bottom-nav {
+	margin: 20px 0;
+	text-align: center;
+
+	a {
+		margin: 0 16px;
+		text-transform: uppercase;
+		&:after {
+			content: "|";
+			position: relative;
+			left: 16px;
+		}
+		&:last-child:after {
+			display: none;
+		}
+	}
+}

@@ -22,7 +22,7 @@ Template Name: Splash page
         </div>
     </div>
     <a href="#" class="splash-continue">Pokračovat na web »</a>
-    <div class="splash-footer">
+    <div class="visual-footer">
         <p>Ing.Vilém Jurek, předseda KO  |  tel. 605 526 958  |  email: <a href="#">vilem.j@gmail.com</a></p>
     </div>
 

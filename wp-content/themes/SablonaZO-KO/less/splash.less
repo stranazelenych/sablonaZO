@@ -2,17 +2,6 @@
 .splash {
 	text-align: center;
 
-	.visual {
-		overflow: hidden;
-		text-align: center;
-
-		@media screen and (min-width: 640px) {
-			min-height: 499px;
-			background: #fff url("../img/splash-background.jpg") 50% 0 no-repeat;
-			border-bottom: 2px solid @green;
-		}
-	}
-
 	.org-name {
 		margin-top: 45px;
 		position: relative;
@@ -57,32 +46,6 @@
 		}
 	}
 
-	.box {
-		display: block;
-		padding: @space;
-		h3 {
-			font-weight: normal;
-			.typeAbcGreen;
-			color: #fff;
-			font-size: 18px;
-		}
-		@media screen and (min-width: 640px) {
-			width: 320px;
-			display: inline-block;
-			h3 {
-				font-size: 24px;
-			}
-		}
-	}
-	.box-info {
-		background: @orange;
-		margin: @space;
-	}
-	.box-fundraising {
-		background: @purple;
-		margin: @space;
-	}
-
 	.splash-continue {
 		background: @green;
 		color: #fff;
@@ -95,14 +58,4 @@
 			top: -32px;
 		}
 	}
-
-	.splash-footer {
-		p {
-			background: @gray-box;
-			border: 1px solid #c0cccc;
-			padding: 5px 10px;
-			display: inline-block;
-		}
-	}
-
 }
