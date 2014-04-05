@@ -26,3 +26,10 @@
         <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+		<div id="color-lines">
+			<div class="orange"></div>
+			<div class="blue"></div>
+			<div class="purple"></div>
+			<div class="yellow"></div>
+			<div class="orange"></div>
+		</div>
