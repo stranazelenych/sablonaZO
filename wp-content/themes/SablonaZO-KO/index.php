@@ -3,14 +3,6 @@
 <div id="container">
 
 <div id="menu">
-	<ul role="menu">
-		<li><a href="#">kalendář akcí</a></li>
-		<li><a href="#">vedení ko zlín</a></li>
-		<li><a href="#">základní organizace</a></li>
-		<li><a href="#">naši zastupitelé</a></li>
-		<li><a href="#">dokumenty</a></li>
-		<li><a href="#">zpravodaj</a></li>
-	</ul>
 	<div class="menu-button">Menu</div>
 	<nav>
       <ul data-breakpoint="800" class="flexnav">
