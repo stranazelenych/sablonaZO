@@ -19,9 +19,11 @@
 <!-- box vlevo nahoře -->
 <div id="promo-box" class="box sedy">
 	<h2>Dočasný box pro důležité téma (volby)</h2>
-	<a href="#">Seznamte se: naši kandidáti</a>
-	<a href="#">Kalendář předvolebních akcí</a>
-	<a href="#">Zahájení kampaně: fotogalerie</a>
+	<ul class="links">
+		<li><a href="#">Seznamte se: naši kandidáti</a></li>
+		<li><a href="#">Kalendář předvolebních akcí</a></li>
+		<li><a href="#">Zahájení kampaně: fotogalerie</a></li>
+	</ul>
 </div><!-- /promo-box -->
 
 
