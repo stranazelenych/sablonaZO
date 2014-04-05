@@ -1,1 +1,56 @@
 // Prouzek uplne nahore v hlavice s informacemi o strane
+#info-line-wrap { 
+	height: @space*2; 
+	background-color: @green-dark; 
+}
+#info-line {
+	width: 980px; 
+	margin: 0 auto; 
+	div.info-line li {
+		&.hp a:before { 
+			content:"";
+			background-image: url(img/top-zeleni.png); 
+			padding-left: 25px; 
+		}
+		&.dary a:before { 
+			background-image: url(img/top-dary.png); 
+			padding-left: 26px; 
+		}
+		&.kontakt a:before { 
+			background-image: url(img/top-kontakty.png); 
+			padding-left: 19px; 
+		}
+		&.dalsi a:before { 
+			background-image: url(img/top-dalsi.png); 
+			padding-left:31px; 
+		}
+	}
+	ul { 
+		li { 
+			float: left; 
+			background: transparent url(img/top-separator.png) no-repeat right center; 
+			&.last { 
+				background: none; 
+			}
+			a { 
+				color: @white; 
+				background-color: transparent; 
+				background-repeat: no-repeat; 
+				background-position: left center; 
+				line-height: @space*2; 
+				height: @space*2; 
+				display:block; 
+				.t7; 
+			}
+		}
+	}
+}
+
+#searchform li     { padding:10px 20px; }
+#searchform .wrap  { background:transparent url(img/top-search-bg.png) no-repeat left top; padding:0 5px; width:140px; }
+#searchform input  { border:none; width:111px; height:20px; float:left; }
+#searchform button { border:none; background:none; padding:0; height:20px; cursor:pointer; }
+#searchform button img { display:block; }
+
+#top .social li     { padding:0 14px; }
+#top .social a      { float:left; padding:10px 2px; line-height:20px; height:20px; }

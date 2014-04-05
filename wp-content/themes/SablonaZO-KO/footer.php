@@ -6,9 +6,11 @@
           </center>
         </div>
       </div><!-- /container -->
-	  <div id="info-line">
-		<?php wp_nav_menu( array( 'theme_location' => 'info-line') ); ?>
-		<?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
+	  <div id="info-line-wrap">
+		  <div id="info-line">
+			<?php wp_nav_menu( array( 'theme_location' => 'info-line', 'container_class' => 'info-line') ); ?>
+			<?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
+		  </div>
 	  </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
