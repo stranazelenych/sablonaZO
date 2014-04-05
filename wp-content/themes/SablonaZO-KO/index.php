@@ -11,17 +11,25 @@
 	</ul>
 </div>
 
+<div class="content-wrapper">
+
+<div class="column">
 <!-- box vlevo nahoře -->
 <div class="promo-box" class="box">
 	<h2>Dočasný box pro důležité téma (volby)</h2>
 	<a href="#">Seznamte se: naši kandidáti</a>
 	<a href="#">Kalendář předvolebních akcí</a>
 	<a href="#">Zahájení kampaně: fotogalerie</a>
-</div>
+</div><!-- /promo-box -->
 
-<!-- box vpravo nahoře -->
-<div id="media-box" class="box">
-</div>
+<?php if (is_handheld()) { ?>
+
+    <!-- box vpravo nahoře -->
+	<div id="media-box" class="box">
+		Ahoj
+	</div><!-- /media-box -->
+
+<?php } ?>
 
 <!-- box vlevo articles -->
 <div id="articles">
@@ -38,11 +46,27 @@
 		<h2><a href="#">Výběrové řízení na dodávku tisků pro volební kampaň do Evropského parlamentu 2014</a></h2>
 		<span class="datum-publikovani"> 1. 1. 2012</span>
 	</article>
-</div>
+</div><!-- /articles -->
+
+</div><!-- /column -->
+
+<div class="column">
+<?php if (!is_handheld()) { ?>
+
+    <!-- box vpravo nahoře -->
+	<div id="media-box" class="box">
+		Ahoj
+	</div><!-- /media-box -->
+
+<?php } ?>
 
 <!-- sloupce vpravo feeds -->
 <div id="feeds">
-</div>
+</div><!-- /feeds -->
+
+</div><!-- /column -->
+
+</div><!-- /content-wrapper -->
 
 
 <?php get_footer(); ?>
