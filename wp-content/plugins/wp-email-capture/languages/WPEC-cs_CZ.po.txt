@@ -1,0 +1,200 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPEC\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-05 01:57-0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Michal Berg <michal.berg@seznam.cz>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: Czech republic\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/_display.php:22
+msgid "Name:"
+msgstr "Jméno:"
+
+#: ../inc/_display.php:24
+msgid "Email:"
+msgstr "E-mail:"
+
+#: ../inc/_display.php:36
+#: ../inc/_display.php:71
+#: ../inc/display.php:34
+#: ../inc/display.php:69
+msgid "Powered by"
+msgstr "Běží na"
+
+#: ../inc/dashboard.php:13
+#: ../inc/options.php:151
+msgid "Export"
+msgstr "Exportovat"
+
+#: ../inc/dashboard.php:15
+msgid "Use the button below to export your list as a CSV to use in software such as"
+msgstr "Použijte tlačítko níže pro export vašeho seznamu emailů jako soubor CSV, pro použití v excelu nebo v programech jako"
+
+#: ../inc/dashboard.php:22
+#: ../inc/options.php:165
+msgid "Temporary e-mails"
+msgstr "Nepotvrzené emaily"
+
+#: ../inc/dashboard.php:24
+#: ../inc/options.php:169
+msgid "There are"
+msgstr "Je zde"
+
+#: ../inc/dashboard.php:24
+#: ../inc/options.php:169
+msgid "e-mail addresses that have been unconfirmed. Delete them to save space below."
+msgstr "emailový adres, které nejsou potvrzeny. Můžete je smazat pro úsporu místa."
+
+#: ../inc/dashboard.php:40
+msgid "WP Email Capture - At A Glance"
+msgstr "Přehled emailů"
+
+#: ../inc/options.php:5
+#: ../inc/options.php:15
+msgid "WP Email Capture Options"
+msgstr "Nastavení"
+
+#: ../inc/options.php:19
+msgid "Recommendations"
+msgstr "Doporučení"
+
+#: ../inc/options.php:21
+msgid "We recommend"
+msgstr "Doporučujeme"
+
+#: ../inc/options.php:21
+msgid "to run your email campaigns. We have tested this plugin with it."
+msgstr "pro vaše kampaně."
+
+#: ../inc/options.php:46
+msgid "Options"
+msgstr "Nastavení"
+
+#: ../inc/options.php:66
+msgid "Page to redirect to on sign up (full web address ie: http://www.domain.com/this-page/)"
+msgstr "Stránka, na kterou se má web přesměrovat pro vložení emailu</br>použijte kompletní URL: např. http://mesto.zeleni.cz/dekujeme"
+
+#: ../inc/options.php:74
+msgid "Page to redirect to on confirmation of email address  (full web address ie: http://www.domain.com/this-other-page/)"
+msgstr "Stránka, na kterou se má web přesměrovat, jakmile se vloží platný email</br>použijte kompletní URL: např. http://mesto.zeleni.cz/dekujeme"
+
+
+#: ../inc/options.php:82
+msgid "From Which Email Address"
+msgstr "Z jaké adresy bude odeslán (nejčastěji vaše)"
+
+#: ../inc/options.php:90
+msgid "Z jakého jména (nejčastěji vaše)"
+msgstr "Nombre para mostrar en el correo de confirmación"
+
+#: ../inc/options.php:98
+msgid "Subject of Email"
+msgstr "Předmět emailu"
+
+#: ../inc/options.php:106
+msgid "Body of Email"
+msgstr "<b>obsah emailu</b>"
+
+#: ../inc/options.php:107
+msgid "(use %NAME% to use the form's &quot;Name&quot; field in their welcome email)"
+msgstr "Použijte zkratku %NAME% pokud chcete využít jejich jméno v emailu"
+
+#: ../inc/options.php:115
+msgid "Link to us (optional, but appreciated)"
+msgstr "Link na web"
+
+#: ../inc/options.php:139
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#: ../inc/options.php:155
+msgid "Use the button below to export your list as a CSV to use in software such as <a href=\"http://wpemailcapture.com/recommends/aweber\" title=\"Email Marketing\">Aweber</a> or <a href=\"http://wpemailcapture.com/recommends/mailchimp\">Mailchimp</a>"
+msgstr "Použijte tlačítko níže pro export vašeho seznamu emailů jako soubor CSV, pro použití v excelu nebo v programech jako Mailchimp"
+
+#: ../inc/options.php:177
+msgid "Delete Current List"
+msgstr "Smazat seznam adres"
+
+#: ../inc/options.php:181
+msgid "Want to delete the entire list? Click the link below. <strong>WARNING: </strong> this will delete all confirmed emails, so make sure you have a backup."
+msgstr "Chcete smazat celý seznam email? <b>POZOR</b>, smaže to všechny emaily v systému, proto se ujistěte, že jste s je předtím uložili jako zálohu"
+
+#: ../inc/options.php:191
+msgid "Donations"
+msgstr "Přispějte"
+
+#: ../inc/options.php:193
+msgid "If you like this plugin, please consider a small donation to help with future versions &amp; plugins. Donators are thanked on each specific plugin page!"
+msgstr "Díky za vaše příspěvky"
+
+#: ../inc/pagedresults.php:141
+msgid "Prev"
+msgstr "Předchozí"
+
+#: ../inc/pagedresults.php:169
+msgid "Next"
+msgstr "Následující"
+
+#: ../inc/process.php:158
+msgid "This is an automated message that is generated because somebody with the IP address of"
+msgstr "Toto je automatická zpráva, která byla vygenerována protože někdo s IP adresou"
+
+#: ../inc/process.php:158
+msgid "(possibly you) on"
+msgstr "(zřejmě vy)"
+
+#: ../inc/process.php:158
+msgid "filled out the form on the following page"
+msgstr "vyplnil formulář na webu"
+
+#: ../inc/process.php:159
+msgid "If you are sure this isn't you, please ignore this message, you will not be sent another message."
+msgstr "Pokud si nejste jisti, že jste to byli vy, prosím ignorujte tuto zprávu."
+
+#: ../inc/process.php:176
+msgid "Not found your email in our database"
+msgstr "nenalezen email ve vaší databázi"
+
+#: ../inc/tabledata.php:27
+msgid "Members"
+msgstr "Členové seznamu"
+
+#: ../inc/tabledata.php:37
+msgid "Name"
+msgstr "Jméno"
+
+#: ../inc/tabledata.php:37
+msgid "Email"
+msgstr "E-mail"
+
+#: ../inc/widget.php:35
+msgid "Subscribe!"
+msgstr "Přihlásit email"
+
+#: ../inc/widget.php:37
+msgid "Subscribe to my blog for updates"
+msgstr "Aktuální zprávy najdete na blogu"
+
+#: ../inc/widget.php:117
+msgid "Widget title:"
+msgstr "Nadpis tohoto boxu (widgetu)"
+
+#: ../inc/widget.php:119
+msgid "Widget text:"
+msgstr "Text boxu (widgetu)"
+
+#: ../inc/widget.php:135
+#: ../inc/widget.php:141
+msgid "WP Email Capture"
+msgstr "WP Email Capture"
+
