@@ -12,7 +12,7 @@
 </div>
 
 <!-- box vlevo nahoře -->
-<div id="promo-box">
+<div class="promo-box" class="box">
 	<h2>Dočasný box pro důležité téma (volby)</h2>
 	<a href="#">Seznamte se: naši kandidáti</a>
 	<a href="#">Kalendář předvolebních akcí</a>
@@ -20,7 +20,7 @@
 </div>
 
 <!-- box vpravo nahoře -->
-<div id="media-box">
+<div id="media-box" class="box">
 </div>
 
 <!-- box vlevo articles -->
