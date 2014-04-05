@@ -15,8 +15,14 @@
 	background-color: @green-dark; 
 }
 #info-line {
-	width: 980px; 
-	margin: 0 auto; 
+	width: 98%;
+	margin: 0 auto;
+	@media screen and (min-width: 700px) {
+		width: 90%;
+	}
+	@media screen and (min-width: 980px) {
+		width: 980px;
+	}
 	> div {
 		float: left; 
 		ul {
@@ -83,6 +89,8 @@
 				height: @space; 
 				float: left;
 				padding: 0;
+				color: @gray-light;
+				.t7;
 			}
 			input[type="submit"] { 
 				border: none; 
@@ -95,8 +103,23 @@
 			}
 		}
 	}
+	
+	div.social {
+		padding: 0 14px;
+		a {
+			float: left;
+			background: transparent url(../img/social-icons-small.png) no-repeat left center; 
+			line-height: @space*2;
+			height: @space*2; 
+			width: 24px;
+			&.facebook {
+				background-position: -24px center; 
+			}
+			&.youtube {
+				background-position: -48px center; 
+			}
+		}
+	}
 }
 
 
-#top .social li     { padding:0 14px; }
-#top .social a      { float:left; padding:10px 2px; line-height:20px; height:20px; }

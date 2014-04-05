@@ -19,3 +19,51 @@
 		}
 	}
 }
+
+#header-wrap {
+	@header-space-big: 27px;
+	@header-space-small: 17px;
+	@header-height: 180px; 
+	background: @green url(../img/header-bg.png) repeat-x left top; 
+	height: @header-height; 
+	#header {
+		width: 98%;
+		margin: 0 auto;
+		@media screen and (min-width: 700px) {
+			width: 90%;
+		}
+		@media screen and (min-width: 980px) {
+			width: 980px;
+		}
+		.logo {
+			padding: @header-space-big 0;
+			height: 180px;
+			.border-box;
+			.ctyrlistek {
+				background: transparent url(../img/logo-bg.png) no-repeat left top; 
+				.left;
+				width: 110px;
+				height: 105px; 
+				padding-right: @header-space-big;
+			}
+			 
+			.logoTypo {
+				color: @white;
+				.typeAbcGreen;
+				font-weight: normal;
+				
+			}
+			h1 {
+				padding-bottom: 10px;
+			}
+			h1 a {
+				.logoTypo;
+				.t1;
+			}
+			h2 a {
+				.logoTypo;
+				.t2;
+			}
+		}
+	}
+}
