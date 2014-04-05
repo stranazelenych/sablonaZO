@@ -19,16 +19,29 @@
 		display: inline-block;
 		padding: 0 @space;
 		position: relative;
-		.typeface2;
+		color: #fff;
+		h1, h2 {
+			font-weight: normal;
+			.typeAbcGreen;
+		}
+		h1 {
+			margin: 10px;
+		}
+		h2 {
+			margin: 10px;
+		}
 		&:before {
 			content: "";
 			position: absolute;
-			top: 0;
+			top: -50%;
 			left: -110px;
 			display: block;
 			width: 130px;
 			height: 130px;
 			background: transparent url("../img/logo-v-kruhu.png") 0 0 no-repeat;
+		}
+		@media screen and (min-width: 700px) {
+			margin-top: 85px;
 		}
 	}
 

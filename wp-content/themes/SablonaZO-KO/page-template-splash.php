@@ -23,6 +23,7 @@ Template Name: Splash page
         </div>
     </div>
     <a href="#" class="splash-continue">Pokračovat na web</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, perferendis reprehenderit rerum! Distinctio, sed, nobis, perferendis delectus ad ut voluptatum placeat vitae laborum magni amet odio facilis atque dignissimos assumenda.</p>
 
       <div>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
