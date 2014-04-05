@@ -11,8 +11,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/less/screen.less">
-        <script src="js/vendor/less-1.6.3.min.js" type="text/javascript"></script>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/vendor/less-1.6.3.min.js" type="text/javascript"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
       <div id="container">
