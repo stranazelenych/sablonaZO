@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="content-wrapper">
+
 <div id="menu">
 	<ul role="menu">
 		<li><a href="#">kalendář akcí</a></li>
@@ -29,6 +31,8 @@
 
 <!-- sloupce vpravo feeds -->
 <div id="feeds">
+</div>
+
 </div>
 
 
