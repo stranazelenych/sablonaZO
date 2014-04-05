@@ -15,21 +15,23 @@
 
 <div class="column">
 <!-- box vlevo nahoře -->
-<div class="promo-box" class="box">
+<div id="promo-box" class="box sedy">
 	<h2>Dočasný box pro důležité téma (volby)</h2>
 	<a href="#">Seznamte se: naši kandidáti</a>
 	<a href="#">Kalendář předvolebních akcí</a>
 	<a href="#">Zahájení kampaně: fotogalerie</a>
 </div><!-- /promo-box -->
 
+
 <?php if (is_handheld()) { ?>
 
     <!-- box vpravo nahoře -->
 	<div id="media-box" class="box">
-		Ahoj
+		<img src="http://placehold.it/920x520" alt=" " />
 	</div><!-- /media-box -->
 
 <?php } ?>
+
 
 <!-- box vlevo articles -->
 <div id="articles">
