@@ -1,1 +1,34 @@
 // zobrazeni clanku na homepage
+
+#articles {
+	
+	article {
+		.clear;
+		margin-bottom: @space;
+		.clearfix;
+	}
+	.datum-publikovani {
+		color: @gray-light;
+
+		&:after {
+			content: " | ";
+		}
+	}
+
+	img {
+		float: left;
+		margin-right: @space;
+		max-width: 120px;
+	}
+
+	.highlight {
+		h2 {
+			.t2;
+			
+		}
+		img {
+			max-width: 100%;
+			margin-bottom: @space/2;
+		}
+	}
+}

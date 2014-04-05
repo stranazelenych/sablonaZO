@@ -43,10 +43,12 @@
 		<p class="perex"><span class="datum-publikovani">21. 7. 2014</span>Strana zelených nesouhlasí s nápadem nového ministra dopravy Pavla Dobeše zavést známky za použití silnic I. třídy, aby získal další prostředky do Státního fondu dopravní infrastruktury. "Okurková sezóna snese mnohé, ale zveřejňovat kdejaký nepromyšlený návrh se nevyplácí," komentuje návrh předseda Ondřej Liška.</p>
 	</article>
 	<article>
+		<img src="http://placehold.it/200x200">
 		<h2><a href="#">Spalování igelitek je výhodné pouze pro průmyslovou lobby</a></h2>
 		<span class="datum-publikovani">2. 12. 2013</span>
 	</article>
 	<article>
+		<img src="http://placehold.it/200x200">
 		<h2><a href="#">Výběrové řízení na dodávku tisků pro volební kampaň do Evropského parlamentu 2014</a></h2>
 		<span class="datum-publikovani"> 1. 1. 2012</span>
 	</article>
