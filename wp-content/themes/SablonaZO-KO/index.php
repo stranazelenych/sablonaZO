@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div id="container">
+
 <div id="menu">
 	<ul role="menu">
 		<li><a href="#">kalendář akcí</a></li>

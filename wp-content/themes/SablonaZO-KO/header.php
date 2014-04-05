@@ -27,4 +27,3 @@
         <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-      <div id="container">
