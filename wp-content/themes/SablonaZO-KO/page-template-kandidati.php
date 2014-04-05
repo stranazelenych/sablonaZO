@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Splash page
+Template Name: Kandidáti
 */
 ?>
 <?php get_header(); ?>
