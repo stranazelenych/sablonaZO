@@ -15,11 +15,25 @@ if(!is_admin()){
 
 function add_menus(){
 	register_nav_menus( array(
-		'primary' => __( 'Havní navigace')
+		'primary' => __( 'Havní navigace'),
+		'info-line' => __('Proužek s dalšími informacemi')
   ) );
 }
 
 add_action( 'after_setup_theme', 'add_menus' );
+
+function add_widget_areas(){
+	register_sidebar( array(
+		'name' => __('Proužek s dalšími informacemi'),
+		'id' => 'info-line',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	));
+}
+
+add_action( 'widgets_init', 'add_widget_areas' );
 
 add_theme_support( 'post-thumbnails' );
 
