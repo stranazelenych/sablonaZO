@@ -63,13 +63,48 @@
 
     <!-- box vpravo nahoře -->
 	<div id="media-box" class="box">
-		Ahoj
+		<img src="http://placehold.it/900x700" alt=" " />
 	</div><!-- /media-box -->
 
 <?php } ?>
 
 <!-- sloupce vpravo feeds -->
 <div id="feeds">
+	<div class="column">
+		<div id="peticni-list" class="feed box ">
+			<div class="header">Petiční list</div>
+			<div class="content">
+				<p>Petici za vyřešení hlučnosti silnice I/57 ve Vsetíně Rokytnici můžete podepsat <a href="#" class="read-more">ZDE »</a></p>
+			</div>
+		</div>
+		<div id="novinky-emailem" class="feed box">
+			<div class="header">Novinky emailem</div>
+			<div class="content">
+				<form>
+					<input type="text" placeholder="Váš email" />
+				</form>
+			</div>
+		</div>
+		<div id="socialni-site" class="feed box">
+			<div class="header">Petiční list</div>
+			<div class="content">
+				<p>FB box nebo TW stream</p>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div id="aktuality" class="feed box">
+			<div class="header">Aktuality zeleni.cz</div>
+			<div class="content">
+				<ul class="aktuality">
+					<li><a href="#">Výběrové řízení na dodávku tisků pro volební kampaň do Evropského parlamentu 2014</a></li>
+					<li><a href="#">Velkochovy prasat v ČR odporují evropské legislativě, zelení vyzývají ministerstvo k okamžité nápravě</a></li>
+					<li><a href="#">Stream.cz: Zachráněné nádraží na Žižkově</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 </div><!-- /feeds -->
 
 </div><!-- /column -->
