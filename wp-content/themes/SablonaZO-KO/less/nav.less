@@ -48,10 +48,12 @@ nav {
     color: #fff;
     background: @green-dark;
     border-bottom: 0;
-    &:hover { background: darken(@green-dark, 10%); }
+    text-transform: uppercase;
+    &:hover { background: darken(@green-dark, 5%); }
     }
   .flexnav li ul {
-    width: 100%; }
+    width: 100%;
+    min-width: 160px; }
     .flexnav li ul li {
       font-size: 100%;
       position: relative;
@@ -61,6 +63,7 @@ nav {
   .flexnav li ul li a {
     display: block;
     background: @green;
+    text-transform: none;
     &:hover { background: darken(@green, 10%); }
     }
   .flexnav ul li ul li a {
@@ -138,6 +141,23 @@ nav {
     .flexnav li a {
       border-right: 1px solid darken(@green-dark, 5%);
       border-bottom: none; }
+    .flexnav > li > a {
+      border-right: 0;
+      padding: 1em 25px;
+    }
+    .flexnav > li:after {
+      content: "*";
+      .typeAbcGreen;
+      font-size: 18px;
+      color: darken(@green-dark, 10%);
+      position: absolute;
+      top: 0.85em;
+      right: -7px;
+      z-index: 100;
+    }
+    .flexnav > li > .touch-button {
+      display: none;
+    }
     .flexnav li > ul {
       position: absolute;
       top: auto;
