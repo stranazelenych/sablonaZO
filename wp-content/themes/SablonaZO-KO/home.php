@@ -17,22 +17,16 @@
 
 <div class="l-column">
 <!-- box vlevo nahoře -->
-<div id="promo-box" class="box sedy">
-	<h2>Dočasný box pro důležité téma (volby)</h2>
-	<ul class="links">
-		<li><a href="#">Seznamte se: naši kandidáti</a></li>
-		<li><a href="#">Kalendář předvolebních akcí</a></li>
-		<li><a href="#">Zahájení kampaně: fotogalerie</a></li>
-	</ul>
-</div><!-- /promo-box -->
+<?php if ( dynamic_sidebar('home-top-left') ) : else : endif; ?>
+
+<!-- /promo-box -->
 
 
 <?php if (is_handheld()) { ?>
 
     <!-- box vpravo nahoře -->
-	<div id="media-box" class="box">
-		<img src="http://placehold.it/920x520" alt=" " />
-	</div><!-- /media-box -->
+	<?php if ( dynamic_sidebar('home-top-right') ) : else : endif; ?>
+	<!-- /media-box -->
 
 <?php } ?>
 
@@ -49,9 +43,9 @@
 <?php if (!is_handheld()) { ?>
 
     <!-- box vpravo nahoře -->
-	<div id="media-box" class="box">
-		<img src="http://placehold.it/900x700" alt=" " />
-	</div><!-- /media-box -->
+    <?php if ( dynamic_sidebar('home-top-right') ) : else : endif; ?>
+    
+<!-- /media-box -->
 
 <?php } ?>
 
