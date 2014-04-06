@@ -66,5 +66,10 @@
 					<div class="social">
 					</div>
 				</div>
+				<div class="icons">
+					<a href="#" class="clenove">Staňte se členy</a>
+					<a href="#" class="podporte">Podpořte nás finančně</a>
+					<a href="#" class="info">Získejte informace</a>
+				</div>
 			</div>
 		</div>

@@ -37,6 +37,8 @@
 		.logo {
 			padding: @header-space-big 0;
 			height: 180px;
+			width: 550px;
+			.left;
 			.border-box;
 			.ctyrlistek {
 				background: transparent url(../img/logo-bg.png) no-repeat left top;
@@ -67,5 +69,32 @@
 				.t2;
 			}
 		}
+		.icons {
+		   .border-box;
+		   .right;
+		   padding: @header-space-small 0;
+		   a {
+			   .typeface1;
+			   .t6;
+			   .left;
+			   .border-box;
+			   background: transparent url(../img/header-icons.png) no-repeat left top; 
+			   width: 103px;
+			   margin-right: 25px;
+			   height: 146px;
+			   color: @white;
+			   padding-top:103px;
+			   text-align: center;
+			   text-decoration: underline;
+			   line-height: 18px;
+			   &.podporte {
+				   background-position:-103px top;
+			   }
+			   &.info {
+				   background-position:-206px top;
+				   margin-right: 0;
+			   }
+		   }
+	   }
 	}
 }
