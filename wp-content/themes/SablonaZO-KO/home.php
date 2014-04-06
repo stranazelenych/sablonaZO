@@ -40,16 +40,6 @@
 <!-- box vlevo articles -->
 <div id="articles">
   <?php get_template_part("loop","home"); ?>
-	<article>
-		<img src="http://placehold.it/200x200">
-		<h2><a href="#">Spalování igelitek je výhodné pouze pro průmyslovou lobby</a></h2>
-		<span class="datum-publikovani">2. 12. 2013</span>
-	</article>
-	<article>
-		<img src="http://placehold.it/200x200">
-		<h2><a href="#">Výběrové řízení na dodávku tisků pro volební kampaň do Evropského parlamentu 2014</a></h2>
-		<span class="datum-publikovani"> 1. 1. 2012</span>
-	</article>
 </div><!-- /articles -->
 
 </div><!-- /l-column -->
