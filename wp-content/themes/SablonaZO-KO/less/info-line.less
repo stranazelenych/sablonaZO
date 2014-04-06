@@ -71,10 +71,11 @@
 			display: inline-block;
 			margin-top: @space/2;
 			@media screen and (min-width: 650px) {
-				text-align:center;
+				text-align: center;
+				margin-top: 0;
 			}
 			@media screen and (min-width: 980px) {
-				text-align:auto;
+				text-align: auto;
 			}
 			li {
 				display: block;
@@ -100,19 +101,28 @@
 					background: transparent url(../img/info-line-icons.png) no-repeat left top;
 				}
 				&.hp a:before {
-					padding-left: @space/2+15;
+					padding-left: 25px;
 				}
 				&.dary a:before {
-					padding-left: @space/2+16;
 					background-position: left -20px;
+					padding-left: 25px;
+					@media screen and (min-width: 650px) {
+						padding-left: 26px;
+					}
 				}
 				&.kontakt a:before {
-					padding-left: @space/2+9;
 					background-position: left -40px;
+					padding-left: 25px;
+					@media screen and (min-width: 650px) {
+						padding-left: 19px;
+					}
 				}
 				&.dalsi a:before {
-					padding-left: @space/2+21;
+					padding-left: 25px;
 					background-position: left -60px;
+					@media screen and (min-width: 650px) {
+						padding-left: 31px;
+					}
 				}
 			}
 		}
