@@ -63,19 +63,19 @@
         <?php if(get_field('headerlogo','option'))  ?>
 				<div class="logo">
 					<a href="<?php bloginfo( 'url' ); ?>" class="ctyrlistek"></a>
-					<h1>
-						<a href="<?php bloginfo( 'url' ); ?>">Strana zelených</a>
-					</h1>
-					<h2>
-						<a href="<?php bloginfo( 'url' ); ?>"><?php echo get_field('header2','option');  ?></a>
-					</h2>
+					<hgroup>
+                        <a href="<?php bloginfo( 'url' ); ?>">
+                            <h1>Strana zelených</h1>
+                            <h2><?php echo get_field('header2','option');  ?></h2>
+                        </a>
+                    </hgroup>
 					<div class="social">
 					</div>
 				</div>
         <?php endif; ?>
         <?php if(get_field('headerright','option')) ?>
 				<div class="icons">
-					<a href="#" class="clenove">Staňte se členy</a>
+					<a href="#" class="clenove">Staňte<br> se členy</a>
 					<a href="#" class="podporte">Podpořte nás finančně</a>
 					<a href="#" class="info">Získejte informace</a>
 				</div>
