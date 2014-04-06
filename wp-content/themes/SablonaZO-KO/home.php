@@ -15,7 +15,7 @@
 
 <div class="content-wrapper">
 
-<div class="column">
+<div class="l-column">
 <!-- box vlevo nahoře -->
 <div id="promo-box" class="box sedy">
 	<h2>Dočasný box pro důležité téma (volby)</h2>
@@ -52,9 +52,9 @@
 	</article>
 </div><!-- /articles -->
 
-</div><!-- /column -->
+</div><!-- /l-column -->
 
-<div class="column">
+<div class="l-column">
 
 <?php if (!is_handheld()) { ?>
 
@@ -95,36 +95,13 @@
 
 </div><!-- /feeds -->
 
-</div><!-- /column -->
+</div><!-- /l-column -->
 
 </div><!-- /content-wrapper -->
 
 </div><!-- /container -->
 
-<div class="container">
-	<div class="bottom-nav">
-		<a href="#">kalendář akcí</a>
-		<a href="#">vedení ko zlín</a>
-		<a href="#">základní organizace</a>
-		<a href="#">naši zastupitelé</a>
-		<a href="#">dokumenty</a>
-		<a href="#">zpravodaj</a>
-	</div>
-</div>
-
-<div class="visual">
-    <div class="action-boxes">
-        <div class="box box-info">
-            <h3>Získejte informace</h3>
-        </div>
-        <div class="box box-fundraising">
-            <h3>Podpořte nás</h3>
-        </div>
-    </div>
-</div>
-<div class="visual-footer">
-    <p>Ing.Vilém Jurek, předseda KO  |  tel. 605 526 958  |  email: <a href="#">vilem.j@gmail.com</a></p>
-</div>
+<?php include_once('visual.php'); ?>
 
 
 <?php get_footer(); ?>
