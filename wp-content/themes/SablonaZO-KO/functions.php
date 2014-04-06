@@ -69,7 +69,7 @@ function child_add_time($excerpt) {
 
 // počet slov v excerptu
 function custom_excerpt_length( $length ) {
-    return 23;
+    return 50;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
