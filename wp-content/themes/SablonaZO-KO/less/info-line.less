@@ -1,6 +1,6 @@
 // Prouzek uplne nahore v hlavice s informacemi o strane
 .separated {
-	background: transparent url(../img/info-line-separator.png) no-repeat right center;
+	background: transparent url(../img/info-line-separator.png) no-repeat right @space/2;
 }
 .screen-reader-text {
 	font-size: 0;
@@ -84,6 +84,7 @@
 				float: none;
 				background: none;
 				text-align: left;
+				position: relative; 
 				@media screen and (min-width: 650px) {
 					float: none;
 					display: inline-block;
@@ -97,6 +98,9 @@
 					@media screen and (min-width: 980px) {
 						.separated;
 					}
+				}
+				a {
+					float: left;
 				}
 				a:before {
 					content: "";
@@ -125,6 +129,43 @@
 					@media screen and (min-width: 650px) {
 						padding-left: 31px;
 					}
+				}
+				&.menu-item-has-children a {
+					padding-right: 0px;
+				}
+				ul {
+					position: absolute;
+					top: @space*2;
+					z-index: 10;
+					background-color: @green;
+					min-width: 160px; 
+					li {
+						width: 100%;
+						a {
+							width: 100%;
+							&:hover {
+								background: darken(@green-dark, 5%);
+							}
+						}
+					}
+				}
+				.touch-button {
+					z-index: 999;
+					float: left; 
+					width: 30px;
+					line-height: @space*2;
+					height: @space*2;
+					@media screen and (max-width: 800px) {
+						width: 50px;
+					}
+					text-align: center; 
+				}
+				.touch-button:hover {
+					cursor: pointer; 
+				}
+				.touch-button .navicon {
+					font-size: 12px;
+					color: darken(@green-dark, 10%); 
 				}
 			}
 		}
