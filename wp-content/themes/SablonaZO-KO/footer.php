@@ -14,15 +14,17 @@
         <script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
         <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
         <script>
-        $(".flexnav").flexNav({
-          'animationSpeed':     250,            // default for drop down animation speed
-          'transitionOpacity':  true,           // default for opacity animation
-          'buttonSelector':     '.menu-button', // default menu button class name
-          'hoverIntent':        false,          // Change to true for use with hoverIntent plugin
-          'hoverIntentTimeout': 150,            // hoverIntent default timeout
-          'calcItemWidths':     false,          // dynamically calcs top level nav item widths
-          'hover':              true            // would you like hover support?
-        });
+          jQuery(document).ready(function($){
+                  $(".flexnav").flexNav({
+                    'animationSpeed':     250,            // default for drop down animation speed
+                    'transitionOpacity':  true,           // default for opacity animation
+                    'buttonSelector':     '.menu-button', // default menu button class name
+                    'hoverIntent':        false,          // Change to true for use with hoverIntent plugin
+                    'hoverIntentTimeout': 150,            // hoverIntent default timeout
+                    'calcItemWidths':     false,          // dynamically calcs top level nav item widths
+                    'hover':              true            // would you like hover support?
+                  });
+          });
         </script>
     </body>
 </html>
