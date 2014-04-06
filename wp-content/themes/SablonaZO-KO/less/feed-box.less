@@ -2,6 +2,16 @@
 
 .feed.box {
 	background: @gray-background;
+	overflow: hidden;
+
+	ul {
+		padding: 0 @space 0 @space*1.5;
+	}
+
+	a {
+		text-decoration: underline;
+		border-bottom: 0;
+	}
 
 	.header {
 		background: @green;
@@ -12,7 +22,6 @@
 		.textshadow;
 	}
 	.content {
-		padding: @space;
 
 		p {
 			margin: 0;

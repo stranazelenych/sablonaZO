@@ -42,7 +42,13 @@ function add_widget_areas(){
     register_sidebar( array(
         'name' => __('Úvod - pravý sloupec, levá část'),
         'id' => 'home-column-first',
-        'before_widget' => '<div class="column">',
+        'before_widget' => '<div class="feed box">',
+        'after_widget' => '</div>',
+    ));
+    register_sidebar( array(
+        'name' => __('Úvod - pravý sloupec, pravá část'),
+        'id' => 'home-column-second',
+        'before_widget' => '<div class="feed box">',
         'after_widget' => '</div>',
     ));
 }

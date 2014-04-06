@@ -57,7 +57,9 @@
 
 <!-- sloupce vpravo feeds -->
 <div id="feeds">
+	<div class="column">
 		<?php if ( dynamic_sidebar('home-column-first') ) : else : endif; ?>
+	</div>
 		<!-- <div id="peticni-list" class="feed box ">
 			<div class="header">Petiční list</div>
 			<div class="content">
@@ -71,7 +73,8 @@
 			</div>
 		</div> -->
 	<div class="column">
-		<div id="aktuality" class="feed box">
+		<?php if ( dynamic_sidebar('home-column-second') ) : else : endif; ?>
+		<!-- <div id="aktuality" class="feed box">
 			<div class="header">Aktuality zeleni.cz</div>
 			<div class="content">
 				<ul class="aktuality">
@@ -80,7 +83,7 @@
 					<li><a href="#">Stream.cz: Zachráněné nádraží na Žižkově</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 </div><!-- /feeds -->

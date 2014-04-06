@@ -2,18 +2,18 @@
 	background: @gray-background;
 	.t6;
 
-	.widgettitle {
-		background: @green;
-		color: @white;
-		padding: @space/2 @space;
-		.uppercase;
-		.bold;
-		.textshadow;
-		.t6;
-	}
 	.textwidget {
 		padding: @space @space 0;
 	}
+}
+.widgettitle {
+	background: @green;
+	color: @white;
+	padding: @space/2 @space;
+	.uppercase;
+	.bold;
+	.textshadow;
+	.t6;
 }
 .wp-email-capture {
 	.t6;
@@ -26,6 +26,21 @@
 	}
 	.wp-email-capture-submit {
 		.input_full;
+		margin-top: 3px;
+	}
+}
+#calendar_wrap, .textwidget, .tagcloud, .searchform {
+	padding: @space;
+	table {
+		width: 100%;
+	}
+}
+
+.searchform {
+	input {
+		.input_full;
+	}
+	input[type="submit"] {
 		margin-top: 3px;
 	}
 }
