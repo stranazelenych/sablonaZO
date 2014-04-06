@@ -130,7 +130,7 @@
 						padding-left: 31px;
 					}
 				}
-				&.menu-item-has-children a {
+				&.menu-item-has-children > a {
 					padding-right: 0px;
 				}
 				ul {
@@ -146,6 +146,8 @@
 					li {
 						width: 100%;
 						a {
+							padding-right: 25px;
+							white-space: nowrap;
 							width: 100%;
 							&:hover {
 								background: darken(@green-dark, 5%);
