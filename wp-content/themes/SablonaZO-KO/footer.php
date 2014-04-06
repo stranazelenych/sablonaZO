@@ -1,15 +1,17 @@
 
-    <div id="info-line-wrap">
-		  <div id="info-line">
-			<?php wp_nav_menu( array( 'theme_location' => 'info-line', 'container_class' => 'menu') ); ?>
-			<?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
-			<div class="social">
-				<a href="#" class="twitter"><?php __('Twitter účet Strany zelených'); ?></a>
-				<a href="#" class="facebook"><?php __('Facebook účet Strany zelených'); ?></a>
-				<a href="#" class="youtube"><?php __('Youtube účet Strany zelených'); ?></a>
-			</div>
-		  </div>
-	  </div>
+    <?php if (is_handheld()) { ?>
+      <div id="info-line-wrap">
+  		  <div id="info-line">
+  			<?php wp_nav_menu( array( 'theme_location' => 'info-line', 'container_class' => 'menu') ); ?>
+  			<?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
+  			<div class="social">
+  				<a href="#" class="twitter"><?php __('Twitter účet Strany zelených'); ?></a>
+  				<a href="#" class="facebook"><?php __('Facebook účet Strany zelených'); ?></a>
+  				<a href="#" class="youtube"><?php __('Youtube účet Strany zelených'); ?></a>
+  			</div>
+  		  </div>
+  	  </div>
+    <?php } ?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>

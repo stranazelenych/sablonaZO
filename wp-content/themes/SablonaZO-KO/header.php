@@ -10,8 +10,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-	      <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">     
-   
+	      <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
         <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/less/screen.less">
 
         <script>
@@ -40,6 +40,19 @@
 			<div class="yellow"></div>
 			<div class="orange"></div>
 		</div>
+        <?php if (!is_handheld()) { ?>
+          <div id="info-line-wrap">
+              <div id="info-line">
+                <?php wp_nav_menu( array( 'theme_location' => 'info-line', 'container_class' => 'menu') ); ?>
+                <?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
+                <div class="social">
+                    <a href="#" class="twitter"><?php __('Twitter účet Strany zelených'); ?></a>
+                    <a href="#" class="facebook"><?php __('Facebook účet Strany zelených'); ?></a>
+                    <a href="#" class="youtube"><?php __('Youtube účet Strany zelených'); ?></a>
+                </div>
+              </div>
+          </div>
+        <?php } ?>
 		<div id="header-wrap">
 			<div id="header">
 				<div class="logo">
