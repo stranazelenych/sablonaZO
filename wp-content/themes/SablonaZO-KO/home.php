@@ -11,7 +11,7 @@
 
 <div class="content-wrapper">
 
-<div class="column">
+<div class="l-column">
 <!-- box vlevo nahoře -->
 <div id="promo-box" class="box sedy">
 	<h2>Dočasný box pro důležité téma (volby)</h2>
@@ -52,9 +52,9 @@
 	</article>
 </div><!-- /articles -->
 
-</div><!-- /column -->
+</div><!-- /l-column -->
 
-<div class="column">
+<div class="l-column">
 <?php if (!is_handheld()) { ?>
 
     <!-- box vpravo nahoře -->
@@ -103,7 +103,7 @@
 
 </div><!-- /feeds -->
 
-</div><!-- /column -->
+</div><!-- /l-column -->
 
 </div><!-- /content-wrapper -->
 
