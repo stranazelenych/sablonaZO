@@ -16,7 +16,7 @@ Template Name: homepage
 	<div id="content">
 		<div id="topstory">
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-		   <div id="topstory-text"><?php the_excerpt(); ?></div>
+		   <!-- <div id="topstory-text"><?php the_excerpt(); ?></div>  -->
 		</div>
 
 		<div class="clearfix"></div>

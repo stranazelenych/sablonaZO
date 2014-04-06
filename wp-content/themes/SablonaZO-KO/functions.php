@@ -55,6 +55,7 @@ function child_add_time($excerpt) {
         // Check for the <p> tags
         if ( '<p>' == substr($excerpt, 0, 3) && '</p>' == substr($excerpt, -4) )
             $excerpt = sprintf( '<p>%s %s</p>', '<span class="date">'.get_the_time('j. n. Y') . '&nbsp;&nbsp;|&nbsp;</span>', substr($excerpt, 3, -4) );
+            $excerpt = sprintf( '<p>%s %s</p>', substr($excerpt, 3, -4) , '<a href='.get_permalink() . ' class="bold">více&raquo</a>' );
     return $excerpt;
 }
 
@@ -68,7 +69,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // změna vzhledu excerpt more
 function new_excerpt_more( $more ) {
-    return ' <a class="bold" href="'. get_permalink( get_the_ID() ) . '">více&raquo;</a>';
+    return '';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
