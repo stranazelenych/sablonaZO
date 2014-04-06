@@ -16,7 +16,8 @@
             <?php if ( dynamic_sidebar('action-box-info') ) : else : endif; ?>
         </div>
         <div class="box box-fundraising">
-            <?php if ( dynamic_sidebar('action-box-fundraising') ) : else : endif; ?>
+            <h3>Podpořte nás</h3>
+            <a href="<?php echo get_field("fundraising","option");?>" class="action-box-button" >Darovat</a>
         </div>
     </div>
 </div>
