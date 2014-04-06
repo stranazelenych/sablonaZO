@@ -5,11 +5,11 @@
 <div id="menu">
 	<div class="menu-button">Menu</div>
 	<nav>
-			<?php wp_nav_menu( array( 
-        'theme_location' => 'primary',
-        'menu_class' => 'flexnav', //Adding the class for FlexNav
-        'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>'));
-       ?>
+		<?php wp_nav_menu( array(
+	        'theme_location' => 'primary',
+	        'menu_class' => 'flexnav', //Adding the class for FlexNav
+	        'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>'));
+		?>
   </nav>
 </div>
 
@@ -39,7 +39,7 @@
 
 <!-- box vlevo articles -->
 <div id="articles">
-  <?php get_template_part("loop","home"); ?> 
+  <?php get_template_part("loop","home"); ?>
 	<article>
 		<img src="http://placehold.it/200x200">
 		<h2><a href="#">Spalování igelitek je výhodné pouze pro průmyslovou lobby</a></h2>
@@ -54,7 +54,7 @@
 
 </div><!-- /column -->
 
-<div class="column"> 
+<div class="column">
 
 <?php if (!is_handheld()) { ?>
 
@@ -67,19 +67,11 @@
 
 <!-- sloupce vpravo feeds -->
 <div id="feeds">
-	<div class="column">
-		<div id="peticni-list" class="feed box ">
+		<?php if ( dynamic_sidebar('home-column-first') ) : else : endif; ?>
+		<!-- <div id="peticni-list" class="feed box ">
 			<div class="header">Petiční list</div>
 			<div class="content">
 				<p>Petici za vyřešení hlučnosti silnice I/57 ve Vsetíně Rokytnici můžete podepsat <a href="#" class="read-more">ZDE »</a></p>
-			</div>
-		</div>
-		<div id="novinky-emailem" class="feed box">
-			<div class="header">Novinky emailem</div>
-			<div class="content">
-				<form>
-					<input type="text" placeholder="Váš email" />
-				</form>
 			</div>
 		</div>
 		<div id="socialni-site" class="feed box">
@@ -87,8 +79,7 @@
 			<div class="content">
 				<p>FB box nebo TW stream</p>
 			</div>
-		</div>
-	</div>
+		</div> -->
 	<div class="column">
 		<div id="aktuality" class="feed box">
 			<div class="header">Aktuality zeleni.cz</div>
