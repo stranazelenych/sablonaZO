@@ -77,9 +77,9 @@
         <?php endif; ?>
         <?php if(get_field('headerright','option')): ?>
 				<div class="icons">
-					<a href="#" class="clenove">Staňte<br> se členy</a>
-					<a href="#" class="podporte">Podpořte nás finančně</a>
-					<a href="#" class="info">Získejte informace</a>
+					<a href="#" class="clenove">Staňte se členy</a>
+					<a href="#" class="podporte">Podpořte nás</a>
+					<a href="#" class="info">Informujte se</a>
 				</div>
         <?php endif; ?>
 			</div>
