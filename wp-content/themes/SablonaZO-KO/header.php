@@ -56,12 +56,12 @@
 		<div id="header-wrap">
 			<div id="header">
 				<div class="logo">
-					<a href="/" class="ctyrlistek"></a>
+					<a href="<?php bloginfo( 'url' ); ?>" class="ctyrlistek"></a>
 					<h1>
-						<a href="#">Strana zelených</a>
+						<a href="<?php bloginfo( 'url' ); ?>">Strana zelených</a>
 					</h1>
 					<h2>
-						<a href="#">Moravskoslezský kraj</a>
+						<a href="<?php bloginfo( 'url' ); ?>">Moravskoslezský kraj</a>
 					</h2>
 					<div class="social">
 					</div>
