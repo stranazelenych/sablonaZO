@@ -13,9 +13,10 @@
     <div class="action-boxes">
         <div class="box box-info">
             <h3>Získejte informace</h3>
+            <?php if ( dynamic_sidebar('action-box-info') ) : else : endif; ?>
         </div>
         <div class="box box-fundraising">
-            <h3>Podpořte nás</h3>
+            <?php if ( dynamic_sidebar('action-box-fundraising') ) : else : endif; ?>
         </div>
     </div>
 </div>

@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: homepage
-*/
-?>
-
 <?php get_header(); ?>
 
 <div class="container main">

@@ -64,6 +64,18 @@ function add_widget_areas(){
         'before_widget' => '<div class="hometop right">',
         'after_widget' => '</div>',
     ));
+    register_sidebar( array(
+        'name' => __('Akční box - dole vlevo'),
+        'id' => 'action-box-info',
+        'before_widget' => '<div class="hometop right">',
+        'after_widget' => '</div>',
+    ));
+    register_sidebar( array(
+        'name' => __('Akční box - dole vpravo'),
+        'id' => 'action-box-fundraising',
+        'before_widget' => '<div class="hometop right">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action( 'widgets_init', 'add_widget_areas' );
