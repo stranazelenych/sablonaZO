@@ -17,6 +17,7 @@
 #info-line {
 	width: 98%;
 	margin: 0 auto;
+	text-align: center;
 	@media screen and (min-width: 700px) {
 		width: 90%;
 	}
@@ -42,40 +43,96 @@
 			background-color: transparent;
 			background-repeat: no-repeat;
 			background-position: left center;
-			line-height: @space*2;
-			height: @space*2;
 			display: block;
 			border-bottom: 0;
+			line-height: 30px;
+			height: 30px;
+			@media screen and (min-width: 650px) {
+				line-height: @space*2;
+				height: @space*2;
+			}
 			&:hover {
 				text-decoration: none;
 			}
 		}
 	}
-	div.menu li {
-		a:before {
-			content: "";
-			background: transparent url(../img/info-line-icons.png) no-repeat left top;
+	div.menu {
+		float: none;
+		height: auto;
+		@media screen and (min-width: 650px) {
+			height: @space*2;
+			width: 100%;
 		}
-		&.hp a:before {
-			padding-left: @space/2+15;
+		@media screen and (min-width: 980px) {
+			float: left;
+			width: auto;
 		}
-		&.dary a:before {
-			padding-left: @space/2+16;
-			background-position: left -20px;
-		}
-		&.kontakt a:before {
-			padding-left: @space/2+9;
-			background-position: left -40px;
-		}
-		&.dalsi a:before {
-			padding-left: @space/2+21;
-			background-position: left -60px;
+		ul {
+			display: inline-block;
+			margin-top: @space/2;
+			@media screen and (min-width: 650px) {
+				text-align:center;
+			}
+			@media screen and (min-width: 980px) {
+				text-align:auto;
+			}
+			li {
+				display: block;
+				float: none;
+				background: none;
+				text-align: left;
+				@media screen and (min-width: 650px) {
+					float: none;
+					display: inline-block;
+					.separated;
+				}
+				@media screen and (min-width: 980px) {
+					float:left;
+				}
+				&:last-child {
+					background: none;
+					@media screen and (min-width: 980px) {
+						.separated;
+					}
+				}
+				a:before {
+					content: "";
+					background: transparent url(../img/info-line-icons.png) no-repeat left top;
+				}
+				&.hp a:before {
+					padding-left: @space/2+15;
+				}
+				&.dary a:before {
+					padding-left: @space/2+16;
+					background-position: left -20px;
+				}
+				&.kontakt a:before {
+					padding-left: @space/2+9;
+					background-position: left -40px;
+				}
+				&.dalsi a:before {
+					padding-left: @space/2+21;
+					background-position: left -60px;
+				}
+			}
 		}
 	}
 
 	div.search {
+		float: none;
+		vertical-align: top;
+		width: 140px;
+		display: block;
+		margin: 0 auto;
 		padding: 10px 20px;
-		.separated;
+		@media screen and (min-width: 650px) {
+			display: inline-block;
+			width: auto;
+			.separated;
+		}
+		@media screen and (min-width: 980px) {
+			float: left;
+		}
 		h2 {
 			display: none;
 		}
@@ -106,6 +163,12 @@
 	}
 
 	div.social {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+		@media screen and (min-width: 980px) {
+			float: left;
+		}
 		padding: 0 14px;
 		a {
 			float: left;
