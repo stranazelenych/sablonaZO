@@ -55,5 +55,7 @@ Template Name: homepage
 
 </div><!-- /container -->
 
+<?php include_once('visual.php'); ?>
+
 <?php get_footer(); ?>
 
