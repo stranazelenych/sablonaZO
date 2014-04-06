@@ -39,6 +39,12 @@ function add_widget_areas(){
         'before_widget' => '<div class="search">',
         'after_widget' => '</div>',
     ));
+    register_sidebar( array(
+        'name' => __('Úvod - pravý sloupec, levá část'),
+        'id' => 'home-column-first',
+        'before_widget' => '<div class="column">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action( 'widgets_init', 'add_widget_areas' );
