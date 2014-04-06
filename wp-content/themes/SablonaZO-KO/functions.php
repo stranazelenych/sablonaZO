@@ -54,9 +54,9 @@ function add_widget_areas(){
     register_sidebar( array(
         'name' => __('Hlavní stránka - nahoře vlevo'),
         'id' => 'home-top-left',
-        'before_widget' => '<div class="hometop left box sedy">',
+        'before_widget' => '<div class="hometop box sedy">',
         'after_widget' => '</div>',
-        
+
     ));
     register_sidebar( array(
         'name' => __('Hlavní stránka - nahoře vpravo'),
