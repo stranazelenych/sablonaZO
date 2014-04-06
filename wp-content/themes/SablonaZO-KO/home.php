@@ -5,7 +5,12 @@
 <div id="menu">
 	<div class="menu-button">Menu</div>
 	<nav>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '','menu_class' => 'flexnav') ); ?>
+			<?php wp_nav_menu( array( 
+          'theme_location' => 'primary', 
+          'container' => 'ul',
+          'menu_class' => 'flexnav',
+          'items_wrap' => '<ul class="%2$s" id="%1$s" data-breakpoint="800">%3$s</ul>')); 
+       ?>
   </nav>
 </div>
 
@@ -35,11 +40,7 @@
 
 <!-- box vlevo articles -->
 <div id="articles">
-	<article class="highlight">
-		<a href="#"><img src="http://placehold.it/920x520" alt=" " /></a>
-		<h2><a href="#">Brno: Zelení nesouhlasí s plánem na zdražení MHD</a></h2>
-		<p class="perex"><span class="datum-publikovani">21. 7. 2014</span>Strana zelených nesouhlasí s nápadem nového ministra dopravy Pavla Dobeše zavést známky za použití silnic I. třídy, aby získal další prostředky do Státního fondu dopravní infrastruktury. "Okurková sezóna snese mnohé, ale zveřejňovat kdejaký nepromyšlený návrh se nevyplácí," komentuje návrh předseda Ondřej Liška.</p>
-	</article>
+  <?php get_template_part("loop","home"); ?> 
 	<article>
 		<img src="http://placehold.it/200x200">
 		<h2><a href="#">Spalování igelitek je výhodné pouze pro průmyslovou lobby</a></h2>
@@ -55,6 +56,7 @@
 </div><!-- /l-column -->
 
 <div class="l-column">
+
 <?php if (!is_handheld()) { ?>
 
     <!-- box vpravo nahoře -->
