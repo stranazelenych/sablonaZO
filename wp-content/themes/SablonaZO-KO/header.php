@@ -60,6 +60,7 @@
         <?php } ?>
 		<div id="header-wrap">
 			<div id="header">
+        <?php if(get_field('headerlogo','option')) : ?>
 				<div class="logo">
 					<a href="<?php bloginfo( 'url' ); ?>" class="ctyrlistek"></a>
 					<h1>
@@ -71,6 +72,7 @@
 					<div class="social">
 					</div>
 				</div>
+        <?php endif; ?>
 				<div class="icons">
 					<a href="#" class="clenove">Staňte se členy</a>
 					<a href="#" class="podporte">Podpořte nás finančně</a>
