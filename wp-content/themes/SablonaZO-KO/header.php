@@ -57,25 +57,27 @@
                 </div>
               </div>
           </div>
-        <?php } ?>
-		<div id="header-wrap">
+       <?php } ?>
+    <?php $imageurl = get_field('headerbg','option'); if($imageurl == ""){$noimg = true;}else{$noimg = false;}?>
+		<div id="header-wrap" <?php if(!$noimg){echo 'style="background: url(' . get_field('headerbg','option') . ')center no-repeat">';}
+      else { echo '>';}?>
 			<div id="header">
-        <?php if(get_field('headerlogo','option'))  ?>
+        <?php if(get_field('headerlogo','option')):  ?>
 				<div class="logo">
 					<a href="<?php bloginfo( 'url' ); ?>" class="ctyrlistek"></a>
-					<hgroup>
-                        <a href="<?php bloginfo( 'url' ); ?>">
-                            <h1>Strana zelených</h1>
-                            <h2><?php echo get_field('header2','option');  ?></h2>
-                        </a>
-                    </hgroup>
+					<h1>
+						<a href="<?php bloginfo( 'url' ); ?>">Strana zelených</a>
+					</h1>
+					<h2>
+						<a href="<?php bloginfo( 'url' ); ?>"><?php echo get_field('header2','option');  ?></a>
+					</h2>
 					<div class="social">
 					</div>
 				</div>
         <?php endif; ?>
         <?php if(get_field('headerright','option')) ?>
 				<div class="icons">
-					<a href="#" class="clenove">Staňte<br> se členy</a>
+					<a href="#" class="clenove">Staňte se členy</a>
 					<a href="#" class="podporte">Podpořte nás finančně</a>
 					<a href="#" class="info">Získejte informace</a>
 				</div>
