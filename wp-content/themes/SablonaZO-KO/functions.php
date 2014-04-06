@@ -1,5 +1,7 @@
 <?php
 
+
+// skripty 
 function add_scripts(){
 // Load jQuery + jquerytools
    wp_deregister_script('jquery');
@@ -13,6 +15,9 @@ if(!is_admin()){
   add_action('init', 'add_scripts');
 }
 
+
+
+// registrace 2 lokací menu
 function add_menus(){
 	register_nav_menus( array(
 		'primary' => __( 'Havní navigace'),
@@ -22,6 +27,8 @@ function add_menus(){
 
 add_action( 'after_setup_theme', 'add_menus' );
 
+
+// widget areas
 function add_widget_areas(){
 	register_sidebar( array(
 		'name' => __('Proužek s dalšími informacemi'),
@@ -33,33 +40,8 @@ function add_widget_areas(){
 
 add_action( 'widgets_init', 'add_widget_areas' );
 
+// nastavení supportů šablony
 add_theme_support( 'post-thumbnails' );
-
-
-// ----------------- support checkboxu v custom fields
-add_action( 'post_submitbox_misc_actions', 'publish_in_frontpage' );
-function publish_in_frontpage($post)
-{
-    $value = get_post_meta($post->ID, '_publish_in_frontpage', true);
-    echo '<div class="misc-pub-section misc-pub-section-last">
-         <span id="timestamp">'
-         . '<label><input type="checkbox"' . (!empty($value) ? ' checked="checked" ' : null) . 'value="1" name="publish_in_frontpage" /> Publish to frontpage</label>'
-    .'</span></div>';
-}
-
-function save_postdata($postid)
-{   
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return false;
-    if ( !current_user_can( 'edit_page', $postid ) ) return false;
-    if(empty($postid) || $_POST['post_type'] != 'article' ) return false;
-
-    if($_POST['action'] == 'editpost'){
-        delete_post_meta($postid, 'publish_in_frontpage');
-    }
-
-    add_post_meta($postid, 'publish_in_frontpage', $_POST['publish_in_frontpage']);
-}
-// ------------------
 
 
 // Add Read More link to manual excerpts.
@@ -114,12 +96,16 @@ function child_add_time($excerpt) {
 
 */
 
+
+/*
 if(false === get_option("medium_crop")) {
     add_option("medium_crop", "1");
 } else {
     update_option("medium_crop", "1");
-}
+}  */
 
+
+// paginace
 function paginate($pages = '', $range = 2)
 {  
      $showitems = ($range * 2);  
