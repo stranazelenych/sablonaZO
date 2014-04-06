@@ -5,19 +5,22 @@
 function add_scripts(){
 // Load jQuery + jquerytools
    wp_deregister_script('jquery');
-   wp_enqueue_script('jquery',"http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js",$deps, $ver, false);
+   wp_enqueue_script('jquery',"http://code.jquery.com/jquery-1.11.0.min.js",$deps, $ver, false);
    
 // Your Scripts     ( $handle, $src, $deps, $ver, $in_footer );
    wp_enqueue_script('script1',get_bloginfo( 'stylesheet_directory' ).'/js/custom.js' ,$deps, $ver, true); 
+   wp_enqueue_script('flexnav', get_bloginfo('stylesheet_directory').'/js/jquery.flexnav.min.js');
 }
-
+ 
 if(!is_admin()){
   add_action('init', 'add_scripts');
 }
 
+// nastavení supportů šablony
+add_theme_support( 'post-thumbnails' );
 
 
-// registrace 2 lokací menu
+// registrace lokací menu
 function add_menus(){
 	register_nav_menus( array(
 		'primary' => __( 'Havní navigace'),
@@ -40,70 +43,34 @@ function add_widget_areas(){
 
 add_action( 'widgets_init', 'add_widget_areas' );
 
-// nastavení supportů šablony
-add_theme_support( 'post-thumbnails' );
 
-
-// Add Read More link to manual excerpts.
-/*
-add_action('the_excerpt', 'child_add_manual_read_more', 20);
-add_action('the_excerpt', 'child_add_time', 20);     
-
-function child_add_manual_read_more($excerpt) {
-if( is_home() || is_front_page() || is_page_template('archive.php')){
-    if ( has_excerpt() ) {
- 
-        // Trim the newline.
-        $excerpt = snippet(rtrim($excerpt),175,"...</p>");
- 
-        // Check for the <p> tags
-        if ( '<p>' == substr($excerpt, 0, 3) && '</p>' == substr($excerpt, -4) )
-            $excerpt = sprintf( '<p>%s <a href="%s" rel="nofollow" class="morelink">Celý článek >>></a></p>', substr($excerpt, 3, -4), get_permalink() );
-    }
-    return $excerpt;
-}else{
-    return $excerpt;
-}
-}
-
-function snippet($text,$length=64,$tail="...") {
-    $text = trim($text);
-    $txtl = strlen($text);
-    if($txtl > $length) {
-        for($i=1;$text[$length-$i]!=" ";$i++) {
-            if($i == $length) {
-                return substr($text,0,$length) . $tail;
-            }
-        }
-        $text = substr($text,0,$length-$i+1) . $tail;
-    }
-    return $text;
-}
-
+// automatické přidání času na začátek excerptu
+add_action('the_excerpt', 'child_add_time', 20);  
 function child_add_time($excerpt) {
- 
-    if ( has_excerpt() ) {
+
  
         // Trim the newline.
         $excerpt = rtrim($excerpt);
  
         // Check for the <p> tags
         if ( '<p>' == substr($excerpt, 0, 3) && '</p>' == substr($excerpt, -4) )
-            $excerpt = sprintf( '<p>%s %s</p>', '<span class="time" style="height: 20px; font: 12px Calibri; color: #666666;">'.get_the_time('j. F, Y').' v '.get_the_time('G:i').'</span>', substr($excerpt, 3, -4) );
-    }
+            $excerpt = sprintf( '<p>%s %s</p>', '<span class="date">'.get_the_time('j. n. Y') . '&nbsp;&nbsp;|&nbsp;</span>', substr($excerpt, 3, -4) );
     return $excerpt;
 }
 
-*/
 
 
-/*
-if(false === get_option("medium_crop")) {
-    add_option("medium_crop", "1");
-} else {
-    update_option("medium_crop", "1");
-}  */
+// počet slov v excerptu
+function custom_excerpt_length( $length ) {
+	return 23;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+// změna vzhledu excerpt more
+function new_excerpt_more( $more ) {
+	return ' <a class="bold" href="'. get_permalink( get_the_ID() ) . '">více&raquo;</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 // paginace
 function paginate($pages = '', $range = 2)
