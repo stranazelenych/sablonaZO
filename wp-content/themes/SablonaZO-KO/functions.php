@@ -51,6 +51,18 @@ function add_widget_areas(){
         'before_widget' => '<div class="feed box">',
         'after_widget' => '</div>',
     ));
+    register_sidebar( array(
+        'name' => __('Hlavní stránka - nahoře vlevo'),
+        'id' => 'home-top-left',
+        'before_widget' => '<div class="hometop left">',
+        'after_widget' => '</div>',
+    ));
+    register_sidebar( array(
+        'name' => __('Hlavní stránka - nahoře vpravo'),
+        'id' => 'home-top-right',
+        'before_widget' => '<div class="hometop right">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action( 'widgets_init', 'add_widget_areas' );
