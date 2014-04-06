@@ -29,10 +29,9 @@ Template Name: homepage
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 		   <!-- <div id="topstory-text"><?php the_excerpt(); ?></div>  -->
 		</div>
-
 		<div class="clearfix"></div>
 		<div id="text">
-		  <p><?php the_content(); ?></p>
+		  <p><span class="date"><?php the_date('j. n. Y'); ?></span><?php the_content(); ?></p>
 		</div>
 	</div>
 </div><!-- /l-section -->
