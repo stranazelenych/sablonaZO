@@ -135,10 +135,15 @@
 				}
 				ul {
 					position: absolute;
-					top: @space*2;
 					z-index: 10;
 					background-color: @green;
 					min-width: 160px; 
+					top: 30px;
+					margin-top: 0;
+					@media screen and (min-width: 650px) {
+						top: @space*2;
+						margin-top: @space/2;
+					}
 					li {
 						width: 100%;
 						a {
@@ -153,10 +158,11 @@
 					z-index: 999;
 					float: left; 
 					width: 30px;
-					line-height: @space*2;
-					height: @space*2;
-					@media screen and (max-width: 800px) {
-						width: 50px;
+					line-height: 30px;
+					height: 30px;
+					@media screen and (min-width: 650px) {
+						line-height: @space*2;
+						height: @space*2;
 					}
 					text-align: center; 
 				}
