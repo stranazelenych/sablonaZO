@@ -34,22 +34,27 @@
 		}
 		width: 98%;
 		margin: 0 auto;
+		text-align: center;
 		@media screen and (min-width: 700px) {
 			width: 90%;
 		}
 		@media screen and (min-width: 980px) {
 			width: 980px;
+			text-align: left;
 		}
 		.logo {
 			.left;
 			.border-box;
 			padding: @header-space-small 0;
 			height: auto;
-			width: 100%;
+			width: auto;
+			display: inline-block;
+			float: none;
 			@media screen and (min-width: 980px) {
 				padding: @header-space-big 0;
 				height: 180px;
 				width: 550px;
+				float: left;
 			}
 			.ctyrlistek {
 				background: transparent url(../img/logo-bg.png) no-repeat left top;
@@ -70,6 +75,7 @@
 			}
 			h1 {
 				padding-bottom: 10px;
+				white-space: nowrap;
 			}
 			h1 a {
 				.logoTypo;
@@ -81,18 +87,19 @@
 			}
 		}
 		.icons {
-		   .border-box;
-		   clear: both;
-		   overflow: hidden;
+			.border-box;
+			clear: both;
+			overflow: hidden;
+			width: 100%;
 			@media screen and (min-width: 980px) {
 			   .right;
 			   clear: none;
+			   width: auto;
 			}
 		   padding: @header-space-small 0;
 		   a {
 			   .typeface1;
 			   .t6;
-			   .left;
 			   .border-box;
 			   background: transparent url(../img/header-icons.png) no-repeat left top; 
 			   width: 103px;
@@ -103,6 +110,11 @@
 			   text-align: center;
 			   text-decoration: underline;
 			   line-height: 18px;
+			   display: inline-block;
+			   vertical-align:top; 
+			   @media screen and (min-width: 980px) {
+					.left;
+			   }
 			   &.podporte {
 				   background-position:-103px top;
 			   }
