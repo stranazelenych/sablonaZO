@@ -109,3 +109,10 @@
 .textshadow (@textShadow: 1px 1px 1px rgba(0,0,0,.5)) {
 	text-shadow: @textShadow;
 }
+
+// Inline block, older IE support
+.inline-block() {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
