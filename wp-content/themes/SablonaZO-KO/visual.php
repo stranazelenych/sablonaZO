@@ -1,11 +1,6 @@
 <div class="container">
 	<div class="bottom-nav">
-		<a href="#">kalendář akcí</a>
-		<a href="#">vedení ko zlín</a>
-		<a href="#">základní organizace</a>
-		<a href="#">naši zastupitelé</a>
-		<a href="#">dokumenty</a>
-		<a href="#">zpravodaj</a>
+		<?php if ( dynamic_sidebar('footer-menu') ) : else : endif; ?>
 	</div>
 </div>
 

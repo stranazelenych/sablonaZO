@@ -76,6 +76,12 @@ function add_widget_areas(){
         'before_widget' => '<div class="hometop right">',
         'after_widget' => '</div>',
     ));
+    register_sidebar( array(
+        'name' => __('Menu v patičce'),
+        'id' => 'footer-menu',
+        'before_widget' => '<div class="footer-menu">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action( 'widgets_init', 'add_widget_areas' );
