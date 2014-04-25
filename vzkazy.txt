@@ -5,6 +5,7 @@ druhý pokus
 třetí pokus
 čtvrtý pokus
 pátý pokus
+šestý pokus
 
 Test pushe
 Test deploye 444
