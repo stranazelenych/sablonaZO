@@ -15,10 +15,12 @@
             }
             
         }
+        
+        @boxHeight: 110px;
 
 	.box {
 		display: block;
-		padding: @space;
+		padding: 15px;
                 position: relative;
 		h3 {
 			font-weight: normal;
@@ -27,42 +29,100 @@
 			font-size: 18px;
 		}
 		@media screen and (min-width: 640px) {
+                        height: @boxHeight;
 			width: 320px;
 			display: inline-block;
                         vertical-align: top;
 			h3 {
 				font-size: 24px;
 			}
+                    
+                        // Skew sides of the boxes
+                        &:before, &:after {
+                            top: 0;
+                            width: 0;
+                            height: 0;
+                            content: " ";
+                            position: absolute;
+                            border-style: solid;
+                            border-width: @boxHeight/2 15px;
+
+                        }
+                        &:before {
+                            left: -30px;
+                        }
+                        &:after {
+                            right: -30px;
+                        }
 		}
 	}
 	.box-info {
 		background: @orange;
 		margin: @space;
-                &:before {
-                    content: " ";
-                    position: absolute;
-                    background: @orange;
+		@media screen and (min-width: 640px) {
+                        &:before {
+                            border-color: transparent @orange @orange transparent;
+                        }
+                        &:after {
+                            border-color: @orange transparent transparent @orange;
+                        }
+		}
+                
+                .right {
+                    float: none;
                 }
-                &:after {
-                    content: " ";
-                    position: absolute;
-                    background: @orange;
+                
+                .wp-email-capture {
+                    background: transparent;
                 }
+                
+                .wp-email-capture-label {
+                    @media screen and (min-width: 640px) {
+                        display: none;
+                    }
+                }
+                
+                .wp-email-capture-input {
+                    .t6;
+                    .rounded-corners(5px);
+                    border: 0;
+                    width: 170px;
+                    height: 36px;
+                    line-height: 36px;
+                }
+                
+                                
 	}
 	.box-fundraising {
 		background: @purple;
 		margin: @space;
-                &:before {
-                    content: " ";
-                    position: absolute;
-                    background: @purple;
-                }
-                &:after {
-                    content: " ";
-                    position: absolute;
-                    background: @purple;
-                }
+		@media screen and (min-width: 640px) {
+                        &:before {
+                            border-color: transparent @purple @purple transparent;
+                        }
+                        &:after {
+                            border-color: @purple transparent transparent @purple;
+                        }
+		}
+                
 	}
+        
+        .wp-email-capture .wp-email-capture-button-text, .action-box-button {
+            .t6;
+            .inline-block;
+            .rounded-corners(5px); 
+            margin: 0;
+            width: auto;
+            height: 36px;
+            line-height: 36px;
+            font-weight: normal;
+            background: transparent; 
+            border: 2px solid #ffffff;
+            color: #fff;
+        }
+        .action-box-button {
+            width: 200px;
+        }
 }
 
 .visual-footer {
