@@ -13,6 +13,11 @@
 #info-line-wrap {
 	background-color: @green-dark;
 	.clearfix;
+        
+	@media screen and (min-width: 700px) {
+                position: absolute;
+                
+	}
 }
 #info-line {
 	width: 98%;
@@ -23,6 +28,7 @@
 	}
 	@media screen and (min-width: 980px) {
 		width: 980px;
+                
 	}
 	> div {
 		float: left;
@@ -67,6 +73,7 @@
 			float: left;
 			width: auto;
 			height: auto;
+                        .clearfix;
 		}
 		ul {
 			display: inline-block;
@@ -106,7 +113,7 @@
 					content: "";
 					background: transparent url(../img/info-line-icons.png) no-repeat left top;
 				}
-				&.hp a:before {
+				&#menu-item-628 a:before {
 					padding-left: 25px;
 				}
 				&.dary a:before {
