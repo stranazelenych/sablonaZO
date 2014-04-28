@@ -148,11 +148,16 @@ nav {
       content: "*";
       .typeAbcGreen;
       font-size: 18px;
-      color: darken(@green-dark, 10%);
+      color: @green;
       position: absolute;
       top: 0.85em;
       right: -7px;
       z-index: 100;
+    }
+    .flexnav > li:last-child {
+        &:after {
+            display: none;
+        }
     }
     .flexnav > li > .touch-button {
       display: none;
