@@ -185,7 +185,11 @@
 						line-height: @space*2;
 						height: @space*2;
 					}
+                                        display: none; 
 					text-align: center;
+                                        &:last-child {
+                                            display: block;
+                                        }
 				}
 				.touch-button:hover {
 					cursor: pointer;
