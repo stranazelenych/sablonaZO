@@ -16,7 +16,7 @@
         <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
         <script>
           jQuery(document).ready(function($){
-                  $(".flexnav").flexNav({
+                  $(".info-line-menu").flexNav({
                     'animationSpeed':     250,            // default for drop down animation speed
                     'transitionOpacity':  true,           // default for opacity animation
                     'buttonSelector':     '.menu-button', // default menu button class name
@@ -25,7 +25,7 @@
                     'calcItemWidths':     false,          // dynamically calcs top level nav item widths
                     'hover':              true            // would you like hover support?
                   });
-                  $(".info-line-menu").flexNav({
+                  $(".flexnav").flexNav({
                     'animationSpeed':     250,            // default for drop down animation speed
                     'transitionOpacity':  true,           // default for opacity animation
                     'buttonSelector':     '.menu-button', // default menu button class name
