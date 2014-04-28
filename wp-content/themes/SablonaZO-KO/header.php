@@ -49,12 +49,12 @@
                         'container_class' => 'menu',
                         'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>'));
                 ?>
+                <?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
                 <div class="social">
                     <a href="#" class="twitter"><?php __('Twitter účet Strany zelených'); ?></a>
                     <a href="#" class="facebook"><?php __('Facebook účet Strany zelených'); ?></a>
                     <a href="#" class="youtube"><?php __('Youtube účet Strany zelených'); ?></a>
                 </div>
-                <?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
               </div>
           </div>
        <?php } ?>
