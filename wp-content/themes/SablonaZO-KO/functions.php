@@ -82,6 +82,12 @@ function add_widget_areas(){
         'before_widget' => '<div class="footer-menu">',
         'after_widget' => '</div>',
     ));
+    register_sidebar( array(
+        'name' => __('Text v patičce'),
+        'id' => 'footer-text',
+        'before_widget' => '<div class="footer-text">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action( 'widgets_init', 'add_widget_areas' );

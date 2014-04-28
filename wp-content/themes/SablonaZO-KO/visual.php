@@ -17,5 +17,5 @@
     </div>
 </div>
 <div class="visual-footer">
-    <p>Ing.Vilém Jurek, předseda KO  |  tel. 605 526 958  |  email: <a href="#">vilem.j@gmail.com</a></p>
+    <?php if ( dynamic_sidebar('footer-text') ) : else : endif; ?>
 </div>
