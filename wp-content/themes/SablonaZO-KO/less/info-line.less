@@ -59,7 +59,6 @@
 	div.menu {
 		float: none;
 		height: auto;
-                .clear;
 		@media screen and (min-width: 650px) {
 			height: @space*2;
 			width: 100%;
@@ -124,21 +123,32 @@
 						padding-left: 19px;
 					}
 				}
-				&.dalsi a:before {
+				&#menu-item-629 > a:before {
 					padding-left: 25px;
 					background-position: left -60px;
 					@media screen and (min-width: 650px) {
 						padding-left: 31px;
 					}
 				}
-				&.menu-item-has-children > a {
+                                &.menu-item-has-children {
+                                    
+/*                                    &:hover {
+                                        ul {
+                                            display: block;
+                                        }
+                                    }*/
+                                    
+                                    > a {
 					padding-right: 0px;
-				}
+                                    }   
+                                }
 				ul {
+                                        /*display: none;*/
 					position: absolute;
 					z-index: 10;
-					background-color: @green;
+					background-color: @green-dark;
 					min-width: 160px;
+                                        left: 0;
 					top: 30px;
 					margin-top: 0;
 					@media screen and (min-width: 650px) {
