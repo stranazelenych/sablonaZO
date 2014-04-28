@@ -22,7 +22,7 @@
                         'theme_location' => 'info-line',
                         'menu_class' => 'info-line-menu', //Adding the class for FlexNav
                         'container_class' => 'menu',
-                        'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>'));
+                        'items_wrap' => '<ul data-breakpoint="980" id="%1$s" class="%2$s">%3$s</ul>'));
                 ?>
                 <script>
                   jQuery(document).ready(function($){
