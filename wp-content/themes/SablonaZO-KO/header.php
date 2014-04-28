@@ -48,7 +48,20 @@
                         'menu_class' => 'info-line-menu', //Adding the class for FlexNav
                         'container_class' => 'menu',
                         'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>'));
-                ?>                  
+                ?>
+                <script>
+                  jQuery(document).ready(function($){
+                          $(".info-line-menu").flexNav({
+                            'animationSpeed':     250,            // default for drop down animation speed
+                            'transitionOpacity':  true,           // default for opacity animation
+                            'buttonSelector':     '.menu-button', // default menu button class name
+                            'hoverIntent':        false,          // Change to true for use with hoverIntent plugin
+                            'hoverIntentTimeout': 150,            // hoverIntent default timeout
+                            'calcItemWidths':     false,          // dynamically calcs top level nav item widths
+                            'hover':              true            // would you like hover support?
+                          });
+                  });
+                </script>                  
                 <div class="social">
                     <a href="#" class="twitter"><?php __('Twitter účet Strany zelených'); ?></a>
                     <a href="#" class="facebook"><?php __('Facebook účet Strany zelených'); ?></a>
