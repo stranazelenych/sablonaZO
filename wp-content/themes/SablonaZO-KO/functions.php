@@ -23,6 +23,7 @@ if ( function_exists( 'add_image_size' ) ) {
     
     // Featured image on the homepage
     add_image_size( "article-featured", 460, 260, true );
+    add_image_size( "article-full", 705, 705, true );
 }
 
 

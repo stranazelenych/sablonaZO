@@ -19,6 +19,9 @@
 
 <div class="l-section">
 	<div id="content">
+            
+                <?php the_post_thumbnail('article-full'); ?>
+            
 		<div id="topstory">
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 		   <!-- <div id="topstory-text"><?php the_excerpt(); ?></div>  -->
