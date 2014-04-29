@@ -33,26 +33,7 @@
 	</div>
 </div><!-- /l-section -->
 <div class="l-aside">
-	<div id="peticni-list" class="feed box ">
-		<div class="header">Petiční list</div>
-		<div class="content">
-			<p>Petici za vyřešení hlučnosti silnice I/57 ve Vsetíně Rokytnici můžete podepsat <a href="#" class="read-more">ZDE »</a></p>
-		</div>
-	</div>
-	<div id="novinky-emailem" class="feed box">
-		<div class="header">Novinky emailem</div>
-		<div class="content">
-			<form>
-				<input type="text" placeholder="Váš email" />
-			</form>
-		</div>
-	</div>
-	<div id="socialni-site" class="feed box">
-		<div class="header">Petiční list</div>
-		<div class="content">
-			<p>FB box nebo TW stream</p>
-		</div>
-	</div>
+        <?php if ( dynamic_sidebar('post-page-right') ) : else : endif; ?>
 </div><!-- /l-aside -->
 
 <?php endwhile; ?>

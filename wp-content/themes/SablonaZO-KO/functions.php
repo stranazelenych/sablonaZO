@@ -95,6 +95,12 @@ function add_widget_areas(){
         'before_widget' => '<div class="footer-text">',
         'after_widget' => '</div>',
     ));
+    register_sidebar( array(
+        'name' => __('Sidebar post/page'),
+        'id' => 'post-page-right',
+        'before_widget' => '<div class="post-page">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action( 'widgets_init', 'add_widget_areas' );
