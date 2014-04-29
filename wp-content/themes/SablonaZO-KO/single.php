@@ -24,7 +24,12 @@
             
 		<div id="topstory">
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-		   <!-- <div id="topstory-text"><?php the_excerpt(); ?></div>  -->
+                   
+                   <?php if(!is_page()) : ?>
+                        <!-- <div id="topstory-text"><?php the_excerpt(); ?></div>  -->
+                   <?php endif; ?>
+                   
+                   
 		</div>
 		<div class="clearfix"></div>
 		<div id="text">
