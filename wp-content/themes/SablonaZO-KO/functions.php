@@ -19,6 +19,12 @@ if(!is_admin()){
 // nastavení supportů šablony
 add_theme_support( 'post-thumbnails' );
 
+if ( function_exists( 'add_image_size' ) ) { 
+    
+    // Featured image on the homepage
+    add_image_size( "article-featured", 460, 260, true );
+}
+
 
 // registrace lokací menu
 function add_menus(){
