@@ -12,7 +12,7 @@
                 if ($featured) {
                     the_post_thumbnail('article-featured');
                 } else {
-                    the_post_thumbnail();
+                    the_post_thumbnail('thumbnail');
                 }
                 ?>
                          
