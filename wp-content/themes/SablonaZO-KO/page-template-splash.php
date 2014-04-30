@@ -53,8 +53,8 @@ Template Name: Splash page
 
 
 
-<?php echo get_field('show-box-newsletter'); ?>
-<?php echo get_field('show-box-fundraising'); ?>
+<?php echo get_field('show-box-newsletter', 'option'); ?>
+<?php echo get_field('show-box-fundraising', 'option'); ?>
 
 <?php
  //logika zobrazování custom fieldu true/false
