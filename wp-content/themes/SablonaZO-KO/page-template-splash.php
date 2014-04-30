@@ -7,6 +7,7 @@ Template Name: Splash page
 
 <div id="container" class="splash">
 
+    <?php /*
     <div id="menu">
             <div class="menu-button">Menu</div>
             <nav>
@@ -16,7 +17,7 @@ Template Name: Splash page
                     'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>'));
                     ?>
       </nav>
-    </div>
+    </div> */ ?>
     
     
 <?php include_once('visual.php'); ?>
