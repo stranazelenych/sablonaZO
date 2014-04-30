@@ -50,6 +50,12 @@ Template Name: Splash page
           <?php the_content(); ?></p>
         <?php endwhile; ?>
         <?php endif; ?>
+
+
+
+<?php echo get_field('show-box-newsletter'); ?>
+<?php echo get_field('show-box-fundraising'); ?>
+
 <?php
  //logika zobrazování custom fieldu true/false
 if( get_field('boxx') )
