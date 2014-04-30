@@ -8,7 +8,8 @@ Template Name: Splash page
 
 <style>
     
-    #header-wrap {
+    /* CSS hidden parts on page */
+    #header-wrap, #info-line-wrap {
         display: none; 
     }
     
