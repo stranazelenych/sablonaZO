@@ -41,8 +41,18 @@ Template Name: Splash page
 <?php endif; ?>
     
     
-    <?php echo get_field('splash-background', 'option') ?>
-    <?php echo get_field('show-splash-background', 'option') ?>
+    <?php $custom_background_url =  get_field('splash-background', 'option') ?>
+    <?php $custom_background_show =  get_field('show-splash-background', 'option') ?>
+    
+    <?php if ( $custom_background_show && strlen($custom_background_url) ) { ?>
+    
+    <style>
+        .splash .visual {
+            background-image: url('<?php echo $custom_background_url ?>');
+        }
+    </style>
+    
+    <?php } ?>
     
 
     <?php /*
