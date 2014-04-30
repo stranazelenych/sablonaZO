@@ -3,7 +3,7 @@
 Template Name: Splash page
 */
 ?>
-<?php //get_header(); ?>
+<?php get_header(); ?>
 
 <div id="container" class="splash">
 
@@ -88,4 +88,4 @@ Template Name: Splash page
 
 
 
-<?php //get_footer(); ?>
+<?php get_footer(); ?>
