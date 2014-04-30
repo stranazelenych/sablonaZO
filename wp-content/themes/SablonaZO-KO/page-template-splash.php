@@ -5,6 +5,15 @@ Template Name: Splash page
 ?>
 <?php get_header(); ?>
 
+
+<style>
+    
+    #header-wrap {
+        display: none; 
+    }
+    
+</style>
+
 <div id="container" class="splash">
 
     <?php /*
