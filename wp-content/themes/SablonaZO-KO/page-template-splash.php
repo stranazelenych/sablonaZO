@@ -40,9 +40,9 @@ Template Name: Splash page
     
     
     <a href="<?php echo get_permalink( 669 ) ?>" class="splash-continue">Pokračovat na web »</a>
-    <div class="visual-footer">
+    <?php /*<div class="visual-footer">
         <p>Ing.Vilém Jurek, předseda KO  |  tel. 605 526 958  |  email: <a href="#">vilem.j@gmail.com</a></p>
-    </div>
+    </div> */ ?>
 
       <div>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
