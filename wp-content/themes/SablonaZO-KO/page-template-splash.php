@@ -21,6 +21,25 @@ Template Name: Splash page
     
     
 <?php include_once('visual.php'); ?>
+    
+    
+<?php if (get_field('show-box-newsletter', 'option') == "Ne") : ?>
+    <style>
+        .splash .box-info {
+            display: none !important;
+        }
+    </style>
+<?php endif; ?>
+    
+    
+<?php if (get_field('show-box-fundraising', 'option') == "Ne") : ?>
+        <style>
+        .splash .box-fundraising {
+            display: none !important;
+        }
+    </style>
+<?php endif; ?>
+    
 
     <?php /*
     <div class="visual">
@@ -53,8 +72,6 @@ Template Name: Splash page
 
 
 
-<?php echo get_field('show-box-newsletter', 'option'); ?>
-<?php echo get_field('show-box-fundraising', 'option'); ?>
 
 <?php
  //logika zobrazování custom fieldu true/false
