@@ -3,7 +3,7 @@
 Template Name: Splash page
 */
 ?>
-<?php get_header(); ?>
+<?php //get_header(); ?>
 
 <div id="container" class="splash">
 
@@ -87,15 +87,5 @@ Template Name: Splash page
 
 
 
-<?php
- //logika zobrazování custom fieldu true/false
-if( get_field('boxx') )
-{
-    echo "do something";
-}else{
-    echo '<div style="width: 200px; height: 200px; background: #000;">';
-}
-?>
-      </div>
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
