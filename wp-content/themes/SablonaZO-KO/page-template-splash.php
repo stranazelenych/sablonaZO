@@ -7,6 +7,21 @@ Template Name: Splash page
 
 <div id="container" class="splash">
 
+    <div id="menu">
+            <div class="menu-button">Menu</div>
+            <nav>
+                    <?php wp_nav_menu( array(
+                    'theme_location' => 'primary',
+                    'menu_class' => 'flexnav', //Adding the class for FlexNav
+                    'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>'));
+                    ?>
+      </nav>
+    </div>
+    
+    
+<?php include_once('visual.php'); ?>
+
+    <?php /*
     <div class="visual">
         <hgroup class="org-name">
             <h1>Strana zelených</h1>
@@ -20,8 +35,10 @@ Template Name: Splash page
                 <h3>Podpořte nás</h3>
             </div>
         </div>
-    </div>
-    <a href="#" class="splash-continue">Pokračovat na web »</a>
+    </div> */ ?>
+    
+    
+    <a href="<?php echo get_permalink( 669 ) ?>" class="splash-continue">Pokračovat na web »</a>
     <div class="visual-footer">
         <p>Ing.Vilém Jurek, předseda KO  |  tel. 605 526 958  |  email: <a href="#">vilem.j@gmail.com</a></p>
     </div>

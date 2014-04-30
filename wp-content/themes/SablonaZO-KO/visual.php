@@ -16,6 +16,7 @@
         </div>
     </div>
 </div>
+
 <div class="visual-footer">
     <?php if ( dynamic_sidebar('footer-text') ) : else : endif; ?>
 </div>
