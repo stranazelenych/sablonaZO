@@ -40,6 +40,10 @@ Template Name: Splash page
     </style>
 <?php endif; ?>
     
+    
+    <?php echo get_field('splash-background', 'option') ?>
+    <?php echo get_field('show-splash-background', 'option') ?>
+    
 
     <?php /*
     <div class="visual">
