@@ -35,6 +35,10 @@
 		<div id="text">
 		  <p><span class="date"><?php the_date('j. n. Y'); ?></span><?php the_content(); ?></p>
 		</div>
+                
+                
+                <?php if ( dynamic_sidebar('box-under-post') ) : else : endif; ?>
+                
 	</div>
 </div><!-- /l-section -->
 <div class="l-aside">

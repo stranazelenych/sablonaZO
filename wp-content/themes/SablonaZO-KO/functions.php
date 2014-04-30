@@ -101,6 +101,12 @@ function add_widget_areas(){
         'before_widget' => '<div class="box">',
         'after_widget' => '</div>',
     ));
+    register_sidebar( array(
+        'name' => __('Box pod článkem'),
+        'id' => 'box-under-post',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action( 'widgets_init', 'add_widget_areas' );

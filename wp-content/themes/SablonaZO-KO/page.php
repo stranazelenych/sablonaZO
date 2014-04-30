@@ -34,6 +34,9 @@ Template Name: homepage
 		<div id="text">
 		  <p><?php the_content(); ?></p>
 		</div>
+                
+                <?php if ( dynamic_sidebar('box-under-post') ) : else : endif; ?>
+                
 	</div>
 </div><!-- /l-section -->
 <div class="l-aside">
