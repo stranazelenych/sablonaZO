@@ -9,6 +9,26 @@
 <div class="visual">
     
     
+    <?php if ( !is_page_template('page-template-splash.php') && get_field('footer-image-disabled', 'option') ) { ?>
+    
+        <style>
+            .visual {
+                background: transparent;
+                min-height: 0;
+            }
+        </style>
+    
+    <?php ?>
+    
+    <?php if ( !is_page_template('page-template-splash.php') && !get_field('footer-image-disabled', 'option') && strlen(get_field('footer-image', 'option')) ) { ?>
+    
+        <style>
+            .visual {
+                background-image: url(<?php get_field('footer-image', 'option') ?>);
+            }
+        </style>
+    
+    <?php ?>
     
     <?php
     // Splash things
