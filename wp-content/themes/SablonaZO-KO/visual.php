@@ -18,7 +18,7 @@
             }
         </style>
     
-    <?php ?>
+    <?php } ?>
     
     <?php if ( !is_page_template('page-template-splash.php') && !get_field('footer-image-disabled', 'option') && strlen(get_field('footer-image', 'option')) ) { ?>
     
@@ -28,7 +28,7 @@
             }
         </style>
     
-    <?php ?>
+    <?php } ?>
     
     <?php
     // Splash things
