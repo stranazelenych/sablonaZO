@@ -33,12 +33,13 @@
         <?php wp_head(); ?>
         
         
+    </head>
+    <body>
+        
         <!-- GA -->
         <?php echo get_field('google-analytics', 'option'); ?>
         <!-- /GA -->
         
-    </head>
-    <body>
 		<div id="color-lines">
 			<div class="orange"></div>
 			<div class="blue"></div>
