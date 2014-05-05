@@ -6,9 +6,20 @@
 
 <?php
 
-if ( is_page_template('page-template-splash.php') ) {
-    echo "věci pro splash";
-}
+    // Splash things
+    if ( is_page_template('page-template-splash.php') ) { ?>
+
+    <div class="logo">
+        <a href="<?php bloginfo('url'); ?>" class="ctyrlistek"></a>
+        <hgroup>
+            <a href="<?php bloginfo('url'); ?>">
+                <h1>Strana zelených</h1>
+                <h2><?php echo get_field('header2', 'option'); ?></h2>
+            </a>
+        </hgroup>
+    </div>
+
+    <?php } ?>
 
 ?>
 
