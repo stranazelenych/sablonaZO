@@ -16,13 +16,15 @@
 #header-wrap {
 	@header-space-big: 27px;
 	@header-space-small: 17px;
-	@header-height: 180px;
+	@header-height: 170px;
 	background: #319c31 url(../img/header-bg.png) repeat-x left top;
 	overflow: hidden;
         margin: 0;
+        background-size: cover !important;
         
 	@media screen and (min-width: 980px) {
                 margin: @space*2 0 0 0;
+                height: @header-height;
 	}
 	#header {
 		a {
