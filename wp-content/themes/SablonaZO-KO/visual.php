@@ -4,7 +4,12 @@
 	</div>
 </div>
 
-<?php
+
+
+<div class="visual">
+    
+    
+    <?php
 
     // Splash things
     if ( is_page_template('page-template-splash.php') ) { ?>
@@ -20,21 +25,26 @@
     </div>
 
     <?php } ?>
-
-?>
-
-
-<div class="visual">
+    
+    
     <div class="action-boxes">
-        <div class="box box-info">
-            <h3>Získejte informace</h3>
-            <?php if ( dynamic_sidebar('action-box-info') ) : else : endif; ?>
-        </div>
-        <div class="box box-fundraising">
-            <h3>Podpořte nás</h3>
-            <a href="<?php echo get_field("fundraising","option");?>" class="action-box-button" >Darovat</a>
-        </div>
+        
+        <?php if (get_field('show-box-newsletter', 'option') == "Ano") : ?>
+            <div class="box box-info">
+                <h3>Získejte informace</h3>
+                <?php if ( dynamic_sidebar('action-box-info') ) : else : endif; ?>
+            </div>
+        <?php endif; ?>
+        
+        
+        <?php if (get_field('show-box-fundraising', 'option') == "Ano") : ?>
+            <div class="box box-fundraising">
+                <h3>Podpořte nás</h3>
+                <a href="<?php echo get_field("fundraising","option");?>" class="action-box-button" >Darovat</a>
+            </div>
+        <?php endif; ?>
     </div>
+    
 </div>
 
 <div class="visual-footer">

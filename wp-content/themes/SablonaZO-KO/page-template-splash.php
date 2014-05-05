@@ -31,26 +31,7 @@ Template Name: Splash page
     
     
 <?php include_once('visual.php'); ?>
-    
-    
-<?php if (get_field('show-box-newsletter', 'option') == "Ne") : ?>
-    <style>
-        .splash .box-info {
-            display: none !important;
-        }
-    </style>
-<?php endif; ?>
-    
-    
-<?php if (get_field('show-box-fundraising', 'option') == "Ne") : ?>
-        <style>
-        .splash .box-fundraising {
-            display: none !important;
-        }
-    </style>
-<?php endif; ?>
-    
-    
+        
     <?php $custom_background_url =  get_field('splash-background', 'option') ?>
     <?php $custom_background_show =  get_field('show-splash-background', 'option') ?>
     
