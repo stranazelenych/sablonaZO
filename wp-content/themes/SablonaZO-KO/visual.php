@@ -13,7 +13,11 @@
     <?php
     // Splash things
     if ( is_page_template('page-template-splash.php') ) { ?>
-        <a href="<?php echo get_permalink( 669 ) ?>" class="splash-continue">Pokračovat na web »</a>
+    
+        <?php if (get_field('splash-show-continue-link', 'option')) { ?>
+            <a href="<?php echo get_permalink( 669 ) ?>" class="splash-continue">Pokračovat na web »</a>
+        <?php } ?>        
+        
     <?php } ?>
     
     <?php
