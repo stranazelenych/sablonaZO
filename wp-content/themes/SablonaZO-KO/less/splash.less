@@ -4,15 +4,13 @@
 
 	.org-name {
 		margin-top: 45px;
-		position: relative;
-		left: 50px;
+		margin-bottom: 30px;
 		text-align: left;
 		background: @green;
 		display: inline-block;
 		padding: 0 @space;
 		position: relative;
 		color: #fff;
-		margin-bottom: 30px;
 		h1, h2 {
 			font-weight: normal;
                         color: #fff;
@@ -24,18 +22,10 @@
 		h2 {
 			padding: 15px 10px 10px;
 		}
-		&:before {
-			content: "";
-			position: absolute;
-			top: -25px;
-			left: -110px;
-			display: block;
-			width: 130px;
-			height: 130px;
-			background: transparent url("../img/logo-v-kruhu.png") 0 0 no-repeat;
-		}
 		@media screen and (min-width: 640px) {
 			margin-top: 85px;
+                        position: relative;
+                        left: 50px;
 			h1 {
 				font-size: 36px;
 				padding: 5px 30px 0;
@@ -44,6 +34,16 @@
 				font-size: 24px;
 				padding: 0px 30px 10px;
 			}
+                    &:before {
+                            content: "";
+                            position: absolute;
+                            top: -25px;
+                            left: -110px;
+                            display: block;
+                            width: 130px;
+                            height: 130px;
+                            background: transparent url("../img/logo-v-kruhu.png") 0 0 no-repeat;
+                    }
 		}
 	}
 
