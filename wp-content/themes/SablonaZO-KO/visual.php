@@ -24,7 +24,7 @@
     
         <style>
             .visual {
-                background-image: url(<?php get_field('footer-image', 'option') ?>);
+                background-image: url(<?php echo get_field('footer-image', 'option') ?>);
             }
         </style>
     
