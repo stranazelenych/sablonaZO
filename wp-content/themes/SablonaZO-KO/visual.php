@@ -20,15 +20,20 @@
     // Splash things
     if ( is_page_template('page-template-splash.php') ) { ?>
 
-    <div class="org-name">
-        <a href="<?php bloginfo('url'); ?>" class="ctyrlistek"></a>
-        <hgroup>
-            <a href="<?php bloginfo('url'); ?>">
-                <h1>Strana zelených</h1>
-                <h2><?php echo get_field('header2', 'option'); ?></h2>
-            </a>
-        </hgroup>
-    </div>
+        <?php if (get_field('splash-show-logo', 'option')) { ?>
+            
+            <div class="org-name">
+                <a href="<?php bloginfo('url'); ?>" class="ctyrlistek"></a>
+                <hgroup>
+                    <a href="<?php bloginfo('url'); ?>">
+                        <h1>Strana zelených</h1>
+                        <h2><?php echo get_field('logo-second-line', 'option'); ?></h2>
+                    </a>
+                </hgroup>
+            </div>
+        
+        <?php } ?>
+        
 
     <?php } ?>
     
