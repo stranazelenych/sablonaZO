@@ -67,7 +67,9 @@
                         <div class="social">
                             
                             <?php if (get_field('headerfb', 'option')): ?>
-                                <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_field('header-url-facebook', 'option')) ?>&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=160419347389933" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+                                <div class="fb-button">
+                                    <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_field('header-url-facebook', 'option')) ?>&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=160419347389933" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+                                </div>
                             <?php endif; ?>
                             
                             <?php if (get_field('headertw', 'option')): ?>
