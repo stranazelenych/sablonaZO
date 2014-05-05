@@ -31,6 +31,12 @@
 
         <!-- slouží k vypisování scriptů a dalších záležitostí wordpressu a jeho pluginů !-->
         <?php wp_head(); ?>
+        
+        
+        <!-- GA -->
+        <?php echo get_field('google-analytics', 'option'); ?>
+        <!-- /GA -->
+        
     </head>
     <body>
 		<div id="color-lines">
