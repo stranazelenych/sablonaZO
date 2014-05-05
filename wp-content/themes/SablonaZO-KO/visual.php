@@ -45,6 +45,15 @@
         <?php endif; ?>
     </div>
     
+    
+    <?php
+
+    // Splash things
+    if ( is_page_template('page-template-splash.php') ) { ?>
+        <a href="<?php echo get_permalink( 669 ) ?>" class="splash-continue">Pokračovat na web »</a>
+    <?php } ?>
+    
+    
 </div>
 
 <div class="visual-footer">

@@ -54,14 +54,19 @@
 		padding: @space @space*2;
 		display: inline-block;
 		.rounded-corners(@space*2);
+                border: 2px solid #FFFFFF;
 		@media screen and (min-width: 640px) {
-			position: relative;
-			top: -100px;
+			position: absolute;
+			bottom: -26px;
 		}
 	}
         
         .bottom-nav {
             display: none; 
+        }
+        
+        .visual {
+            overflow: auto;
         }
                 
 }
