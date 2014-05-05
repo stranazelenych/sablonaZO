@@ -4,6 +4,15 @@
 	</div>
 </div>
 
+<?php
+
+if ( is_page_template('page-template-splash.php') ) {
+    echo "věci pro splash";
+}
+
+?>
+
+
 <div class="visual">
     <div class="action-boxes">
         <div class="box box-info">
