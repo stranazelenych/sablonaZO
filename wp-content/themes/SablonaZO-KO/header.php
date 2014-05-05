@@ -65,6 +65,16 @@
                             </a>
                         </hgroup>
                         <div class="social">
+                            
+                            <?php if (get_field('headerfb', 'option')): ?>
+                                <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_field('header-url-facebook', 'option')) ?>&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=160419347389933" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+                            <?php endif; ?>
+                            
+                            <?php if (get_field('headertw', 'option')): ?>
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo get_field('header-url-twitter', 'option') ?>" data-lang="cs">Tweet</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                            <?php endif; ?>
+                                
                         </div>
                     </div>
             <?php endif; ?>
