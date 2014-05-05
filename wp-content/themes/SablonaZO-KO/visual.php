@@ -14,7 +14,7 @@
     // Splash things
     if ( is_page_template('page-template-splash.php') ) { ?>
 
-    <div class="logo">
+    <div class="org-name">
         <a href="<?php bloginfo('url'); ?>" class="ctyrlistek"></a>
         <hgroup>
             <a href="<?php bloginfo('url'); ?>">
