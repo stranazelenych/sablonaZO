@@ -20,7 +20,7 @@ Template Name: Homepage
 <div class="content-wrapper page-404">
 
     <h1>Stránka nenalezena</h1>
-    <p>Požadovaná stránka nebyl nalezena.</p>
+    <p>Požadovaná stránka nebyla nalezena.</p>
     <?php get_search_form(); ?>
  
 </div><!-- /content-wrapper -->
