@@ -64,7 +64,8 @@
     
     <div class="action-boxes">
         
-        <?php if (get_field('show-box-newsletter', 'option')) : ?>
+        <?php if ( ( is_page_template('page-template-splash.php') && get_field('show-box-newsletter', 'option') ) ||
+                ( !is_page_template('page-template-splash.php') && get_field('footer-show-box-newsletter', 'option') ) ) : ?>
             <div class="box box-info">
                 <h3>Získejte informace</h3>
                 <?php if ( dynamic_sidebar('action-box-info') ) : else : endif; ?>
@@ -72,7 +73,8 @@
         <?php endif; ?>
         
         
-        <?php if (get_field('show-box-fundraising', 'option')) : ?>
+        <?php if ( ( is_page_template('page-template-splash.php') && get_field('show-box-fundraising', 'option') ) ||
+                ( !is_page_template('page-template-splash.php') && get_field('footer-show-box-fundraising', 'option') ) ) : ?>
             <div class="box box-fundraising">
                 <h3>Podpořte nás</h3>
                 <a href="<?php echo get_field("fundraising","option");?>" class="action-box-button" >Darovat</a>
