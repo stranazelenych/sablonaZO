@@ -38,8 +38,8 @@
                   });
                 </script>                  
                 <div class="social">
-                    <a href="<?php echo get_field('upper-line-facebook', 'option'); ?>" class="twitter"><?php __('Twitter účet Strany zelených'); ?></a>
-                    <a href="<?php echo get_field('upper-line-twitter', 'option'); ?>" class="facebook"><?php __('Facebook účet Strany zelených'); ?></a>
+                    <a href="<?php echo get_field('upper-line-twitter', 'option'); ?>" class="twitter"><?php __('Twitter účet Strany zelených'); ?></a>
+                    <a href="<?php echo get_field('upper-line-facebook', 'option'); ?>" class="facebook"><?php __('Facebook účet Strany zelených'); ?></a>
                     <a href="<?php echo get_field('upper-line-youtube', 'option'); ?>" class="youtube"><?php __('Youtube účet Strany zelených'); ?></a>
                 </div>
                 <?php if ( dynamic_sidebar('info-line') ) : else : endif; ?>
