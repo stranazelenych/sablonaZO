@@ -42,14 +42,18 @@ Template Name: Homepage
                          * this in a child theme then include a file called called content-___.php
                          * (where ___ is the post format) and that will be used instead.
                          */
-                        get_template_part( 'content', get_post_format() );
-
-                endwhile;
-
+                        //get_template_part( 'content', get_post_format() );
+                
                 ?>
+                
+                
+		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                   <?php the_excerpt(); ?>
+                   
+                <?php endwhile; ?>
 
         <?php else : ?>
-                asdf
+                Žádné příspěvky
         <?php endif; ?>
 
 </div><!-- /articles -->
