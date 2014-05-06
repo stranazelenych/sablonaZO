@@ -162,8 +162,8 @@ function paginate($pages = '', $range = 2)
      if(1 != $pages)
      {
          echo "<div class='pagination'>";
-         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo;</a>";
-         if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a>";
+//         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo;</a>";
+         if($paged > 1 /*&& $showitems < $pages*/) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a>";
 
          for ($i=1; $i <= $pages; $i++)
          {
@@ -173,8 +173,8 @@ function paginate($pages = '', $range = 2)
              }
          }
 
-         if ($paged < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";
-         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>&raquo;</a>";
+         if ($paged < $pages /*&& $showitems < $pages*/) echo "<a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";
+//         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>&raquo;</a>";
          echo "</div>\n";
      }
 }
