@@ -20,20 +20,6 @@ Template Name: Homepage
 <div class="content-wrapper">
 
 <div class="l-column">
-<!-- box vlevo nahoře -->
-<?php if ( dynamic_sidebar('home-top-left') ) : else : endif; ?>
-
-<!-- /promo-box -->
-
-
-<?php if (is_handheld()) { ?>
-
-    <!-- box vpravo nahoře -->
-	<?php if ( dynamic_sidebar('home-top-right') ) : else : endif; ?>
-	<!-- /media-box -->
-
-<?php } ?>
-
 
 <!-- box vlevo articles -->
 <div id="articles">
@@ -63,7 +49,7 @@ Template Name: Homepage
                 ?>
 
         <?php else : ?>
-                <?php get_template_part( 'content', 'none' ); ?>
+                asdf
         <?php endif; ?>
 
 </div><!-- /articles -->
