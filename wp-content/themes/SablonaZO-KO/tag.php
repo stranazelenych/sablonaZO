@@ -60,7 +60,6 @@ Template Name: Homepage
 
                 endwhile;
 
-                twentytwelve_content_nav( 'nav-below' );
                 ?>
 
         <?php else : ?>
