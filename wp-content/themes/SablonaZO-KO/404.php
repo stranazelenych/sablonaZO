@@ -17,7 +17,7 @@ Template Name: Homepage
   </nav>
 </div>
 
-<div class="content-wrapper">
+<div class="content-wrapper page-404">
 
     <h1>Stránka nenalezena</h1>
     <?php get_search_form(); ?>
