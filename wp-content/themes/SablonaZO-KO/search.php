@@ -24,17 +24,13 @@ Template Name: Homepage
 <!-- box vlevo articles -->
 <div id="articles">
     
-    <h2>Hledání</h2>
+    
+    <header class="archive-header">
+        <h1 class="archive-title">Výsledky hledání</h1>
+    </header><!-- .archive-header -->
     
         <?php if ( have_posts() ) : ?>
-                <header class="archive-header">
-                        <h1 class="archive-title"><?php printf( __( 'Kategorie: %s' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
-
-                <?php if ( tag_description() ) : // Show an optional tag description ?>
-                        <div class="archive-meta"><?php echo tag_description(); ?></div>
-                <?php endif; ?>
-                </header><!-- .archive-header -->
-
+                
                 <?php
                 /* Start the Loop */
                 while ( have_posts() ) : the_post();
