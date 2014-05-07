@@ -23,7 +23,8 @@ Template Name: Homepage
 
 <!-- box vlevo articles -->
 <div id="articles">
-
+    
+    <h2>Hledání</h2>
     
         <?php if ( have_posts() ) : ?>
                 <header class="archive-header">
