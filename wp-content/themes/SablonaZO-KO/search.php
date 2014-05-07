@@ -22,12 +22,16 @@ Template Name: Homepage
 <div class="l-column">
 
 <!-- box vlevo articles -->
-<div id="articles">
+<div id="articles" class="search-results">
     
     
     <header class="archive-header">
         <h1 class="archive-title">Výsledky hledání</h1>
     </header><!-- .archive-header -->
+    
+    
+        <?php get_search_form(); ?>
+    
     
         <?php if ( have_posts() ) : ?>
                 
