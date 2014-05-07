@@ -98,7 +98,7 @@ function add_widget_areas(){
     register_sidebar( array(
         'name' => __('Sidebar post/page'),
         'id' => 'post-page-right',
-        'before_widget' => '<div class="box">',
+        'before_widget' => '<div class="feed box">',
         'after_widget' => '</div>',
     ));
     register_sidebar( array(
