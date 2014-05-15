@@ -1,5 +1,11 @@
 <?php
 
+// úprava pro to, aby author mohl vkládat HTML embed
+$role = get_role( 'author' );
+
+// -> druhá podmínka pro to samé -> 
+$role->add_cap( 'unfiltered_html' );
+
 
 // skripty
 function add_scripts(){
