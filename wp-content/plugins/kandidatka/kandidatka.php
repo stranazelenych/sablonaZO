@@ -97,12 +97,17 @@ add_filter(
 );
 
 /**
- * Renders custom CSS for custom fields edits.
+ * Includes custom CSS for custom fields edits.
  */
-function sz_kandidatka_admin_head() {
-	?>
-<style>
-</style>
-	<?php
+function sz_kandidatka_admin_enqueue_scripts() {
+	wp_register_style(
+		'sz_kandidatka_admin_css',
+		plugin_dir_url( __FILE__ ) . '/kandidatka.css',
+		array( 'acf-input' ),
+		'0.1'
+	);
+	wp_enqueue_style( 'sz_kandidatka_admin_css' );
 }
-//add_action( 'acf/input/admin_head', 'sz_kandidatka_admin_head' );
+add_action(
+	'acf/input/admin_enqueue_scripts', 'sz_kandidatka_admin_enqueue_scripts'
+);
