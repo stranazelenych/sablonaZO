@@ -23,17 +23,6 @@ Template Name: Kandidátka
 
 
 
-<?php
- //logika zobrazování custom fieldu true/false
-if( get_field('boxx') )
-{
-    echo "do something";
-}else{
-    echo '<div style="width: 200px; height: 200px; background: #000;">';
-}
-?>
-
-
 
 
 
