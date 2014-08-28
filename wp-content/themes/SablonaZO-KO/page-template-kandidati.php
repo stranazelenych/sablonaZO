@@ -58,9 +58,11 @@ Template Name: Kandidátka
         </b>
         
         <?php
-        if (get_sub_field('age')>0) {
-        (<?php the_sub_field('age'); ?> let)
-        <?php } ?>
+        $age=get_sub_field('age';
+        
+        if $age>0 {
+        echo "(" & $age & " let)"
+        } ?>
         <br>
         <?php the_sub_field('bio'); ?>
         
