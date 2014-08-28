@@ -60,15 +60,15 @@ Template Name: Kandidátka
         
         
        <br>
-        <?php the_sub_field('bio'); ?>
+       <?php the_sub_field('bio'); ?>,
         
         
        <?php
 
 if (get_sub_field('is_member')==1) {
-  echo ", člen(ka) Strany zelených";
+  echo " člen(ka) Strany zelených";
 } else {
-  echo ", bez p.p.";
+  echo " bez p.p.";
 }
 ?>
         
