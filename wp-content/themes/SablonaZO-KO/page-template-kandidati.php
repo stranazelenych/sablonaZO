@@ -77,6 +77,17 @@ facebook (URL)
 twitter (URL)
 google+ (URL)
 photo (image)
+
+TODO:
+- zobrazování věku a dalších položek pouze pokud jsou vyplněny
+- zobrazování odkazu na podrobný profil - méno jako aktivní link
+- nominující strana (u koalic)
+- zobrazování odkazů na weby a sociální sítě, pokud jsou vyplněny
+- zobrazování fotky
+
+- odkaz na výsledky voleb - pokud je vyplněno
+
+
 -->
 
 <?php if( have_rows('candidate') ): ?>
