@@ -55,26 +55,20 @@ Template Name: Kandidátka
         <?php the_sub_field('middle_name'); ?>
         <?php the_sub_field('last_name'); ?>
         <?php the_sub_field('salutation_suffix'); ?> 
+        (<?php the_sub_field('age'); ?> let) 
         </b>
         
-        <?php
-        $age=get_sub_field('age');
         
-        if ($age>0) {
-        echo "(" & $age & " let)"
-        } ?>
-        <br>
+       <br>
         <?php the_sub_field('bio'); ?>
         
         
-        <?php the_sub_field('is_member'); ?>
-       
        <?php
 
 if (get_sub_field('is_member')==1) {
-  echo "Strana zelených";
+  echo ", člen(ka) Strany zelených";
 } else {
-  echo "bez p.p.";
+  echo ", bez p.p.";
 }
 ?>
         
