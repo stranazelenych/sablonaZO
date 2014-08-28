@@ -61,11 +61,18 @@ Template Name: Kandidátka
         <br>
         <?php the_sub_field('bio'); ?>
         
-        <?php if( get_sub_field('is_member') ): ?>
-	(člen Strany zelených)  
-      	<?php else?>
-        (bez p.p.)
-        <?php endif?>
+        
+        <?php
+$clen_sz = get_sub_field('is_member'); 
+
+
+if ($clen_sz == true {
+  echo "člen Strany zelených";
+
+} else {
+	echo "bez p.p.";
+}
+?>
         
      
         
@@ -75,7 +82,7 @@ Template Name: Kandidátka
         
         <?php 
         
-        $sub_field_3 = get_sub_field('is_member'); 
+        
         
         // do something with $sub_field_3
         
