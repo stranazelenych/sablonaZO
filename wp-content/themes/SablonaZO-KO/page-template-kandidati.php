@@ -28,6 +28,8 @@ Template Name: Kandidátka
             
                 <?php the_post_thumbnail('article-full'); ?>
             
+            Datum voleb: <?php echo get_field('polls_date', 'option') ?>
+            
 		<div id="topstory">
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                    
