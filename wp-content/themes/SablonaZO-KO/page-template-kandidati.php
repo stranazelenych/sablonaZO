@@ -65,8 +65,7 @@ Template Name: Kandidátka
        
        <?php
 
-
-if (get_sub_field('is_member')="1") {
+if (get_sub_field('is_member')==1) {
   echo "Strana zelených";
 } else {
   echo "bez p.p.";
