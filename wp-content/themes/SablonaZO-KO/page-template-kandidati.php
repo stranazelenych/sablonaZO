@@ -39,7 +39,7 @@ Template Name: Kandidátka
 		<div class="clearfix"></div>
 		<div id="text">
 		
-		Výpis kandidátů
+		<p><h4>Výpis kandidátů</h4>
 		
 
 
@@ -59,11 +59,11 @@ Template Name: Kandidátka
         </b>
         (<?php the_sub_field('age'); ?> let)
         <br>
-        <?php the_sub_field('bio'); ?>
+        <?php the_sub_field('bio'); ?> (<?php the_sub_field('age'); ?> let)
+        (<?php the_sub_field('is_member'); ?> let)
         
         
-        
-  
+
         
         </li>
         
