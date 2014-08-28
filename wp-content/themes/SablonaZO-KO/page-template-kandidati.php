@@ -27,17 +27,13 @@ Template Name: Kandidátka
 	<div id="content">
             
                 <?php the_post_thumbnail('article-full'); ?>
-            
-            Datum voleb: <?php echo get_field('polls_date', 'option') ?>
+           
             
 		<div id="topstory">
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                    
-                   <?php if(!is_page()) : ?>
-                        <!-- <div id="topstory-text"><?php the_excerpt(); ?></div>  -->
-                   <?php endif; ?>
-                   
-                   
+        	Datum voleb: <?php echo get_field('polls_date', 'option') ?>        
+                   	     
 		</div>
 		<div class="clearfix"></div>
 		<div id="text">
