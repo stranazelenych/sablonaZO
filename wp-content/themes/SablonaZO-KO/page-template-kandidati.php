@@ -33,11 +33,35 @@ Template Name: Kandidátka
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                    
         	Datum voleb: <?php the_field('polls_date', 'option') ?>        
-                   	     
+                
 		</div>
 		<div class="clearfix"></div>
 		<div id="text">
-		  <p><span class="date"><?php the_date('j. n. Y'); ?></span><?php the_content(); ?></p>
+		
+		Výpis kandidátů
+		
+		<?php
+
+$values = get_field('candidate');
+if($values)
+{
+	echo '<ul>';
+
+	foreach($values as $value)
+	{
+		echo '<li>' . $value . '</li>';
+	}
+
+	echo '</ul>';
+}
+
+// always good to see exactly what you are working with
+var_dump($values);
+
+?>
+		
+		
+		
 		</div>
                 
                 
