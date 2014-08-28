@@ -40,7 +40,44 @@ Template Name: Kandidátka
 		<div id="text">
 		<h4>Výpis kandidátů</h4>
 		
+<!-- 
+hodnoty hlavičky kandidátky:
 
+
+polls_type
+polls_year
+polls_date
+polls_term
+polls_location
+polls_manager_name
+polls_manager_email
+polls_manager_phone
+polls_result (URL)
+
+hodnoty výpisu kandidátů; 
+position
+salutation_prefix
+first_name
+middle_name
+last_name
+salutation_suffix
+email
+phone
+address
+postal_code
+city
+is_member (1|0)
+nominator
+sex
+age
+bio
+detailed_bio (URL)
+web (URL)
+facebook (URL)
+twitter (URL)
+google+ (URL)
+photo (image)
+-->
 
 <?php if( have_rows('candidate') ): ?>
  
