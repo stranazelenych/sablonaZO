@@ -40,25 +40,6 @@ Template Name: Kandidátka
 		
 		Výpis kandidátů
 		
-		<?php
-
-$values = get_field('candidate');
-if($values)
-{
-	echo '<ul>';
-
-	foreach($values as $value)
-	{
-		echo '<li>' . $value . '</li>';
-	}
-
-	echo '</ul>';
-}
-
-// always good to see exactly what you are working with
-var_dump($values);
-
-?>
 
 
 <?php if( have_rows('candidate') ): ?>
@@ -67,11 +48,11 @@ var_dump($values);
  
     <?php while( have_rows('candidate') ): the_row(); ?>
  
-        <li>sub_field_1 = <?php the_sub_field('position'); ?>, sub_field_2 = <?php the_sub_field('first_name'); ?>, etc</li>
+        <li><?php the_sub_field('position'); ?>. <?php the_sub_field('first_name'); ?> <?php the_sub_field('last_name'); ?></li>
         
         <?php 
         
-        $sub_field_3 = get_sub_field('last_name'); 
+        $sub_field_3 = get_sub_field('is_member'); 
         
         // do something with $sub_field_3
         
