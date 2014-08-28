@@ -66,7 +66,7 @@ Template Name: Kandidátka
 $clen_sz = get_sub_field('is_member'); 
 
 
-if ($clen_sz == true {
+if ($clen_sz == 'true' {
   echo "člen Strany zelených";
 
 } else {
@@ -75,8 +75,7 @@ if ($clen_sz == true {
 ?>
         
      
-        
-        
+     
         
         </li>
         
