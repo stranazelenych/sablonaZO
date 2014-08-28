@@ -31,8 +31,9 @@ Template Name: Kandidátka
             
 		<div id="topstory">
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                   
-        	Datum voleb: <?php the_field('polls_term') ?>        
+                  
+        	<p>Volební období: <?php the_field('polls_term') ?>
+        	<p>Město: <?php the_field('polls_location') ?>        
                 
 		</div>
 		<div class="clearfix"></div>
@@ -44,11 +45,33 @@ Template Name: Kandidátka
 
 <?php if( have_rows('candidate') ): ?>
  
-    <ul>
+    <ul style="list-style-type:none;">
  
     <?php while( have_rows('candidate') ): the_row(); ?>
  
-        <li><?php the_sub_field('position'); ?>. <?php the_sub_field('first_name'); ?> <?php the_sub_field('last_name'); ?></li>
+        <li><?php the_sub_field('position'); ?>. 
+        <b>
+        <?php the_sub_field('salutation_prefix'); ?> 
+        <?php the_sub_field('first_name'); ?> 
+        <?php the_sub_field('middle_name'); ?>
+        <?php the_sub_field('last_name'); ?>
+        <?php the_sub_field('salutation_suffix'); ?> 
+        </b>
+        (<?php the_sub_field('age'); ?> let)
+        <br>
+        <?php the_sub_field('bio'); ?>
+        
+        <?php if( get_sub_field('is_member') ): ?>
+	(člen Strany zelených)  
+      	<?php else?>
+        (bez p.p.)
+        <?php endif?>
+        
+     
+        
+        
+        
+        </li>
         
         <?php 
         
