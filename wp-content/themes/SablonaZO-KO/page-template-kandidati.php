@@ -56,9 +56,12 @@ Template Name: Kandidátka
         <?php the_sub_field('last_name'); ?>
         <?php the_sub_field('salutation_suffix'); ?> 
         </b>
+        <?php
+        if (!get_sub_field('age')==0) {
         (<?php the_sub_field('age'); ?> let)
+        <?php } ?>
         <br>
-        <?php the_sub_field('bio'); ?> (<?php the_sub_field('age'); ?> let)
+        <?php the_sub_field('bio'); ?>
         
         
         <?php the_sub_field('is_member'); ?>
