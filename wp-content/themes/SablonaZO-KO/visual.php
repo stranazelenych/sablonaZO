@@ -35,7 +35,7 @@
     if ( is_page_template('page-template-splash.php') ) { ?>
     
         <?php if (get_field('splash-show-continue-link', 'option')) { ?>
-            <a href="<?php echo get_permalink( 669 ) ?>" class="splash-continue">Pokračovat na web »</a>
+            <a href="<?php echo get_field('splash-button-url', 'option'); ?>" class="splash-continue"><?php echo get_field('splash-button-text', 'option'); ?></a>
         <?php } ?>        
         
     <?php } ?>
