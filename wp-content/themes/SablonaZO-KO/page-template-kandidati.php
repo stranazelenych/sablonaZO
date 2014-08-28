@@ -32,7 +32,7 @@ Template Name: Kandidátka
 		<div id="topstory">
 		   <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                    
-        	Datum voleb: <?php the_field('polls_date', 'option') ?>        
+        	Datum voleb: <?php the_field('polls_term') ?>        
                 
 		</div>
 		<div class="clearfix"></div>
