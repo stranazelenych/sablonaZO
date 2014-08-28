@@ -62,20 +62,8 @@ Template Name: Kandidátka
         <?php the_sub_field('bio'); ?>
         
         
-        <?php
-$clen_sz = get_sub_field('is_member'); 
-
-
-if ($clen_sz == 'true' {
-  echo "člen Strany zelených";
-
-} else {
-	echo "bez p.p.";
-}
-?>
         
-     
-     
+  
         
         </li>
         
