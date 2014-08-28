@@ -51,7 +51,7 @@
                 <hgroup>
                     <a href="<?php bloginfo('url'); ?>">
                         <h1>Strana zelených</h1>
-                        <h2><?php echo get_field('logo-second-line', 'option'); ?></h2>
+                        <h2><?php echo get_field('splash-logo-second-line', 'option'); ?></h2>
                     </a>
                 </hgroup>
             </div>
