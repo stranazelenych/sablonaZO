@@ -59,6 +59,29 @@ if($values)
 var_dump($values);
 
 ?>
+
+
+<?php if( have_rows('candidate') ): ?>
+ 
+    <ul>
+ 
+    <?php while( have_rows('candidate') ): the_row(); ?>
+ 
+        <li>sub_field_1 = <?php the_sub_field('position'); ?>, sub_field_2 = <?php the_sub_field('first_name'); ?>, etc</li>
+        
+        <?php 
+        
+        $sub_field_3 = get_sub_field('last_name'); 
+        
+        // do something with $sub_field_3
+        
+        ?>
+        
+    <?php endwhile; ?>
+ 
+    </ul>
+ 
+<?php endif; ?>
 		
 		
 		
