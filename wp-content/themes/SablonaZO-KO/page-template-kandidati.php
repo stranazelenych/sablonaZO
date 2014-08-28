@@ -1,7 +1,6 @@
-
 <?php
 /*
-Template Name: homepage
+Template Name: Kandidátka
 */
 ?>
 
