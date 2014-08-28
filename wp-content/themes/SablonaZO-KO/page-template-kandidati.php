@@ -34,12 +34,11 @@ Template Name: Kandidátka
                   
         	<p>Volební období: <?php the_field('polls_term') ?>
         	<p>Město: <?php the_field('polls_location') ?>        
-                
+
 		</div>
 		<div class="clearfix"></div>
 		<div id="text">
-		
-		<p><h4>Výpis kandidátů</h4>
+		<h4>Výpis kandidátů</h4>
 		
 
 
@@ -60,7 +59,21 @@ Template Name: Kandidátka
         (<?php the_sub_field('age'); ?> let)
         <br>
         <?php the_sub_field('bio'); ?> (<?php the_sub_field('age'); ?> let)
-        (<?php the_sub_field('is_member'); ?> let)
+        
+        
+        <?php the_sub_field('is_member'); ?>
+       
+       <?php
+
+
+if (get_sub_field('is_member')="1") {
+  echo "Strana zelených";
+} else {
+  echo "bez p.p.";
+}
+?>
+        
+        
         
         
 
