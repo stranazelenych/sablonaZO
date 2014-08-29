@@ -123,9 +123,10 @@ if (get_sub_field('is_member')==1) {
 
 <?php  
        
-       $url=get_sub_field('detailed_bio')
+       $url=get_sub_field('detailed_bio');
+       
         if (!empty($url)) {
-        echo "<a href=" & url & ">profil kandidáta</a>"
+        echo "<a href=" & url & ">profil kandidáta</a>";
         } 
         ?>
         
