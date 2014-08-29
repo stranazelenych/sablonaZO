@@ -137,9 +137,12 @@ if (get_sub_field('is_member')==1) {
   echo " bez p.p.";
 }
 
-        if (!empty(the_sub_field('photo'))) {
-        echo "<img src=" . the_sub_field('photo') . " align=right>" ;
+$photo_url = get_sub_field('photo')
+
+        if (!empty($photo_url)) {
+        echo "<img src=" . $photo_url . " align=right>" ;
         } 
+        
         ?>      
     
        
