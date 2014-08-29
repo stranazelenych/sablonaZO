@@ -151,7 +151,7 @@ if (get_sub_field('is_member')==1) {
 $photo_url = get_sub_field('photo');
 
         if (!empty($photo_url)) {
-        echo "<p><img src=" . $photo_url . " width=400 style=margin-bottom:20px><br>" ;
+        echo "<p><img src=" . $photo_url . " width=100 style=margin-bottom:20px><br>" ;
         } 
         
         ?>      
