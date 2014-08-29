@@ -104,7 +104,7 @@ TODO:
        $url=get_sub_field('detailed_bio');
        
         if (!empty($url)) {
-        echo "<a href=". $url . ">"
+        echo "<a href=". $url . ">";
         } 
         ?>
         
