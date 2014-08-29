@@ -106,6 +106,7 @@ TODO:
         (<?php the_sub_field('age'); ?> let) 
         </b>
         
+       
         
        <br>
        <?php the_sub_field('bio'); ?>,
@@ -119,6 +120,14 @@ if (get_sub_field('is_member')==1) {
   echo " bez p.p.";
 }
 ?>
+
+<?php  
+       
+       $url=get_sub_field('detailed_bio')
+        if (!empty($url)) {
+        echo "<a href=" & url & ">profil kandidáta</a>"
+        } 
+        ?>
         
         
         
