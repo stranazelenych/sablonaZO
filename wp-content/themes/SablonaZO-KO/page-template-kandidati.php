@@ -136,11 +136,11 @@ TODO:
 
 if (get_sub_field('is_member')==1) {
   
- echo " člen";
+ echo " člen (ka)";
  	
- 	if get_sub_field('sex')=="female" {
- 		echo "ka";
- 	}
+ 	//if get_sub_field('sex')=="female" {
+ 	//	echo "ka";
+ 	// }
  
  echo " Strany zelených";
  
