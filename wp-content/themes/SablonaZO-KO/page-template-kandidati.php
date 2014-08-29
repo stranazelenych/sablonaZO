@@ -131,8 +131,12 @@ TODO:
         
        <?php
 
+echo the_sub_field('sex');
+
+
 if (get_sub_field('is_member')==1) {
-  echo " člen(ka) Strany zelených";
+  
+ echo " člen(ka) Strany zelených";
 } else {
   echo " bez p.p.";
 }
