@@ -98,11 +98,28 @@ TODO:
  
         <li><?php the_sub_field('position'); ?>. 
         <b>
+        
+        <?php  
+       
+       $url=get_sub_field('detailed_bio');
+       
+        if (!empty($url)) {
+        echo "<a href=";
+        } 
+        ?>
+        
         <?php the_sub_field('salutation_prefix'); ?> 
         <?php the_sub_field('first_name'); ?> 
         <?php the_sub_field('middle_name'); ?>
         <?php the_sub_field('last_name'); ?>
-        <?php the_sub_field('salutation_suffix'); ?> 
+        <?php the_sub_field('salutation_suffix');
+        
+        if (!empty($url)) {
+        echo "</a>";
+        } 
+        ?>
+        
+        
         (<?php the_sub_field('age'); ?> let) 
         </b>
         
@@ -121,15 +138,6 @@ if (get_sub_field('is_member')==1) {
 }
 ?>
 
-<?php  
-       
-       $url=get_sub_field('detailed_bio');
-       
-        if (!empty($url)) {
-        echo "<a href=" . $url . ">profil kandidáta</a>";
-        } 
-        ?>
-        
         
         
         
