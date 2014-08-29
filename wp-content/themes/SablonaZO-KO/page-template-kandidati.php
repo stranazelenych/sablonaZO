@@ -136,12 +136,13 @@ if (get_sub_field('is_member')==1) {
 } else {
   echo " bez p.p.";
 }
-?>
 
-        
-        
-        
-
+        if (!empty(the_sub_field('photo'))) {
+        echo "<img src=" . the_sub_field('photo') . " align=right>" ;
+        } 
+        ?>      
+    
+       
         
         </li>
         
