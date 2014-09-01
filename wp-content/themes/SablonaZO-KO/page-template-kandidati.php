@@ -131,7 +131,7 @@ TODO:
        
         
        <br>
-       <?php the_sub_field('bio'); ?>,
+       <?php the_sub_field('bio'); ?>
         
         
        <?php
@@ -141,7 +141,7 @@ TODO:
 
 if (get_sub_field('is_member')==1) {
   
- echo " člen (ka)";
+ echo ", člen (ka)";
  	
  	//if get_sub_field('sex')=="female" {
  	//	echo "ka";
