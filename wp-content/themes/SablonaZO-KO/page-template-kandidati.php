@@ -117,10 +117,13 @@ TODO:
         if (!empty($url)) {
         echo "</a>";
         } 
+
+        if (!empty(get_sub_field('age'))) {
+        echo "(" . the_sub_field('age') . " let)";
+        } 
         ?>
         
-        
-        (<?php the_sub_field('age'); ?> let) 
+
         </b>
         
        
