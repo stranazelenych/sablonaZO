@@ -118,8 +118,9 @@ TODO:
         echo "</a>";
         } 
 
-        if (!empty(get_sub_field('age'))) {
-        echo "(" . the_sub_field('age') . " let)";
+	$age = get_sub_field('age')
+        if (!empty($age)) {
+        echo "(" . $age . " let)";
         } 
         ?>
         
