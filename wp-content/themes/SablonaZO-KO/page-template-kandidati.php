@@ -151,8 +151,8 @@ if (get_sub_field('is_member')==1) {
  
 } else {
   
-  echo the_sub_field('nominator');
-  //echo " bez p.p.";
+  //echo the_sub_field('nominator');
+  echo "";
 }
 
 $photo_url = get_sub_field('photo');
