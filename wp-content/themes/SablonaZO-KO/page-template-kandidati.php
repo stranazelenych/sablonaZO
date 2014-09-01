@@ -150,7 +150,9 @@ if (get_sub_field('is_member')==1) {
  echo " Strany zelených";
  
 } else {
-  echo " bez p.p.";
+  
+  echo the_sub_field('nominator');
+  //echo " bez p.p.";
 }
 
 $photo_url = get_sub_field('photo');
