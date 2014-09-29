@@ -16,10 +16,13 @@
  */
 
 /**
- * @todo zobrazování odkazů na weby a sociální sítě, pokud jsou vyplněny
  * @todo zobrazování fotky
  * @todo odkaz na výsledky voleb - pokud je vyplněno
  */
+
+$hasShareCenter = isset( $bit51scp ) &&
+    isset( $scpoptions ) &&
+    $scpoptions['single'] == 1;
 
 $memberLabel = array(
 	'' => 'člen (-ka)',
@@ -37,11 +40,16 @@ $nominantLabel = array(
 	'male' => 'kandidát',
 );
 $nominatorLabel = array(
-	'greens' => 'Strany zelených'
+	'greens' => 'Strany zelených',
+);
+$profileLabel = array(
+    'web' => 'webu',
+    'facebook' => 'Facebooku',
+    'twitter' => 'Twitteru',
+    'google-plus' => 'Google+',
 );
 
 ?>
-
 <?php get_header(); ?>
 
 <div class="container main">
@@ -77,17 +85,22 @@ $nominatorLabel = array(
 
 		$detailedBio = get_sub_field( 'detailed_bio' );
 		$age = get_sub_field( 'age' );
+
 		$isMember = is_scalar( get_sub_field( 'is_member' ) ) ?
 			get_sub_field( 'is_member' ) :
 			get_sub_field( 'is_member' ) == array( 'ano' );
 		$sex = get_sub_field( 'sex' );
 		$nominator = get_sub_field( 'nominator' );
+
+		$web = get_sub_field( 'web' );
+		$twitter = get_sub_field( 'twitter' );
+		$facebook = get_sub_field( 'facebook' );
+		$googlePlus = get_sub_field( 'google_plus' );
+
 		$photo = get_sub_field( 'photo' );
-		$photoUrl = is_scalar( $photo ) ? $photo : $phoro['url'];
-		$photoAlt = is_scalar( $photo ) ? '' : $phoro['alt'];
 
 		$parsedDetailedBio = parse_url( $detailedBio );
-		if ( ! isset( $parsedDetailedBio['scheme'] ) and
+		if ( $detailedBio and ! isset( $parsedDetailedBio['scheme'] ) and
 			 substr( $parsedDetailedBio['path'], 0, 2 ) !== '//' ) {
 			$detailedBio = 'http://' . $detailedBio;
 		}
@@ -99,16 +112,46 @@ $nominatorLabel = array(
 			$label = $memberLabel[ $sex ] . ' Strany zelených';
 		} elseif ( $nominator === 'independent' ) {
 			$label = $independentLabel[ $sex ];
-		} elseif ( ! empty( $nominator ) ) {
+		} elseif ( $nominator ) {
 			$label = $nominantLabel[ $sex ] . ' ' . $nominatorName;
 		} else {
 			$label = '-- NEZNÁMÝ VZTAH KE STRANĚ ZELENÝCH --';
 		}
 
+		$parsedWeb = parse_url( $web );
+		if ( $web and ! isset( $parsedWeb['scheme'] ) and
+			 substr( $parsedWeb['path'], 0, 2 ) !== '//' ) {
+			$web = 'http://' . $web;
+		}
+		$parsedGooglePlus = parse_url( $googlePlus );
+		if ( $googlePlus and ! isset( $parsedGooglePlus['scheme'] ) and
+			 substr( $parsedGooglePlus['path'], 0, 2 ) !== '//' ) {
+			$googlePlus = 'https://' . $googlePlus;
+		}
+
+		$profiles = array();
+		if ( $web ) {
+		    $profiles[ $profileLabel['web'] ] = $web;
+		}
+		if ( $facebook ) {
+		    $profiles[ $profileLabel['facebook'] ] = 'https://facebook.com/' . $facebook;
+		}
+		if ( $twitter ) {
+		    $profiles[ $profileLabel['twitter'] ] = 'https://twitter.com/' . $twitter;
+		}
+		if ( $googlePlus ) {
+		    $profiles[ $profileLabel['google-plus'] ] = $googlePlus;
+		}
+		end( $profiles );
+		$lastProfile = key( $profiles );
+
+		$photoUrl = is_scalar( $photo ) ? $photo : $photo['url'];
+		$photoAlt = is_scalar( $photo ) ? '' : $photo['alt'];
+
 ?>
 		<li><?php the_sub_field( 'position' ); ?>.
 			<b>
-				<?php if ( ! empty( $detailedBio ) ) : ?>
+				<?php if ( $detailedBio ) : ?>
 					<a href="<?php esc_attr_e( $detailedBio ); ?>">
 				<?php endif; ?>
 				<?php the_sub_field( 'salutation_prefix' ); ?>
@@ -116,17 +159,34 @@ $nominatorLabel = array(
 				<?php the_sub_field( 'middle_name' ); ?>
 				<?php the_sub_field( 'last_name' ); ?>
 				<?php the_sub_field( 'salutation_suffix' ); ?>
-				<?php if ( ! empty( $detailedBio ) ) : ?>
+				<?php if ( $detailedBio ) : ?>
 					</a>
 				<?php endif; ?>
-				<?php if ( ! empty( $age ) ) : ?>
+				<?php if ( $age ) : ?>
 					(<?php esc_html_e( $age ); ?> let)
 				<?php endif; ?>
 			</b>
 			<br>
 			<?php the_sub_field('bio'); ?>, <?php esc_html_e( $label ); ?>
-			<?php if ( ! empty( $photo ) ) : ?>
-				<p><img src="<?php esc_attr_e( is_scalar( $photo ) ? $photo : $photo['url'] ); ?>"<?php if ( ! is_scalar( $photo ) and ! empty( $photo['alt'] ) ) : ?> alt="<?php esc_attr_e( $photo['alt'] ); ?>"<?php endif; ?> width="100" style="margin-bottom: 20px;"><br>
+			<br>
+			<?php if ( $hasShareCenter ): ?>
+				<?php if ( $facebook ) : ?>
+		            <div class="fb-follow" data-href="https://www.facebook.com/<?php esc_attr_e( $facebook ); ?>" data-colorscheme="light" data-layout="button" data-show-faces="false"></div>
+				<?php endif; ?>
+				<?php if ( $twitter ) : ?>
+	            	<a href="https://twitter.com/<?php esc_attr_e( $twitter ); ?>" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-lang="cs">Sledovat</a>
+				<?php endif; ?>
+				<?php if ( $googlePlus ) : ?>
+					<div class="g-follow" data-annotation="none" data-height="20" data-href="<?php esc_attr_e( $googlePlus ); ?>" data-rel="author"></div>
+				<?php endif; ?>
+			<?php elseif ( $profiles ) : ?>
+            	Sleduj na:
+				<?php $first = true; foreach ( $profiles as $label => $url ) : ?><?php if ( ! $first and  $label == $lastProfile ) : ?> nebo <?php elseif ( ! $first ) : ?>, <?php else : $first = false; endif; ?>
+            		<a href="<?php esc_attr_e( $url ); ?>"><?php esc_html_e( $label ); ?></a><?php endforeach; ?>
+			<?php endif; ?>
+
+			<?php if ( $photo ) : ?>
+				<p><img src="<?php esc_attr_e( $photoUrl ); ?>"<?php if ( $photoAlt ) : ?> alt="<?php esc_attr_e( $photoAlt ); ?>"<?php endif; ?> width="100" style="margin-bottom: 20px;"><br>
 			<?php endif; ?>
 		</li>
 		<?php
