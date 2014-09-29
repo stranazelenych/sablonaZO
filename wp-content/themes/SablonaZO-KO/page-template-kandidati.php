@@ -38,6 +38,10 @@ $nominatorLabel = array(
 	'greens' => 'Strany zelených',
 );
 $profileLabel = array(
+	'one' => 'Profil',
+	'many' => 'Profily'
+);
+$profileTypeLabel = array(
 	'web' => 'web',
 	'facebook' => 'Facebook',
 	'twitter' => 'Twitter',
@@ -141,19 +145,23 @@ $profileLabel = array(
 
 		$profiles = array();
 		if ( $web ) {
-			$profiles[ $profileLabel['web'] ] = $web;
+			$profiles[ $profileTypeLabel['web'] ] = $web;
 		}
 		if ( $facebook ) {
-			$profiles[ $profileLabel['facebook'] ] = 'https://facebook.com/' . $facebook;
+			$profiles[ $profileTypeLabel['facebook'] ] = 'https://facebook.com/' . $facebook;
 		}
 		if ( $twitter ) {
-			$profiles[ $profileLabel['twitter'] ] = 'https://twitter.com/' . $twitter;
+			$profiles[ $profileTypeLabel['twitter'] ] = 'https://twitter.com/' . $twitter;
 		}
 		if ( $googlePlus ) {
-			$profiles[ $profileLabel['google-plus'] ] = $googlePlus;
+			$profiles[ $profileTypeLabel['google-plus'] ] = $googlePlus;
 		}
 		end( $profiles );
 		$lastProfile = key( $profiles );
+
+		$profilesLabel = count( $profiles ) > 1 ?
+			$profileLabel['many'] :
+			$profileLabel['one'];
 
 		if ( $photo and is_scalar( $photo ) ) {
 			$photo = array(
@@ -224,7 +232,7 @@ $profileLabel = array(
 					<div class="g-follow" data-annotation="none" data-height="20" data-href="<?php esc_attr_e( $googlePlus ); ?>" data-rel="author"></div>
 				<?php endif; ?>
 			<?php elseif ( $profiles ) : ?>
-				Profily:
+				<?php esc_html_e( $profilesLabel ); ?>:
 				<?php $first = true; foreach ( $profiles as $label => $url ) : ?><?php if ( ! $first and  $label == $lastProfile ) : ?> a <?php elseif ( ! $first ) : ?>, <?php else : $first = false; endif; ?>
 					<a href="<?php esc_attr_e( $url ); ?>" target="_blank"><?php esc_html_e( $label ); ?></a><?php endforeach; ?>
 			<?php endif; ?>
