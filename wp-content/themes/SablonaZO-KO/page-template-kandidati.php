@@ -23,7 +23,9 @@
  */
 ?>
 
-<?php ini_set( 'display_errors', 'on' ); ?>
+<?php var_dump( error_reporting() ); ?>
+<?php var_dump( ini_get( 'display_errors' ) ); ?>
+<?php var_dump( ini_get( 'log_errors' ) ); ?>
 
 <?php get_header(); ?>
 
