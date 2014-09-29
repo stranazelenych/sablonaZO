@@ -82,7 +82,7 @@ $profileLabel = array(
 					<p>Volební období: <?php esc_html_e( get_field( 'polls_term' ) ); ?>
 					<p>Město: <?php esc_html_e( the_field( 'polls_location' ) ); ?>
 					<?php if ( $result ) : ?>
-						<p><a href="<?php esc_attr_e( $result ); ?>">Výsledek voleb</a></p>
+						<p><a href="<?php esc_attr_e( $result ); ?>">Výsledky hlasování</a></p>
 					<?php endif; ?>
 					<?php the_content(); ?>
 				</div>
