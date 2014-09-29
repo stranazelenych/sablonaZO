@@ -38,9 +38,9 @@ $nominatorLabel = array(
 	'greens' => 'Strany zelených',
 );
 $profileLabel = array(
-	'web' => 'webu',
-	'facebook' => 'Facebooku',
-	'twitter' => 'Twitteru',
+	'web' => 'web',
+	'facebook' => 'Facebook',
+	'twitter' => 'Twitter',
 	'google-plus' => 'Google+',
 );
 
@@ -213,7 +213,7 @@ $profileLabel = array(
 			<?php esc_html_e( get_sub_field('bio') ); ?>,
 			<?php esc_html_e( $label ); ?>
 			<br>
-			<?php if ( $hasShareCenter ): ?>
+			<?php if ( false and $hasShareCenter ): ?>
 				<?php if ( $facebook ) : ?>
 					<div class="fb-follow" data-href="https://www.facebook.com/<?php esc_attr_e( $facebook ); ?>" data-colorscheme="light" data-layout="button" data-show-faces="false"></div>
 				<?php endif; ?>
@@ -224,8 +224,8 @@ $profileLabel = array(
 					<div class="g-follow" data-annotation="none" data-height="20" data-href="<?php esc_attr_e( $googlePlus ); ?>" data-rel="author"></div>
 				<?php endif; ?>
 			<?php elseif ( $profiles ) : ?>
-				Sleduj na:
-				<?php $first = true; foreach ( $profiles as $label => $url ) : ?><?php if ( ! $first and  $label == $lastProfile ) : ?> nebo <?php elseif ( ! $first ) : ?>, <?php else : $first = false; endif; ?>
+				Profily:
+				<?php $first = true; foreach ( $profiles as $label => $url ) : ?><?php if ( ! $first and  $label == $lastProfile ) : ?> a <?php elseif ( ! $first ) : ?>, <?php else : $first = false; endif; ?>
 					<a href="<?php esc_attr_e( $url ); ?>"><?php esc_html_e( $label ); ?></a><?php endforeach; ?>
 			<?php endif; ?>
 
