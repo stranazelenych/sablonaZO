@@ -15,10 +15,6 @@
  * Author: Michal Berg
  */
 
-/**
- * @todo odkaz na výsledky voleb - pokud je vyplněno
- */
-
 $hasShareCenter = isset( $bit51scp ) &&
 	isset( $scpoptions ) &&
 	$scpoptions['single'] == 1;
@@ -66,7 +62,14 @@ $profileLabel = array(
 <?php if ( have_posts() ) : ?>
 	<?php while ( have_posts() ) : the_post();
 
+		$result = get_field( 'polls_result' );
 		$photoSize = get_field( 'photo_size' );
+
+		$parsedResult = parse_url( $result );
+		if ( $result and ! isset( $parsedResult['scheme'] ) and
+			 substr( $parsedResult['path'], 0, 2 ) !== '//' ) {
+			$result = 'http://' . $result;
+		}
 
 		if ( ! $photoSize ) $photoSize = 100;
 
@@ -76,13 +79,16 @@ $profileLabel = array(
 				<?php the_post_thumbnail( 'article-full' ); ?>
 				<div id="topstory">
 					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<p>Volební období: <?php the_field( 'polls_term' ); ?>
-					<p>Město: <?php the_field( 'polls_location' ); ?>
-					<p><?php the_content(); ?></p>
-			</div>
-			<div class="clearfix"></div>
-			<div id="text">
-				<h4>Výpis kandidátů</h4>
+					<p>Volební období: <?php esc_html_e( get_field( 'polls_term' ) ); ?>
+					<p>Město: <?php esc_html_e( the_field( 'polls_location' ) ); ?>
+					<?php if ( $result ) : ?>
+						<p><a href="<?php esc_attr_e( $result ); ?>">Výsledek voleb</a></p>
+					<?php endif; ?>
+					<?php the_content(); ?>
+				</div>
+				<div class="clearfix"></div>
+				<div id="text">
+					<h4>Výpis kandidátů</h4>
 <?php if ( have_rows( 'candidate' ) ) : ?>
 <ol style="list-style-type: none;">
 	<?php while ( have_rows( 'candidate' ) ) : the_row();
@@ -231,15 +237,14 @@ $profileLabel = array(
 </ol>
 <?php endif; ?>
 
-		</div>
-		<?php if ( dynamic_sidebar( 'box-under-post' ) ) : else : endif; ?>
-	</div>
-</div><!-- /l-section -->
-<div class="l-aside">
-	<?php if ( dynamic_sidebar( 'post-page-right' ) ) : else : endif; ?>
-</div><!-- /l-aside -->
-
-<?php endwhile; ?>
+				</div>
+				<?php if ( dynamic_sidebar( 'box-under-post' ) ) : else : endif; ?>
+			</div>
+		</div><!-- /l-section -->
+		<div class="l-aside">
+			<?php if ( dynamic_sidebar( 'post-page-right' ) ) : else : endif; ?>
+		</div><!-- /l-aside -->
+	<?php endwhile; ?>
 <?php endif; ?>
 
 </div><!-- /content-wrapper -->
