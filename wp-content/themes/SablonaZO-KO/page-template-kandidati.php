@@ -77,19 +77,20 @@
 			<?php
     			the_sub_field('bio');
 
-				if ( get_sub_field( 'is_member' ) and
-					 get_sub_field( 'sex' ) === 'female' ) {
+				$isMember = is_scalar( get_sub_field( 'is_member' ) ) ?
+					get_sub_field( 'is_member' ) :
+                    get_sub_field( 'is_member' ) == array( 'ano' );
+				if ( $isMember and get_sub_field( 'sex' ) === 'female' ) {
 					esc_html_e( ', členka Strany zelených' );
-				} elseif ( get_sub_field( 'is_member' ) and
-						   get_sub_field( 'sex' ) === 'male' ) {
+				} elseif ( $isMember and get_sub_field( 'sex' ) === 'male' ) {
 					esc_html_e( ', člen Strany zelených' );
-				} elseif ( get_sub_field( 'is_member' ) ) {
+				} elseif ( $isMember ) {
 					esc_html_e( ', člen (-ka) Strany zelených' );
 				}
 			?>
 
-			<?php if ( ! empty( $photo_url = get_sub_field('photo') ) ) : ?>
-				<p><img src="<?php esc_attr_e( $photo_url['url'] ) ?>" width="100" style="margin-bottom: 20px;"><br>
+			<?php if ( ! empty( $photo_url = get_sub_field( 'photo' ) ) ) : ?>
+				<p><img src="<?php esc_attr_e( is_scalar( $photo_url ) ? $photo_url : $photo_url['url'] ) ?>" width="100" style="margin-bottom: 20px;"><br>
 			<?php endif; ?>
 		</li>
 		<?php
