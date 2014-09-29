@@ -16,13 +16,12 @@
  */
 
 /**
- * @todo zobrazování fotky
  * @todo odkaz na výsledky voleb - pokud je vyplněno
  */
 
 $hasShareCenter = isset( $bit51scp ) &&
-    isset( $scpoptions ) &&
-    $scpoptions['single'] == 1;
+	isset( $scpoptions ) &&
+	$scpoptions['single'] == 1;
 
 $memberLabel = array(
 	'' => 'člen (-ka)',
@@ -43,10 +42,10 @@ $nominatorLabel = array(
 	'greens' => 'Strany zelených',
 );
 $profileLabel = array(
-    'web' => 'webu',
-    'facebook' => 'Facebooku',
-    'twitter' => 'Twitteru',
-    'google-plus' => 'Google+',
+	'web' => 'webu',
+	'facebook' => 'Facebooku',
+	'twitter' => 'Twitteru',
+	'google-plus' => 'Google+',
 );
 
 ?>
@@ -65,8 +64,13 @@ $profileLabel = array(
 
 <div class="content-wrapper">
 <?php if ( have_posts() ) : ?>
-	<?php while ( have_posts() ) : ?>
-		<?php the_post(); ?>
+	<?php while ( have_posts() ) : the_post();
+
+		$photoSize = get_field( 'photo_size' );
+
+		if ( ! $photoSize ) $photoSize = 100;
+
+	?>
 		<div class="l-section">
 			<div id="content">
 				<?php the_post_thumbnail( 'article-full' ); ?>
@@ -131,34 +135,60 @@ $profileLabel = array(
 
 		$profiles = array();
 		if ( $web ) {
-		    $profiles[ $profileLabel['web'] ] = $web;
+			$profiles[ $profileLabel['web'] ] = $web;
 		}
 		if ( $facebook ) {
-		    $profiles[ $profileLabel['facebook'] ] = 'https://facebook.com/' . $facebook;
+			$profiles[ $profileLabel['facebook'] ] = 'https://facebook.com/' . $facebook;
 		}
 		if ( $twitter ) {
-		    $profiles[ $profileLabel['twitter'] ] = 'https://twitter.com/' . $twitter;
+			$profiles[ $profileLabel['twitter'] ] = 'https://twitter.com/' . $twitter;
 		}
 		if ( $googlePlus ) {
-		    $profiles[ $profileLabel['google-plus'] ] = $googlePlus;
+			$profiles[ $profileLabel['google-plus'] ] = $googlePlus;
 		}
 		end( $profiles );
 		$lastProfile = key( $profiles );
 
-		$photoUrl = is_scalar( $photo ) ? $photo : $photo['url'];
-		$photoAlt = is_scalar( $photo ) ? '' : $photo['alt'];
+		// Snaží se najít nejbližší vyšší šířku k šířce dané v
+		// nastavení kandidátky, aby byl využit vhodný zdroj pro změnu
+		// velikosti (co nejmenší přenos dat při zachování kvality).
+		$displayedPhoto = null;
+		if ( $photo ) {
+			$photoWidths = array();
+			foreach ( $photo['sizes'] as $key => $size ) {
+				if ( substr( $key, -6 ) === '-width' ) {
+					$photoWidths[ substr( $key, 0, -6 ) ] = $size;
+				}
+			}
+			asort( $photoWidths );
+			foreach ( $photoWidths as $key => $size ) {
+				if ( $size > $photoSize ) {
+					$displayedPhoto = array(
+						'url' => $photo['sizes'][ $key ],
+						'alt' => $photo['alt']
+					);
+					break;
+				}
+			}
+		}
+		if ( $photo and ! $displayedPhoto ) {
+			$displayedPhoto = array(
+				'url' => $photo['url'],
+				'alt' => $photo['alt']
+			);
+		}
 
-?>
-		<li><?php the_sub_field( 'position' ); ?>.
+	?>
+		<li><?php esc_html_e( get_sub_field( 'position' ) ); ?>.
 			<b>
 				<?php if ( $detailedBio ) : ?>
 					<a href="<?php esc_attr_e( $detailedBio ); ?>">
 				<?php endif; ?>
-				<?php the_sub_field( 'salutation_prefix' ); ?>
-				<?php the_sub_field( 'first_name' ); ?>
-				<?php the_sub_field( 'middle_name' ); ?>
-				<?php the_sub_field( 'last_name' ); ?>
-				<?php the_sub_field( 'salutation_suffix' ); ?>
+				<?php esc_html_e( get_sub_field( 'salutation_prefix' ) ); ?>
+				<?php esc_html_e( get_sub_field( 'first_name' ) ); ?>
+				<?php esc_html_e( get_sub_field( 'middle_name' ) ); ?>
+				<?php esc_html_e( get_sub_field( 'last_name' ) ); ?>
+				<?php esc_html_e( get_sub_field( 'salutation_suffix' ) ); ?>
 				<?php if ( $detailedBio ) : ?>
 					</a>
 				<?php endif; ?>
@@ -167,31 +197,29 @@ $profileLabel = array(
 				<?php endif; ?>
 			</b>
 			<br>
-			<?php the_sub_field('bio'); ?>, <?php esc_html_e( $label ); ?>
+			<?php esc_html_e( get_sub_field('bio') ); ?>,
+			<?php esc_html_e( $label ); ?>
 			<br>
 			<?php if ( $hasShareCenter ): ?>
 				<?php if ( $facebook ) : ?>
-		            <div class="fb-follow" data-href="https://www.facebook.com/<?php esc_attr_e( $facebook ); ?>" data-colorscheme="light" data-layout="button" data-show-faces="false"></div>
+					<div class="fb-follow" data-href="https://www.facebook.com/<?php esc_attr_e( $facebook ); ?>" data-colorscheme="light" data-layout="button" data-show-faces="false"></div>
 				<?php endif; ?>
 				<?php if ( $twitter ) : ?>
-	            	<a href="https://twitter.com/<?php esc_attr_e( $twitter ); ?>" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-lang="cs">Sledovat</a>
+					<a href="https://twitter.com/<?php esc_attr_e( $twitter ); ?>" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-lang="cs">Sledovat</a>
 				<?php endif; ?>
 				<?php if ( $googlePlus ) : ?>
 					<div class="g-follow" data-annotation="none" data-height="20" data-href="<?php esc_attr_e( $googlePlus ); ?>" data-rel="author"></div>
 				<?php endif; ?>
 			<?php elseif ( $profiles ) : ?>
-            	Sleduj na:
+				Sleduj na:
 				<?php $first = true; foreach ( $profiles as $label => $url ) : ?><?php if ( ! $first and  $label == $lastProfile ) : ?> nebo <?php elseif ( ! $first ) : ?>, <?php else : $first = false; endif; ?>
-            		<a href="<?php esc_attr_e( $url ); ?>"><?php esc_html_e( $label ); ?></a><?php endforeach; ?>
+					<a href="<?php esc_attr_e( $url ); ?>"><?php esc_html_e( $label ); ?></a><?php endforeach; ?>
 			<?php endif; ?>
 
-			<?php if ( $photo ) : ?>
-				<p><img src="<?php esc_attr_e( $photoUrl ); ?>"<?php if ( $photoAlt ) : ?> alt="<?php esc_attr_e( $photoAlt ); ?>"<?php endif; ?> width="100" style="margin-bottom: 20px;"><br>
+			<?php if ( $displayedPhoto ) : ?>
+				<p><img src="<?php esc_attr_e( $displayedPhoto['url'] ); ?>"<?php if ( $displayedPhoto['alt'] ) : ?> alt="<?php esc_attr_e( $displayedPhoto['alt'] ); ?>"<?php endif; ?> width="<?php esc_attr_e( $photoSize ); ?>" style="margin-bottom: 20px;"><br>
 			<?php endif; ?>
 		</li>
-		<?php
-			// do something with $sub_field_3
-		?>
 	<?php endwhile; ?>
 </ol>
 <?php endif; ?>
