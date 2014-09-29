@@ -23,6 +23,8 @@
  */
 ?>
 
+<?php ini_set( 'display_errors', 'on' ); ?>
+
 <?php get_header(); ?>
 
 <div class="container main">
