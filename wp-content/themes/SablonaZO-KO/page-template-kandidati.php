@@ -149,6 +149,13 @@ $profileLabel = array(
 		end( $profiles );
 		$lastProfile = key( $profiles );
 
+		if ( $photo and is_scalar( $photo ) ) {
+			$photo = array(
+				'url' => $photo,
+				'alt' => ''
+			);
+		}
+
 		// Snaží se najít nejbližší vyšší šířku k šířce dané v
 		// nastavení kandidátky, aby byl využit vhodný zdroj pro změnu
 		// velikosti (co nejmenší přenos dat při zachování kvality).
