@@ -85,7 +85,7 @@ function sz_kandidatka_get_template_for_template_loader( $template ) {
 			$post->ID, '_sz_kandidatka_template', true
 		);
 
-		if ( !empty( $post_template ) && ( 'default' != $post_template ) ) {
+		if ( ! empty( $post_template ) && ( 'default' != $post_template ) ) {
 			$template = get_stylesheet_directory() . '/' . $post_template;
 		}
 	}
