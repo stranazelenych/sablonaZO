@@ -16,11 +16,30 @@
  */
 
 /**
- * @todo nominující strana (u koalic)
  * @todo zobrazování odkazů na weby a sociální sítě, pokud jsou vyplněny
  * @todo zobrazování fotky
  * @todo odkaz na výsledky voleb - pokud je vyplněno
  */
+
+$memberLabel = array(
+	'' => 'člen (-ka)',
+	'female' => 'členka',
+	'male' => 'člen',
+);
+$independentLabel = array(
+	'' => 'nezávislý kandidát (-ka)',
+	'female' => 'nezávislá kandidátka',
+	'male' => 'nezávislý kandidát',
+);
+$nominantLabel = array(
+	'' => 'kandidát (-ka)',
+	'female' => 'kandidátka',
+	'male' => 'kandidát',
+);
+$nominatorLabel = array(
+	'greens' => 'Strany zelených'
+);
+
 ?>
 
 <?php get_header(); ?>
@@ -44,7 +63,7 @@
 			<div id="content">
 				<?php the_post_thumbnail( 'article-full' ); ?>
 				<div id="topstory">
-				    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					<p>Volební období: <?php the_field( 'polls_term' ); ?>
 					<p>Město: <?php the_field( 'polls_location' ); ?>
 					<p><?php the_content(); ?></p>
@@ -54,46 +73,60 @@
 				<h4>Výpis kandidátů</h4>
 <?php if ( have_rows( 'candidate' ) ) : ?>
 <ol style="list-style-type: none;">
-	<?php while ( have_rows( 'candidate' ) ) : ?>
-		<?php the_row(); ?>
-		<li><?php the_sub_field( 'position' ) ?>.
+	<?php while ( have_rows( 'candidate' ) ) : the_row();
+
+		$detailedBio = get_sub_field( 'detailed_bio' );
+		$age = get_sub_field( 'age' );
+		$isMember = is_scalar( get_sub_field( 'is_member' ) ) ?
+			get_sub_field( 'is_member' ) :
+			get_sub_field( 'is_member' ) == array( 'ano' );
+		$sex = get_sub_field( 'sex' );
+		$nominator = get_sub_field( 'nominator' );
+		$photo = get_sub_field( 'photo' );
+		$photoUrl = is_scalar( $photo ) ? $photo : $phoro['url'];
+		$photoAlt = is_scalar( $photo ) ? '' : $phoro['alt'];
+
+		$parsedDetailedBio = parse_url( $detailedBio );
+		if ( ! isset( $parsedDetailedBio['scheme'] ) and
+			 substr( $parsedDetailedBio['path'], 0, 2 ) !== '//' ) {
+			$detailedBio = 'http://' . $detailedBio;
+		}
+
+		$nominatorName = isset( $nominatorLabel[ $nominator ] ) ?
+			$nominatorLabel[ $nominator ] :
+			$nominator;
+		if ( $isMember ) {
+			$label = $memberLabel[ $sex ] . ' Strany zelených';
+		} elseif ( $nominator === 'independent' ) {
+			$label = $independentLabel[ $sex ];
+		} elseif ( ! empty( $nominator ) ) {
+			$label = $nominantLabel[ $sex ] . ' ' . $nominatorName;
+		} else {
+			$label = '-- NEZNÁMÝ VZTAH KE STRANĚ ZELENÝCH --';
+		}
+
+?>
+		<li><?php the_sub_field( 'position' ); ?>.
 			<b>
-				<?php $url = get_sub_field( 'detailed_bio' ); ?>
-				<?php if ( ! empty( $url ) ) : ?>
-					<a href="http://<?php esc_attr_e( $url ) ?>">
+				<?php if ( ! empty( $detailedBio ) ) : ?>
+					<a href="<?php esc_attr_e( $detailedBio ); ?>">
 				<?php endif; ?>
 				<?php the_sub_field( 'salutation_prefix' ); ?>
 				<?php the_sub_field( 'first_name' ); ?>
 				<?php the_sub_field( 'middle_name' ); ?>
 				<?php the_sub_field( 'last_name' ); ?>
 				<?php the_sub_field( 'salutation_suffix' ); ?>
-				<?php if ( ! empty( $url ) ) : ?>
+				<?php if ( ! empty( $detailedBio ) ) : ?>
 					</a>
 				<?php endif; ?>
-				<?php $age = get_sub_field('age'); ?>
 				<?php if ( ! empty( $age ) ) : ?>
-					(<?php esc_html_e( $age ) ?> let)
+					(<?php esc_html_e( $age ); ?> let)
 				<?php endif; ?>
 			</b>
 			<br>
-			<?php
-    			the_sub_field('bio');
-
-				$isMember = is_scalar( get_sub_field( 'is_member' ) ) ?
-					get_sub_field( 'is_member' ) :
-                    get_sub_field( 'is_member' ) == array( 'ano' );
-				if ( $isMember and get_sub_field( 'sex' ) === 'female' ) {
-					esc_html_e( ', členka Strany zelených' );
-				} elseif ( $isMember and get_sub_field( 'sex' ) === 'male' ) {
-					esc_html_e( ', člen Strany zelených' );
-				} elseif ( $isMember ) {
-					esc_html_e( ', člen (-ka) Strany zelených' );
-				}
-			?>
-
-			<?php $photo_url = get_sub_field( 'photo' ); ?>
-			<?php if ( ! empty( $photo_url ) ) : ?>
-				<p><img src="<?php esc_attr_e( is_scalar( $photo_url ) ? $photo_url : $photo_url['url'] ) ?>" width="100" style="margin-bottom: 20px;"><br>
+			<?php the_sub_field('bio'); ?>, <?php esc_html_e( $label ); ?>
+			<?php if ( ! empty( $photo ) ) : ?>
+				<p><img src="<?php esc_attr_e( is_scalar( $photo ) ? $photo : $photo['url'] ); ?>"<?php if ( ! is_scalar( $photo ) and ! empty( $photo['alt'] ) ) : ?> alt="<?php esc_attr_e( $photo['alt'] ); ?>"<?php endif; ?> width="100" style="margin-bottom: 20px;"><br>
 			<?php endif; ?>
 		</li>
 		<?php
