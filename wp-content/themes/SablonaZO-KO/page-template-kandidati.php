@@ -226,7 +226,7 @@ $profileLabel = array(
 			<?php elseif ( $profiles ) : ?>
 				Profily:
 				<?php $first = true; foreach ( $profiles as $label => $url ) : ?><?php if ( ! $first and  $label == $lastProfile ) : ?> a <?php elseif ( ! $first ) : ?>, <?php else : $first = false; endif; ?>
-					<a href="<?php esc_attr_e( $url ); ?>"><?php esc_html_e( $label ); ?></a><?php endforeach; ?>
+					<a href="<?php esc_attr_e( $url ); ?>" target="_blank"><?php esc_html_e( $label ); ?></a><?php endforeach; ?>
 			<?php endif; ?>
 
 			<?php if ( $displayedPhoto ) : ?>
