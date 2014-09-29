@@ -23,10 +23,6 @@
  */
 ?>
 
-<?php var_dump( error_reporting() ); ?>
-<?php var_dump( ini_get( 'display_errors' ) ); ?>
-<?php var_dump( ini_get( 'log_errors' ) ); ?>
-
 <?php get_header(); ?>
 
 <div class="container main">
@@ -62,7 +58,8 @@
 		<?php the_row(); ?>
 		<li><?php the_sub_field( 'position' ) ?>.
 			<b>
-				<?php if ( ! empty( $url = get_sub_field( 'detailed_bio' ) ) ) : ?>
+				<?php $url = get_sub_field( 'detailed_bio' ); ?>
+				<?php if ( ! empty( $url ) ) : ?>
 					<a href="http://<?php esc_attr_e( $url ) ?>">
 				<?php endif; ?>
 				<?php the_sub_field( 'salutation_prefix' ); ?>
@@ -73,7 +70,8 @@
 				<?php if ( ! empty( $url ) ) : ?>
 					</a>
 				<?php endif; ?>
-				<?php if ( ! empty( $age = get_sub_field('age') ) ) : ?>
+				<?php $age = get_sub_field('age'); ?>
+				<?php if ( ! empty( $age ) ) : ?>
 					(<?php esc_html_e( $age ) ?> let)
 				<?php endif; ?>
 			</b>
@@ -93,7 +91,8 @@
 				}
 			?>
 
-			<?php if ( ! empty( $photo_url = get_sub_field( 'photo' ) ) ) : ?>
+			<?php $photo_url = get_sub_field( 'photo' ); ?>
+			<?php if ( ! empty( $photo_url ) ) : ?>
 				<p><img src="<?php esc_attr_e( is_scalar( $photo_url ) ? $photo_url : $photo_url['url'] ) ?>" width="100" style="margin-bottom: 20px;"><br>
 			<?php endif; ?>
 		</li>
