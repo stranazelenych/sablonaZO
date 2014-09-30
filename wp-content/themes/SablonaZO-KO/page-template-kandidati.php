@@ -94,7 +94,7 @@ $profileTypeLabel = array(
 				<div id="text">
 					<h4>Výpis kandidátů</h4>
 <?php if ( have_rows( 'candidate' ) ) : ?>
-<ol style="list-style-type: none;">
+<ol style="list-style-type: none; margin-left: 0; padding-left: 0;">
 	<?php while ( have_rows( 'candidate' ) ) : the_row();
 
 		$detailedBio = get_sub_field( 'detailed_bio' );
@@ -202,7 +202,7 @@ $profileTypeLabel = array(
 		}
 
 	?>
-		<li style="margin-bottom: 20px;"><?php esc_html_e( get_sub_field( 'position' ) ); ?>.
+		<li style="margin-left: 0; margin-bottom: 20px; padding-left: 0;"><?php esc_html_e( get_sub_field( 'position' ) ); ?>.
 			<b>
 				<?php if ( $detailedBio ) : ?>
 					<a href="<?php esc_attr_e( $detailedBio ); ?>">
