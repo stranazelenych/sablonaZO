@@ -202,7 +202,7 @@ $profileTypeLabel = array(
 		}
 
 	?>
-		<li><?php esc_html_e( get_sub_field( 'position' ) ); ?>.
+		<li style="margin-bottom: 20px;"><?php esc_html_e( get_sub_field( 'position' ) ); ?>.
 			<b>
 				<?php if ( $detailedBio ) : ?>
 					<a href="<?php esc_attr_e( $detailedBio ); ?>">
@@ -242,7 +242,7 @@ $profileTypeLabel = array(
 			<?php endif; ?>
 
 			<?php if ( $displayedPhoto ) : ?>
-				<p><img src="<?php esc_attr_e( $displayedPhoto['url'] ); ?>"<?php if ( $displayedPhoto['alt'] ) : ?> alt="<?php esc_attr_e( $displayedPhoto['alt'] ); ?>"<?php endif; ?> width="<?php esc_attr_e( $photoSize ); ?>" style="margin-bottom: 20px;"><br>
+				<p><img src="<?php esc_attr_e( $displayedPhoto['url'] ); ?>"<?php if ( $displayedPhoto['alt'] ) : ?> alt="<?php esc_attr_e( $displayedPhoto['alt'] ); ?>"<?php endif; ?> width="<?php esc_attr_e( $photoSize ); ?>"><br>
 			<?php endif; ?>
 		</li>
 	<?php endwhile; ?>
