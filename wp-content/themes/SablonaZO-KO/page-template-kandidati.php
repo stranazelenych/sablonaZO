@@ -100,6 +100,8 @@ $profileTypeLabel = array(
 		$detailedBio = get_sub_field( 'detailed_bio' );
 		$age = get_sub_field( 'age' );
 
+		$bio = get_sub_field('bio');
+
 		$isMember = is_scalar( get_sub_field( 'is_member' ) ) ?
 			get_sub_field( 'is_member' ) :
 			get_sub_field( 'is_member' ) == array( 'ano' );
@@ -218,7 +220,9 @@ $profileTypeLabel = array(
 				<?php endif; ?>
 			</b>
 			<br>
-			<?php esc_html_e( get_sub_field('bio') ); ?>,
+			<?php if ( $bio ) : ?>
+				<?php esc_html_e( $bio ); ?>,
+			<?php endif; ?>
 			<?php esc_html_e( $label ); ?>
 			<br>
 			<?php if ( false and $hasShareCenter ): ?>
