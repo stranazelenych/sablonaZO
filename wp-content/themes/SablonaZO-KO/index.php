@@ -41,7 +41,7 @@ Template Name: Homepage
                                    
                 <?php endwhile; ?>
                 
-                <?php paginate(); ?>
+                <?php paginate_links(); ?>
 
         <?php else : ?>
                 Žádné příspěvky
