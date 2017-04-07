@@ -9,7 +9,7 @@
         <title><?php wp_title( ' | ', true, 'right' ); ?><?php echo get_bloginfo( 'name' ); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-
+        <link rel='shortcut icon' type='image/x-icon' href="http://www.zeleni.cz/wp-content/themes/cityhub-zeleni/favicon/favicon.ico?v=2">
 	      <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
         <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/less/screen.less">
