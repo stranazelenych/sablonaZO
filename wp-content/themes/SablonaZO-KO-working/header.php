@@ -46,12 +46,10 @@
             $noimg = true;
         } else {
             $noimg = false;
+        list($width, $height) = getimagesize($imageurl);
         } 
 
-        list($width, $height) = getimagesize($imageurl);
         
-        
-
         ?>
         
         <div id="header-wrap" <?php if (!$noimg) {
