@@ -40,13 +40,7 @@
         <?php echo get_field('google-analytics', 'option'); ?>
         <!-- /GA -->
         
-		<div id="color-lines">
-			<div class="orange"></div>
-			<div class="blue"></div>
-			<div class="purple"></div>
-			<div class="yellow"></div>
-			<div class="orange"></div>
-		</div>
+		
         <?php $imageurl = get_field('headerbg', 'option');
         if ($imageurl == "") {
             $noimg = true;
@@ -67,7 +61,7 @@
                         <a href="<?php bloginfo('url'); ?>" class="ctyrlistek"></a>
                         <hgroup>
                             <a href="<?php bloginfo('url'); ?>">
-                                <h1>Strana zelených</h1>
+                                <h1>Zelení</h1>
                                 <h2><?php echo get_field('header2', 'option'); ?></h2>
                             </a>
                         </hgroup>

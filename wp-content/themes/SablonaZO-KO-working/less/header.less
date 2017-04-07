@@ -1,23 +1,10 @@
 // zelena hlavicka
-#color-lines {
-	overflow: hidden;
-	width: 100%;
-	div {
-		float: left;
-		width: 20%;
-		height: 5px;
-		&.orange { background-color: @orange; }
-		&.blue { background-color: @blue; }
-		&.purple { background-color: @purple; }
-		&.yellow { background-color: @yellow; }
-	}
-}
 
 #header-wrap {
 	@header-space-big: 27px;
 	@header-space-small: 17px;
 	@header-height: 170px;
-	background: #319c31 url(../img/header-bg.png) repeat-x left top;
+	background: #27d07d repeat-x left top;
 	overflow: hidden;
         margin: 0;
         /*background-size: cover !important;*/
@@ -53,7 +40,7 @@
 
 			h1, h2 {
 				color: @white;
-				.typeAbcGreen;
+				.typeUrbanGrotesk;
 				font-weight: normal;
 				/*white-space: nowrap;*/
 			}
@@ -83,9 +70,11 @@
 				h1 {
 					padding-bottom: 10px;
 					white-space: nowrap;
+					text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 					.h1;
 				}
 				h2 {
+					text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 					.h2;
 				}
 			}
