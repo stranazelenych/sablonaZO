@@ -47,10 +47,10 @@ nav {
     padding-right: 30px;
     z-index: 2;
     overflow: hidden;
-    color: #fff;
+    color: #000;
     background: @green;
     border-bottom: 0;
-    &:hover { background: darken(@gray-dark, 5%); }
+    &:hover { background: darken(@gray-dark, 5%); color: #fff; }
     }
   .flexnav li ul {
     width: 100%;
@@ -63,9 +63,10 @@ nav {
     overflow: visible; }
   .flexnav li ul li a {
     display: block;
-    background: @green-dark;
+    background: @green;
     text-transform: none;
-    &:hover { background: darken(@gray-dark, 10%); }
+    &:hover { background: darken(@gray-dark, 10%); 
+              color: #fff; }
     }
   .flexnav ul li ul li a {
     background: @green; }
@@ -96,7 +97,7 @@ nav {
   display: block;
   padding: 1em;
   background: @green;
-  color: #fff;
+  color: #000;
   cursor: pointer; }
   .menu-button.one-page {
     position: fixed;
