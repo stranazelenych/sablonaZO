@@ -84,9 +84,9 @@
                  
             <?php if(get_field('headerright','option')): ?>
                     <div class="icons">
-                            <a href="<?php echo get_field('header-link-members', 'option'); ?>" class="clenove">Staňte se členy</a>
-                            <a href="<?php echo get_field('fundraising', 'option'); ?>" class="podporte">Podpořte nás</a>
-                            <a href="<?php echo get_field('header-link-inform', 'option'); ?>" class="info">Informujte se</a>
+                            <a href="http://pridejtese.zeleni.cz" class="clenove">Přidejte se k Zeleným!</a>
+                            <a href="<?php echo get_field('fundraising', 'option'); ?>" class="podporte">Podpořte nás darem</a>
+                
                     </div>
             <?php endif; ?>
 	</div>

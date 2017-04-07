@@ -42,7 +42,7 @@ add_action( 'after_setup_theme', 'add_menus' );
 // widget areas
 function add_widget_areas(){
     register_sidebar( array(
-        'name' => __('Proužek s dalšími informacemi'),
+        'name' => __('Horní proužek s dalšími informacemi'),
         'id' => 'info-line',
         'before_widget' => '<div class="search">',
         'after_widget' => '</div>',

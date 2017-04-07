@@ -39,7 +39,7 @@
 			}
 
 			h1, h2 {
-				color: #800000;
+				color: #fff;
 				.typeUrbanGrotesk;
 				font-weight: normal;
 				/*white-space: nowrap;*/
@@ -69,6 +69,7 @@
 				}
 				h1 {
 					padding-bottom: 10px;
+					padding-top:5px;
 					white-space: nowrap;
 					text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 					.h1;
@@ -101,57 +102,24 @@
                     }
                 }
                 
-		.icons {
-			clear: both;
-			overflow: hidden;
-			width: 100%;
-			padding-bottom: @header-space-small;
-			@media screen and (min-width: 980px) {
-			   .right;
-			   clear: none;
-			   width: auto;
-			   padding: @header-space-small 0;
-			}
-		   a {
-			   .typeface1;
-			   font-size: 12px;
-			   background: transparent url(../img/header-icons.png) no-repeat 10px top;
-			   background-size: 200px 55px;
-			   width: 70px;
-			   margin-right: 25px;
-			   color: @white;
-			   padding-top:60px;
-			   text-align: center;
-			   text-decoration: underline;
-			   line-height: 16px;
-			   display: inline-block;
-			   vertical-align: top;
-			   border-bottom: 0;
-			   @media screen and (min-width: 980px) {
-					.left;
-			   }
-			   &.podporte {
-				   background-position:-66px top;
-			   }
-			   &.info {
-				   background-position:-140px top;
-				   margin-right: 0;
-			   }
-			   @media screen and (min-width: 640px) {
-			   		.t6;
-			   		background-size: 400px 110px;
-					width: 103px;
-					padding-top:110px;
-					background-position: left top;
-					&.podporte {
-					   background-position:-146px top;
-					   }
-				    &.info {
-					   background-position:-297px top;
-					   margin-right: 0;
-				   	}
-			   }
-		   }
-	   }
+		.icons { /* připraveno na buttony*/ }
+			a {
+				    width: calc(40% - .5rem);
+				    box-shadow: 3px 3px 6px #aaa;
+				    margin: 6px;
+				    /* display: block; */
+				    float: right;
+				    text-align: center;
+				    padding: 1rem;
+				    background: #fff;
+				    color: #FFF;
+				    font-weight: 600;
+				    text-decoration: underline;
+				    margin-right: 1rem;
+				    font-size: 18px;
+				    margin-top: 10px;
+					display: block;
+					color: #27d07d;
+					font-weight: 600;}
 	}
 }
