@@ -21,10 +21,11 @@
 	    </article> 
   <?php endwhile; ?>
 
-    <div class="nav-previous alignleft"><b><?php next_posts_link( 'Starší články' ); ?> »</b></div>
     
-    <div class="nav-next alignright"><b><?php previous_posts_link( 'Novější články' ); ?> »</b></div>
+    
+    <div class="nav-next alignleft"><b><?php previous_posts_link( 'Novější články' ); ?></b></div>
 
+    <div class="nav-previous alignright"><b><?php next_posts_link( 'Starší články' ); ?> »</b></div>
 
 <?php endif; ?>
 
