@@ -100,7 +100,10 @@ nav {
   padding: 1em;
   background: @green;
   color: #000;
-  cursor: pointer; }
+  font-weight: 800;
+  cursor: pointer; 
+  box-shadow: 3px 3px 6px #aaa;
+    margin-top:15px}
   .menu-button.one-page {
     position: fixed;
     top: 0;
@@ -120,16 +123,14 @@ nav {
       font-size: 16px;
       position: relative;
       top: 1em;
-      color: darken(@green, 10%); }
+      color: #000; }
 
 @media all and (min-width: 800px) {
   body.one-page {
     padding-top: 70px; }
-
   .flexnav {
     overflow: visible;
-    box-shadow: 3px 3px 6px #aaa;
-    margin-top:15px;}
+    }
     .flexnav.opacity {
       opacity: 1; }
     .flexnav.one-page {
