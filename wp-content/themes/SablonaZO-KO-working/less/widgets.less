@@ -10,7 +10,6 @@
 	background: @green;
 	color: @white;
 	padding: @space/2 @space;
-	.uppercase;
 	.bold;
 	.textshadow;
 	.t6;
@@ -19,6 +18,11 @@
             text-decoration: none !important;;
         }
 }
+
+.hometop .widgettitle h2 {
+    text-transform: none;
+}
+
 .hometop {
     max-width: 100%;
     iframe {
@@ -32,13 +36,19 @@
 		background: transparent;
 		text-shadow: none;
 		font-style: normal;
-		text-transform: normal;
+		text-transform: uppercase;
 		padding: 0;
 	}
 	.textwidget {
 		padding: 0;
 	}
 }
+
+.hometop .widgettitle h2 {
+    text-transform: none;
+}
+
+
 .wp-email-capture {
 	.t6;
 	background: @gray-background;
