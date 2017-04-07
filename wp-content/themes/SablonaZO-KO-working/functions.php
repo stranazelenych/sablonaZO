@@ -32,7 +32,7 @@ if ( function_exists( 'add_image_size' ) ) {
 function add_menus(){
     register_nav_menus( array(
         'primary' => __( 'Havní navigace'),
-        'info-line' => __('Proužek s dalšími informacemi')
+        'info-line' => __('Horní proužek s dalšími informacemi')
   ) );
 }
 
