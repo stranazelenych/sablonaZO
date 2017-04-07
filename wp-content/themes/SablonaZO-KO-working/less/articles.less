@@ -1,0 +1,52 @@
+// zobrazeni clanku na homepage
+
+#articles {
+	
+	article {
+		.clear;
+		margin-bottom: @space;
+		.clearfix;
+		
+		h2 {
+			margin-bottom: @space/4;
+			.t4;
+		}
+	}
+
+	
+			
+	
+	.datum-publikovani {
+		color: @gray-light;
+
+		
+	}
+
+	img {
+		float: left;
+		margin-right: @space;
+	}
+
+	.highlight {
+		h2 {
+			.t2;
+		}
+		img {
+			max-width: 100%;
+                        height: auto;
+			margin-bottom: @space/1.5;
+		}
+		.datum-publikovani:after {
+			content: " | ";
+		}
+	}
+}
+
+.attachment-article-full {
+    display: block;
+    margin: 0 auto @space;
+    height: auto;
+}
+
+H3.related_post_title {font-size:14px;
+margin-top:40px;}

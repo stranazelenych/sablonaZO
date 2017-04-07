@@ -1,0 +1,168 @@
+// zelena hlavicka
+#color-lines {
+	overflow: hidden;
+	width: 100%;
+	div {
+		float: left;
+		width: 20%;
+		height: 5px;
+		&.orange { background-color: @orange; }
+		&.blue { background-color: @blue; }
+		&.purple { background-color: @purple; }
+		&.yellow { background-color: @yellow; }
+	}
+}
+
+#header-wrap {
+	@header-space-big: 27px;
+	@header-space-small: 17px;
+	@header-height: 170px;
+	background: #319c31 url(../img/header-bg.png) repeat-x left top;
+	overflow: hidden;
+        margin: 0;
+        /*background-size: cover !important;*/
+        
+	@media screen and (min-width: 980px) {
+                margin: @space*2 0 0 0;
+                height: @header-height;
+	}
+	#header {
+		a {
+			outline: none;
+		}
+		width: 98%;
+		margin: 0 auto;
+		text-align: center;
+		@media screen and (min-width: 700px) {
+			width: 90%;
+		}
+		@media screen and (min-width: 980px) {
+			width: 980px;
+			text-align: left;
+		}
+		.logo {
+			padding: @header-space-small 0;
+			height: auto;
+			width: auto;
+			display: inline-block;
+
+			a {
+				border-bottom: 0;
+				color: @white;
+			}
+
+			h1, h2 {
+				color: @white;
+				.typeAbcGreen;
+				font-weight: normal;
+				/*white-space: nowrap;*/
+			}
+
+			h1 {
+				.t3;
+			}
+			h2 {
+				.t5;
+                                @media screen and (min-width: 640px) {
+                                    max-width: 450px;
+                                }
+			}
+
+			@media screen and (min-width: 640px) {
+				.ctyrlistek {
+					background: transparent url(../img/logo-bg.png) no-repeat left top;
+					.left;
+					width: 110px;
+					height: 105px;
+					margin-right: @header-space-big;
+				}
+				hgroup {
+					margin-top: 15px;
+					.left;
+				}
+				h1 {
+					padding-bottom: 10px;
+					white-space: nowrap;
+					.h1;
+				}
+				h2 {
+					.h2;
+				}
+			}
+			@media screen and (min-width: 980px) {
+				padding: @header-space-big 0;
+				float: left;
+				hgroup {
+					margin-top: 0;
+				}
+			}
+		}
+                
+                .social {
+                    clear: both;
+                    display: none;
+                    @media screen and (min-width: 980px) {
+                        display: block;
+                        margin: 0 0 0 137px;
+                        padding: 5px 0 0 0;
+                    }
+                    .fb-button {
+                        width: 140px;
+                        .inline-block;
+                    }
+                }
+                
+		.icons {
+			clear: both;
+			overflow: hidden;
+			width: 100%;
+			padding-bottom: @header-space-small;
+			@media screen and (min-width: 980px) {
+			   .right;
+			   clear: none;
+			   width: auto;
+			   padding: @header-space-small 0;
+			}
+		   a {
+			   .typeface1;
+			   font-size: 12px;
+			   background: transparent url(../img/header-icons.png) no-repeat 10px top;
+			   background-size: 200px 55px;
+			   width: 70px;
+			   margin-right: 25px;
+			   color: @white;
+			   padding-top:60px;
+			   text-align: center;
+			   text-decoration: underline;
+			   line-height: 16px;
+			   display: inline-block;
+			   vertical-align: top;
+			   border-bottom: 0;
+			   @media screen and (min-width: 980px) {
+					.left;
+			   }
+			   &.podporte {
+				   background-position:-66px top;
+			   }
+			   &.info {
+				   background-position:-140px top;
+				   margin-right: 0;
+			   }
+			   @media screen and (min-width: 640px) {
+			   		.t6;
+			   		background-size: 400px 110px;
+					width: 103px;
+					padding-top:110px;
+					background-position: left top;
+					&.podporte {
+					   background-position:-146px top;
+					   }
+				    &.info {
+					   background-position:-297px top;
+					   margin-right: 0;
+				   	}
+			   }
+		   }
+	   }
+	}
+}

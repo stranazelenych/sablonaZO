@@ -1,0 +1,275 @@
+// Prouzek uplne nahore v hlavice s informacemi o strane
+.separated {
+	background: transparent url(../img/info-line-separator.png) no-repeat right @space/2;
+}
+.screen-reader-text {
+	font-size: 0;
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+#info-line-wrap {
+	background-color: @green-dark;
+	.clearfix;
+        
+	@media screen and (min-width: 980px) {
+                position: absolute;
+                top: 5px;
+                width: 100%;
+	}
+}
+#info-line {
+	width: 98%;
+	margin: 0 auto;
+	text-align: center;
+	@media screen and (min-width: 700px) {
+		width: 90%;
+	}
+	@media screen and (min-width: 980px) {
+		width: 980px;
+                
+	}
+	> div {
+		float: left;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	li {
+		float: left;
+		list-style-type:none;
+		.separated;
+		a {
+			.t7;
+			.border-box;
+			padding:0 @space;
+			color: @white;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: left center;
+			display: block;
+			border-bottom: 0;
+			line-height: 30px;
+			height: 30px;
+			@media screen and (min-width: 650px) {
+				line-height: @space*2;
+				height: @space*2;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	div.menu {
+		float: none;
+		height: auto;
+		width: 100%;
+		@media screen and (min-width: 650px) {
+			float: left;
+			width: auto;
+		}
+		@media screen and (min-width: 980px) {
+			float: left;
+			width: auto;
+			height: auto;
+                        .clearfix;
+		}
+		ul {
+			display: inline-block;
+			margin-top: @space/2;
+			@media screen and (min-width: 650px) {
+				text-align: center;
+				margin-top: 0;
+			}
+			@media screen and (min-width: 980px) {
+				text-align: auto;
+				float: left;
+			}
+			li {
+				display: block;
+				float: none;
+				background: none;
+				text-align: left;
+				position: relative;
+				@media screen and (min-width: 650px) {
+					float: none;
+					display: inline-block;
+					.separated;
+				}
+				@media screen and (min-width: 980px) {
+					float:left;
+				}
+				&:last-child {
+					background: none;
+					@media screen and (min-width: 980px) {
+						.separated;
+					}
+				}
+				a {
+					float: left;
+				}
+				a:before {
+					content: "";
+					background: transparent url(../img/info-line-icons.png) no-repeat left top;
+				}
+				&#menu-item-628 a:before {
+					padding-left: 25px;
+				}
+				&.dary a:before {
+					background-position: left -20px;
+					padding-left: 25px;
+					@media screen and (min-width: 650px) {
+						padding-left: 26px;
+					}
+				}
+				&.kontakt a:before {
+					background-position: left -40px;
+					padding-left: 25px;
+					@media screen and (min-width: 650px) {
+						padding-left: 19px;
+					}
+				}
+				&#menu-item-629 > a:before {
+					padding-left: 25px;
+					background-position: left -60px;
+					@media screen and (min-width: 650px) {
+						padding-left: 31px;
+					}
+				}
+                                &.menu-item-has-children {
+                                    
+/*                                    &:hover {
+                                        ul {
+                                            display: block;
+                                        }
+                                    }*/
+                                    
+                                    > a {
+					padding-right: 0px;
+                                    }   
+                                }
+				ul {
+                                        /*display: none;*/
+					position: absolute;
+					z-index: 300;
+					background-color: @green-dark;
+					min-width: 160px;
+                                        left: 0;
+					top: 30px;
+					margin-top: 0;
+					@media screen and (min-width: 650px) {
+						top: @space*2;
+					}
+					li {
+						width: 100%;
+						a {
+							padding-right: 25px;
+							white-space: nowrap;
+							width: 100%;
+							&:hover {
+								background: darken(@green-dark, 5%);
+							}
+						}
+					}
+				}
+				.touch-button {
+					z-index: 999;
+					float: left;
+					width: 30px;
+					line-height: 30px;
+					height: 30px;
+					@media screen and (min-width: 650px) {
+						line-height: @space*2;
+						height: @space*2;
+					}
+                                        display: none; 
+					text-align: center;
+                                        &:last-child {
+                                            display: block;
+                                        }
+				}
+				.touch-button:hover {
+					cursor: pointer;
+				}
+				.touch-button .navicon {
+					font-size: 12px;
+					color: darken(@green-dark, 10%);
+				}
+			}
+		}
+	}
+
+	div.search {
+		float: none;
+		vertical-align: top;
+		width: 140px;
+		display: block;
+		margin: 0 auto;
+		padding: 10px 20px;
+		@media screen and (min-width: 650px) {
+			display: inline-block;
+			width: auto;
+			.separated;
+		}
+		@media screen and (min-width: 980px) {
+			float: right;
+		}
+		h2 {
+			display: none;
+		}
+		.searchform {
+			background: transparent url(../img/info-line-search-bg.png) no-repeat left top;
+			padding: 0 5px;
+			width: 140px;
+			input[type="text"] {
+				border: none;
+				width: 106px;
+				height: @space;
+				float: left;
+				padding: 0;
+				color: @gray-light;
+				.t7;
+			}
+			input[type="submit"] {
+				border: none;
+				background: none;
+				padding: 0;
+				height: 20px;
+				width: 20px;
+				color: transparent;
+				background: transparent url(../img/info-line-search-button.png) no-repeat right center;
+				text-shadow: none;
+				margin-top: 0;
+			}
+		}
+	}
+
+	div.social {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+		@media screen and (min-width: 980px) {
+			float: right;
+		}
+		padding: 0 14px;
+		a {
+			float: left;
+			background: transparent url(../img/social-icons-small.png) no-repeat left center;
+			line-height: @space*2;
+			height: @space*2;
+			width: 24px;
+			border-bottom: 0;
+			&.facebook {
+				background-position: -24px center;
+			}
+			&.youtube {
+				background-position: -48px center;
+			}
+		}
+	}
+}
+
+

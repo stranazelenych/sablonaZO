@@ -1,0 +1,160 @@
+.visual {
+	overflow: hidden;
+	text-align: center;
+
+	@media screen and (min-width: 640px) {
+		min-height: 499px;
+		background: #fff url("../img/splash-background.jpg") 50% 0 no-repeat;
+		border-bottom: 2px solid @green;
+	}
+        
+        .action-boxes {
+            
+            @media screen and (min-width: 640px) {
+                padding: 40px 0 0 0;
+            }
+            
+        }
+        
+        @boxHeight: 110px;
+
+	.box {
+		display: block;
+		padding: 15px;
+                position: relative;
+		margin: @space 16px;
+		h3 {
+			font-weight: normal;
+			.typeAbcGreen;
+			color: #fff;
+			font-size: 18px;
+		}
+		@media screen and (min-width: 640px) {
+                        height: @boxHeight;
+			width: 320px;
+			display: inline-block;
+                        vertical-align: top;
+			h3 {
+				font-size: 24px;
+                                margin: 0 0 10px 0;
+			}
+                    
+                        // Skew sides of the boxes
+                        &:before, &:after {
+                            top: 0;
+                            width: 0;
+                            height: 0;
+                            content: " ";
+                            position: absolute;
+                            border-style: solid;
+                            border-width: @boxHeight/2 15px;
+
+                        }
+                        &:before {
+                            left: -30px;
+                        }
+                        &:after {
+                            right: -30px;
+                        }
+		}
+	}
+	.box-info {
+		background: @orange;
+		@media screen and (min-width: 640px) {
+                        &:before {
+                            border-color: transparent @orange @orange transparent;
+                        }
+                        &:after {
+                            border-color: @orange transparent transparent @orange;
+                        }
+		}
+                
+                .right {
+                    float: none;
+                }
+                
+                .widgettitle {
+                    display: none;
+                }
+                
+                .wp-email-capture {
+                    background: transparent;
+                    padding: 0;
+                }
+                
+                .wp-email-capture-label {
+                    @media screen and (min-width: 640px) {
+                        display: none;
+                    }
+                }
+                
+                .wysija-paragraph {
+                    margin: 0;
+                    .inline-block;
+                }
+                
+                .wp-email-capture-input, .wysija-input {
+                    .t6;
+                    .rounded-corners(5px);
+                    border: 0;
+                    width: 170px;
+                    height: 36px;
+                    line-height: 36px;
+                }
+                
+                                
+	}
+	.box-fundraising {
+		background: @purple;
+		@media screen and (min-width: 640px) {
+                        &:before {
+                            border-color: transparent @purple @purple transparent;
+                        }
+                        &:after {
+                            border-color: @purple transparent transparent @purple;
+                        }
+		}
+                
+	}
+        
+        .wp-email-capture .wp-email-capture-button-text, .action-box-button, .wysija-submit {
+            .t5;
+            .inline-block !important;
+            .rounded-corners(5px); 
+            margin: 0 !important;
+            width: auto;
+            height: 36px;
+            line-height: 34px;
+            font-weight: normal;
+            background: transparent !important;;
+            border: 2px solid #ffffff;
+            color: #fff;
+        }
+        .action-box-button {
+            width: 200px;
+        }
+        
+        .wp-email-capture-error {
+            @media screen and (min-width: 640px) {
+                position: absolute;
+                top: -35px;
+            }
+        }
+}
+
+.visual-footer {
+	text-align: center;
+        margin: @space;
+        @media screen and (min-width: 640px) {
+            margin: 0;
+        }
+        .textwidget {
+            padding: 0;
+        }
+	p {
+		background: @gray-box;
+		border: 1px solid #c0cccc;
+		padding: 5px 10px;
+		display: inline-block;
+	}
+}

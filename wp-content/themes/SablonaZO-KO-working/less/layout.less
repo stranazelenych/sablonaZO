@@ -1,0 +1,120 @@
+// rozlozeni stranky (pouze velikosti a umisteni, ne graficke stylovani prvku)
+.container {
+	width: 92%;
+	margin: 0 auto;
+	@media screen and (min-width: 700px) {
+		width: 90%;
+		&.splash {
+			overflow: hidden;
+			width: 100%;
+			text-align: center;
+		}
+	}
+	@media screen and (min-width: 980px) {
+		width: 980px;
+		&.splash {
+			width: 100%;
+		}
+	}
+}
+
+.l-section {
+	margin: 20px 0;
+	padding: 5px 0 20px 0;
+	border-bottom: 1px solid @green;
+	overflow: hidden;
+}
+
+.l-aside {
+	margin: 20px 0;
+	padding: 5px 0 20px 0;
+	overflow: hidden;
+}
+
+.content-wrapper {
+	.clearfix;
+	@media screen and (min-width: 980px) {
+		padding: 0 20px;
+	}
+}
+
+@media screen and (min-width: 640px) {
+
+	.l-column {
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+		&+.l-column {
+			margin-right: 0;
+		}
+	}
+
+	.column {
+		margin-right: 4.342162397%;
+		width: 47.828918802%;
+		float: left;
+		&+.column {
+			margin-right: 0;
+		}
+	}
+
+	.l-section {
+		float: left;
+		width: 75%;
+		margin-right: 2%;
+		border-bottom: none;
+	}
+
+	.l-aside {
+		margin: 20px 0;
+		width: 23%;
+		float: left;
+	}
+
+}
+
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

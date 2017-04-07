@@ -1,0 +1,35 @@
+// standardni sedy box, napr pro docasny obsah
+
+.box.sedy {
+	padding: @space/1.5;
+	background: @gray-box;
+
+	h2 {
+		color: @text;
+		.typeface2;
+		.t3;
+		.italic;
+		margin-bottom: @space/2;
+	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+	}
+
+	a {	
+		.typeface2;
+		.t5;
+		.bold;
+
+		&:after {
+			content: " »";
+		}
+	}
+}

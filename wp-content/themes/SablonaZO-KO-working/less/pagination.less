@@ -1,0 +1,16 @@
+.pagination {
+    text-align: center;
+    a, span {
+        .inline-block;
+        padding: 5px 10px;
+        background: @gray-background;
+        margin: 0 2px;
+        .rounded-corners;
+        text-decoration: none;
+    }
+    a {
+        &:hover {
+            background: darken( @gray-background, 10% );
+        }
+    }
+}
