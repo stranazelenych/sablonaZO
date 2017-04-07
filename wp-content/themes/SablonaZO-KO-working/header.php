@@ -49,13 +49,13 @@
         } 
 
         list($width, $height) = getimagesize($imageurl);
-        echo "width: " . $width . "<br />";
-        echo "height: " .  $height;
+        
+        
 
         ?>
         
         <div id="header-wrap" <?php if (!$noimg) {
-            echo 'style="background: url(' . get_field('headerbg', 'option') . ') center no-repeat;">';
+            echo 'style="background: url(' . get_field('headerbg', 'option') . ') center no-repeat;height:'.$height.'">';
         } else {
             echo '>';
         }
