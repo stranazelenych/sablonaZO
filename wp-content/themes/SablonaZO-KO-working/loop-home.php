@@ -21,9 +21,9 @@
 	    </article> 
   <?php endwhile; ?>
 
-    <div class="nav-previous alignleft"><?php next_posts_link( 'Starší články' ); ?></div>
+    <div class="nav-previous alignleft"><b><?php next_posts_link( 'Starší články' ); ?> »</b></div>
     
-    <div class="nav-next alignright"><?php previous_posts_link( 'Novější články' ); ?></div>
+    <div class="nav-next alignright"><b><?php previous_posts_link( 'Novější články' ); ?> »</b></div>
 
 
 <?php endif; ?>
