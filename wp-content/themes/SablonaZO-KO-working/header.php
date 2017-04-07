@@ -55,7 +55,7 @@
         ?>
         
         <div id="header-wrap" <?php if (!$noimg) {
-            echo 'style="background: url(' . get_field('headerbg', 'option') . ') center no-repeat;height:'.$height.'">';
+            echo 'style="background: url(' . get_field('headerbg', 'option') . ') center no-repeat;height:'.$height.'px;margin-top:60px">';
         } else {
             echo '>';
         }
