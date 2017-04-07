@@ -21,5 +21,11 @@
 		     <p class="perex"><?php the_excerpt(); ?></p>
 	    </article> 
   <?php endwhile; ?>
+
+    <div class="nav-previous alignleft"><?php next_posts_link( 'Starší články' ); ?></div>
+    
+    <div class="nav-next alignright"><?php previous_posts_link( 'Novější články' ); ?></div>
+
+
 <?php endif; ?>
 

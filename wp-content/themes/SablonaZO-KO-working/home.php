@@ -38,13 +38,6 @@ Template Name: Homepage
 <!-- box vlevo articles -->
 <div id="articles">
   <?php get_template_part("loop","home"); ?>
-
-Starší články: <?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>
-
-
-  	<div class="nav-previous alignleft"><?php next_posts_link( 'Starší články' ); ?></div>
-	
-	<div class="nav-next alignright"><?php previous_posts_link( 'Novější články' ); ?></div>
 	
 
 </div><!-- /articles -->
