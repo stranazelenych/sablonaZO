@@ -1,8 +1,7 @@
 
 <!-- Query sticky post. -->
-<?php query_posts( array('showposts'=>'7') ); ?>
 
-<?php $i = 1; ?>
+
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>   
 <?php $featured = ($i++ == 1) ? true : false; ?>  
 
