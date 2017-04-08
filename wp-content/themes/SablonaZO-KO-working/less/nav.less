@@ -50,7 +50,7 @@ nav {
     overflow: hidden;
     color: #000;
     background: @green;
-    border-bottom: 0;
+    border-bottom: 1px solid @gray-dark;
     &:hover { background: darken(@gray-dark, 5%); color: #fff; }
     }
   .flexnav li ul {
@@ -60,7 +60,11 @@ nav {
     .flexnav li ul li {
       font-size: 100%;
       position: relative;
-      overflow: hidden; }
+      overflow: hidden; 
+    @media screen and (max-width: 800px) {
+      padding-left: 20px;
+    }
+  }
   .flexnav li ul.flexnav-show li {
     overflow: visible; }
   .flexnav li ul li a {
