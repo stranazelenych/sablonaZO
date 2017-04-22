@@ -22,7 +22,9 @@ $featured = ($i == 1) ? true : false; ?>
 		     <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 		     <p class="perex"><?php the_excerpt(); ?></p>
 	    </article> 
-  <?php endwhile; ?>
+  <?php 
+  $i=0;
+  endwhile; ?>
 
     
     
