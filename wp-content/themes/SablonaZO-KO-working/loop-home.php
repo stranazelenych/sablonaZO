@@ -1,9 +1,12 @@
 
 <!-- Query sticky post. -->
-
+<?php 
+$i = 1;
+?>   
 
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>   
-<?php $featured = ($i++ == 1) ? true : false; ?>  
+<?php 
+$featured = ($i == 1) ? true : false; ?>  
 
         <article <?php if ($featured) {echo "class='highlight'";} ?>>
             <a href="<?php the_permalink() ?>">
